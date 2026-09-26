@@ -25,15 +25,7 @@ function getWorker(): Worker {
 /** Starts the worker and loads every font face up front, so reading a log never touches the network. */
 export function warmUp() {
 	getWorker();
-	const faces = [
-		'400 1em "Atkinson Hyperlegible"',
-		'700 1em "Atkinson Hyperlegible"',
-		'italic 400 1em "Atkinson Hyperlegible"',
-		'400 1em "IBM Plex Mono"',
-		'600 1em "IBM Plex Mono"',
-		'600 1em "Zilla Slab"',
-		'700 1em "Zilla Slab"'
-	];
+	const faces = ['400 1em "Titillium Web"', '600 1em "Titillium Web"', '700 1em "Titillium Web"'];
 	for (const f of faces) document.fonts?.load(f).catch(() => {});
 }
 
