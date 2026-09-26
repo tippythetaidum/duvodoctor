@@ -7,7 +7,7 @@ Unofficial fan tool. Not affiliated with or endorsed by Luduvo Corporation.
 ## What it does
 
 - Reads `client.log`, `crash.log`, `launcher.log`, `launcher-update.log`, `app.log`, `studio.log`, `state.json` and `Settings.cfg`, or pasted text.
-- Shows your setup as the logs describe it: build, graphics API, every GPU adapter and which one was picked, the decoded driver version.
+- Shows your setup as the logs describe it: build, graphics mode, every GPU adapter and which one was picked, the decoded driver version.
 - Matches the logs against a catalog of known problems collected from the Luduvo forum, root cause first.
 - Folds the harmless noise (hundreds of Razor shadow warnings in a healthy log) so the real errors stand out.
 - Builds a bug report in the layout staff already answer, with personal details removed.
@@ -50,6 +50,14 @@ Every diagnosis is one entry in [`src/data/signatures.json`](src/data/signatures
 Problems that leave no log (a Windows popup, a Mac Join button that does nothing) use `symptoms` instead, which feed the "No log? Pick what you saw" picker.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to send one in.
+
+## Keeping up with Luduvo
+
+Once a day, [`scripts/forum-check.ts`](scripts/forum-check.ts) reads the forum's public release notes, new bug reports, staff replies and the threads the site links to. It runs the Doctor over any logs posted there and opens a `forum-check` issue listing what it found: new builds, logs it recognises, errors it doesn't, and what staff said. The site itself never contacts the forum.
+
+Only two things go on the site without a person checking them first: the newest Luduvo build number and the titles of staff release notes, in [`src/data/luduvo.json`](src/data/luduvo.json). A new build only counts once staff post its release notes or logs from two different threads show it. Diagnoses and statuses are always changed by hand.
+
+Deploys need two repository secrets, `CLOUDFLARE_API_TOKEN` (a token with Cloudflare Pages edit access) and `CLOUDFLARE_ACCOUNT_ID`. Without them, the checks still run and nothing is deployed.
 
 ## Credits
 

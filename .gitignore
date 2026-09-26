@@ -13,6 +13,9 @@ build/
 test-results/
 playwright-report/
 
+# daily forum check output
+forum-report.md
+
 # env
 .env
 .env.*
