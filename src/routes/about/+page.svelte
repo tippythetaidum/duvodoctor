@@ -46,12 +46,12 @@
 		<h1 id="why">Why this exists</h1>
 		<p>
 			I kept seeing the same few errors in the bug threads. Someone posts a screenshot of the popup, staff ask for
-			client.log, and a week later someone else posts the same thing. The biggest thread, "I cant play luduvo because of
-			this bug", passed 190 posts.
+			client.log, and a week later someone else posts the same thing. The biggest thread,
+			<a href="https://forum.luduvo.com/t/2616">"I cant play luduvo because of this bug"</a>, passed 190 posts.
 		</p>
 		<p>
-			The four most common failures have no fix on your end yet. People were reinstalling drivers and deleting folders for
-			nothing. So I made this: drop your log in, and it tells you what's wrong, whose problem it is, and what's worth
+			The four most common failures <a href="/issues">have no fix on your end yet</a>. People were reinstalling drivers and
+			deleting folders for nothing. So I made this: drop your log in, and it tells you what's wrong, whose problem it is, and what's worth
 			trying. If there's nothing you can do yet, it says so.
 		</p>
 		<p>
