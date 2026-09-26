@@ -1,7 +1,9 @@
 import type { Adapter, Os, ParsedFile, SetupSummary } from '../types.ts';
 import { decodeDriver, vendorFromId } from './driver.ts';
 
-const HEADER = /\] Luduvo (\d+)(?:-dirty)? \(([0-9a-f]{7,40})\)(?: sha=[0-9a-f]+)?(?: network_epoch=(\d+))?/;
+// 39 to 44: "Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 ...". 45: "Luduvo 45 sha=790afcf2ee3f ...".
+const HEADER =
+	/\] Luduvo (\d+)(?:-dirty)?(?: \(([0-9a-f]{7,40})\))?(?: sha=([0-9a-f]{7,40}))?(?: network_epoch=(\d+))?/;
 const LAUNCHER_BUILD = /launcher: up to date \((\d+) seq=/;
 const VK_ADAPTER =
 	/\[adapter (\d+)\] (.+?) \((\w+), vendor=(0x[0-9a-fA-F]+) device=(0x[0-9a-fA-F]+), (\d+) MB\)/;
@@ -96,10 +98,10 @@ export function buildSetup(files: ParsedFile[]): SetupSummary {
 				s.nonAsciiUser = true;
 
 			let m = HEADER.exec(t);
-			if (m) {
+			if (m && (m[2] || m[3])) {
 				s.build = Number(m[1]);
-				s.sha = m[2];
-				s.networkEpoch = m[3] ? Number(m[3]) : null;
+				s.sha = m[2] ?? m[3];
+				s.networkEpoch = m[4] ? Number(m[4]) : null;
 				continue;
 			}
 			m = LAUNCHER_BUILD.exec(t);

@@ -45,7 +45,7 @@ export function kindFromContent(text: string, lines: LogLine[]): FileKind {
 	const has = (re: RegExp) => lines.some((l) => re.test(l.text));
 	const launcher = has(/\] (launcher|update|finish-update)[: ]/);
 	const client = has(
-		/\] Luduvo \d+(-dirty)? \(|\] client content:|\] Renderer up:|\] \[vk\] |\] \[d3d12\] |\] connected to |ClientApp::Init/
+		/\] Luduvo \d+(-dirty)? (\(|sha=)|\] client content:|\] Renderer up:|\] \[vk\] |\] \[d3d12\] |\] connected to |ClientApp::Init/
 	);
 	const studio = has(/\] studio (content|assets):/);
 	const shell = has(/^(qt\.qpa|terminate called|Aborted|zsh: |[\w.-]+@[\w.-]+:.*\$)/);

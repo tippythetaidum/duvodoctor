@@ -203,6 +203,14 @@ describe('your setup', () => {
 		expect(analyse(loadDir('joe/healthy-session')).setup.nonAsciiUser).toBe(false);
 	});
 
+	it('reads the build 45 header, which dropped the bracketed sha', () => {
+		const { setup } = analyse(loadDir('forum/3990-1'));
+		expect(setup).toMatchObject({ build: 45, sha: '790afcf2ee3f', networkEpoch: 47, backend: 'd3d12' });
+		expect(setup.selected?.name).toBe('NVIDIA GeForce GTX 1650');
+		expect(parseText('pasted text', '2026-09-26 - 06:38:32.727 [INFO] Luduvo 45 sha=790afcf2ee3f network_epoch=47').kind).toBe('client');
+		expect(analyse([parseText('client.log', '2026-09-26 - 06:38:32.727 [INFO] Luduvo 45 is here')]).setup.build).toBeNull();
+	});
+
 	it('takes the build from state.json or the launcher when there is no header', () => {
 		expect(analyse(loadDir('joe/localappdata')).setup.build).toBe(44);
 		expect(analyse(loadDir('forum/2487-1')).setup.build).toBe(43);
