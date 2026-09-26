@@ -18,7 +18,7 @@
 	const OVERSCAN = 20;
 
 	type Row =
-		| { type: 'line'; n: number; text: string; level: string | null; evidence: boolean }
+		| { type: 'line'; n: number; text: string; level: string | null; evidence: boolean; knock: boolean }
 		| { type: 'fold'; key: string; label: string; from: number; to: number; count: number };
 
 	const PRIORITY: Record<string, number> = {
@@ -80,6 +80,7 @@
 		if (!current) return out;
 		const lines = current.f.lines;
 		let i = 0;
+		let afterEvidence = false;
 		while (i < lines.length) {
 			const l = lines[i];
 			const noise = noiseByLine.get(l.n);
@@ -89,19 +90,25 @@
 				const key = `${current.i}:${l.n}`;
 				if (expanded.has(key)) {
 					for (let k = i; k <= j; k++) {
-						out.push({ type: 'line', n: lines[k].n, text: lines[k].text, level: lines[k].level, evidence: false });
+						out.push({ type: 'line', n: lines[k].n, text: lines[k].text, level: lines[k].level, evidence: false, knock: false });
 					}
 				} else {
 					out.push({ type: 'fold', key, label: noise.label, from: l.n, to: lines[j].n, count: j - i + 1 });
 				}
+				afterEvidence = false;
 				i = j + 1;
 				continue;
 			}
-			out.push({ type: 'line', n: l.n, text: l.text, level: l.level, evidence: evidenceLines.has(l.n) });
+			const evidence = evidenceLines.has(l.n);
+			const knock: boolean = !evidence && afterEvidence && l.level === 'ERROR';
+			afterEvidence = evidence || knock;
+			out.push({ type: 'line', n: l.n, text: l.text, level: l.level, evidence, knock });
 			i++;
 		}
 		return out;
 	});
+
+	const hasKnock = $derived(rows.some((r) => r.type === 'line' && r.knock));
 
 	const stats = $derived.by(() => {
 		if (!current) return null;
@@ -207,9 +214,10 @@
 						{:else}
 							<div
 								class="row"
-								class:error={row.level === 'ERROR'}
+								class:error={row.level === 'ERROR' && !row.knock}
 								class:warning={row.level === 'WARNING'}
 								class:evidence={row.evidence}
+								class:knock={row.knock}
 								class:focused={focusLine === row.n}
 								data-n={row.n}
 								tabindex="-1"
@@ -223,7 +231,8 @@
 		</div>
 		<p class="legend">
 			<span class="swatch ev"></span> lines behind a diagnosis
-			<span class="swatch er"></span> errors
+			{#if hasKnock}<span class="swatch kn"></span> errors that follow on from it{/if}
+			<span class="swatch er"></span> {hasKnock ? 'other errors' : 'errors'}
 		</p>
 	</section>
 {/if}
@@ -368,6 +377,12 @@
 		color: var(--fg);
 		box-shadow: inset 3px 0 0 var(--mark-line);
 	}
+	.row.knock .text {
+		color: var(--muted-fg);
+	}
+	.row.knock .gutter {
+		box-shadow: inset 3px 0 0 var(--border-strong);
+	}
 	.row.focused {
 		outline: 2px solid var(--fg);
 		outline-offset: -2px;
@@ -404,8 +419,14 @@
 		background: var(--mark-bg);
 		box-shadow: inset 3px 0 0 var(--mark-line);
 	}
-	.swatch.er {
+	.swatch.er,
+	.swatch.kn {
 		background: var(--danger-bg);
 		margin-left: 0.6rem;
+	}
+	.swatch.kn {
+		background: var(--bg);
+		box-shadow: inset 3px 0 0 var(--border-strong);
+		outline: 1px solid var(--border);
 	}
 </style>
