@@ -1,0 +1,5 @@
+2026-09-20 - 12:00:00.000 [INFO] Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 network_epoch=40 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-20 - 12:00:00.100 [INFO] <script>document.title='owned'</script>
+2026-09-20 - 12:00:00.200 [ERROR] <img src=x onerror="document.title='owned'">
+2026-09-20 - 12:00:00.300 [WARNING] {@html '<b>bold</b>'} **not markdown** [link](javascript:alert(1))
+2026-09-20 - 12:00:00.400 [INFO] <svg onload="document.title='owned'"></svg>
