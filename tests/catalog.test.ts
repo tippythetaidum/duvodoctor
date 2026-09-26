@@ -50,6 +50,9 @@ describe('signature catalog', () => {
 			clip('2026-09-20 - 12:00:00.000 [INFO] ' + 'content store: cannot rename manifest.json '.repeat(200)),
 			clip('2026-09-20 - 12:00:00.000 [WARNING] ' + 'Vulkan unavailable: '.repeat(450)),
 			clip('2026-09-20 - 12:00:00.000 [ERROR] GTAO: depth SRV ' + 'x '.repeat(4000)),
+			clip("2026-09-20 - 12:00:00.000 [ERROR] FATAL: shader directory '".repeat(120)),
+			clip('2026-09-20 - 12:00:00.000 [WARNING] physics: part '.repeat(160)),
+			clip('failed to connect to ' + 'a'.repeat(8000)),
 			clip('C:\\Users\\' + '\\x'.repeat(3000) + 'é'.repeat(1000))
 		];
 		for (const s of catalog.signatures) {

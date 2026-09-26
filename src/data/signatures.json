@@ -199,7 +199,7 @@
 				"text": "Luduvo blocks these Intel drivers because their Vulkan 1.3 support crashes at runtime. Build 44 falls back to D3D12, which then hits the D3D12 startup bug."
 			},
 			"match": {
-				"files": { "any": { "all": ["skipped: Intel .*non-conformant Vulkan 1\\.3 driver"] } }
+				"files": { "any": { "all": ["skipped: Intel ", "non-conformant Vulkan 1\\.3 driver"] } }
 			},
 			"leads_to": ["d3d12-cluster-pso-fail"],
 			"steps": [
@@ -465,7 +465,7 @@
 			"severity": "info",
 			"platforms": ["windows"],
 			"match": {
-				"files": { "any": { "all": ["Vulkan unavailable: .*using D3D12"] } }
+				"files": { "any": { "all": ["Vulkan unavailable: ", "using D3D12 for this run"] } }
 			},
 			"leads_to": ["d3d12-cluster-pso-fail", "d3d12-no-adapter"],
 			"steps": [
@@ -571,7 +571,7 @@
 			"platforms": ["all"],
 			"fold": { "label": "Vulkan validation warnings" },
 			"match": {
-				"files": { "any": { "any": ["\\[vk\\] vkCreateGraphicsPipelines\\(\\): .*not consumed by vertex shader"] } }
+				"files": { "any": { "any": ["not consumed by vertex shader\\."] } }
 			},
 			"steps": [{ "text": "Ignore these. Staff need the whole log, not just these lines." }],
 			"dont": [],
@@ -630,7 +630,7 @@
 			"platforms": ["all"],
 			"fold": { "label": "Game content warnings" },
 			"match": {
-				"files": { "any": { "any": ["physics: part .* has an unusable Scale"] } }
+				"files": { "any": { "any": ["has an unusable Scale \\("] } }
 			},
 			"steps": [{ "text": "Ignore it." }],
 			"dont": [],
@@ -731,7 +731,7 @@
 			"match": {
 				"files": {
 					"any": {
-						"any": ["Load_shader: failed to read transpiled shader", "FATAL: shader directory '.*' does not exist"]
+						"any": ["Load_shader: failed to read transpiled shader", "FATAL: shader directory '[^']*' does not exist"]
 					}
 				}
 			},
@@ -1326,7 +1326,7 @@
 			"severity": "crash-in-game",
 			"platforms": ["linux"],
 			"match": {
-				"files": { "any": { "all": ["GTAO: depth SRV .* does not match source"] } }
+				"files": { "any": { "all": ["GTAO: depth SRV ", "does not match source"] } }
 			},
 			"steps": [
 				{ "text": "Avoid resizing or maximising the window during a playtest for now.", "unconfirmed": true },
