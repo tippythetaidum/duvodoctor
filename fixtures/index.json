@@ -59,6 +59,7 @@
 		{ "dir": "forum/3549-6", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/3549/6" },
 
 		{ "dir": "synthetic/xss", "expect": [], "verdict": "unknown", "source": "Hand-written: HTML and script in log text must stay inert" },
-		{ "dir": "synthetic/vulkan-dll-popup", "expect": ["vulkan-dll-missing"], "source": "Popup text from https://forum.luduvo.com/t/1365/1" },		{ "dir": "synthetic/empty", "expect": [], "verdict": "empty", "source": "Hand-written: an empty client.log" }
+		{ "dir": "synthetic/vulkan-dll-popup", "expect": ["vulkan-dll-missing"], "source": "Popup text from https://forum.luduvo.com/t/1365/1" },
+		{ "dir": "synthetic/scene-check-popup", "expect": ["studio-publish-scene-check"], "source": "Popup text from the screenshot in https://forum.luduvo.com/t/4012/1" },		{ "dir": "synthetic/empty", "expect": [], "verdict": "empty", "source": "Hand-written: an empty client.log" }
 	]
 }

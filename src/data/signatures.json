@@ -1293,6 +1293,45 @@
 			"last_checked": "2026-09-26"
 		},
 		{
+			"id": "studio-publish-scene-check",
+			"ref": "S28",
+			"title": "Publishing fails with \"scene check failed\"",
+			"headline": "Luduvo's server is turning down your publish. It started with build 45 and other creators have it too, so it's probably not something you did.",
+			"summary": "Studio shows a Publish Failed popup: HTTP 500: {\"error\":\"scene check failed\"}. Uploading a world file on the website says scene check failed as well.",
+			"who": "Creators publishing from Studio, or uploading a world file on the website, since build 45 came out on 26 Sep.",
+			"blame": "luduvo",
+			"severity": "studio",
+			"platforms": ["all"],
+			"cause": {
+				"text": "Not known yet. HTTP 500 is a server error, which usually means something broke on Luduvo's side rather than yours.",
+				"unconfirmed": true
+			},
+			"match": {
+				"files": { "any": { "any": ["scene check failed"] } }
+			},
+			"symptoms": ["Publishing from Studio says \"scene check failed\""],
+			"steps": [
+				{ "text": "Save your project in Studio so nothing is lost." },
+				{ "text": "Try publishing again after the next Luduvo update." },
+				{
+					"text": "Follow the thread for news.",
+					"link": { "label": "Scene check failed when trying to publish a game", "url": "https://forum.luduvo.com/t/4012" }
+				}
+			],
+			"dont": ["Rebuilding your project from scratch. Several creators started getting this on the same day."],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "First report", "url": "https://forum.luduvo.com/t/3994/1" },
+				{ "label": "Screenshots of both errors", "url": "https://forum.luduvo.com/t/4012/1" },
+				{ "label": "A second creator with the same error", "url": "https://forum.luduvo.com/t/4012/2" }
+			],
+			"credits": [
+				{ "handle": "1sam", "url": "https://forum.luduvo.com/t/3994/1", "for": "first reported the publish error on build 45" },
+				{ "handle": "rek", "url": "https://forum.luduvo.com/t/4012/1", "for": "posted screenshots of the Studio and website errors" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
 			"id": "d3d12-descriptor-heap",
 			"ref": "S26",
 			"title": "Studio crashes growing a descriptor heap",
