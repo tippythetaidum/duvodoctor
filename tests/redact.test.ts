@@ -21,7 +21,7 @@ describe('redaction', () => {
 		expect(redact('C:\\Users\\Мария\\AppData').text).toBe('C:\\Users\\<non-ascii user>\\AppData');
 	});
 
-	it('hides Linux and macOS home folders and shell prompts', () => {
+	it('hides Linux and macOS home folders and user@host terminal lines', () => {
 		expect(redact('/home/meowzers/.local/share/Luduvo').text).toBe('/home/<user>/.local/share/Luduvo');
 		expect(redact('/Users/jane/Downloads/Luduvo').text).toBe('/Users/<user>/Downloads/Luduvo');
 		expect(redact('pc@fedora:~$ luduvo --singleplayer').text).toBe('<user>@<host>:~$ luduvo --singleplayer');

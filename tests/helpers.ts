@@ -16,7 +16,7 @@ export interface FixtureCase {
 	noise?: string[];
 	verdict?: string;
 	healthy?: boolean;
-	prompts?: string[];
+	nudges?: string[];
 	source: string;
 }
 

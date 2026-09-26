@@ -11,7 +11,7 @@ describe('every fixture gives its expected diagnosis', () => {
 				expect(result.noise.map((n) => n.sig.id).sort()).toEqual([...c.noise].sort());
 			}
 			if (c.verdict) expect(result.verdict).toBe(c.verdict);
-			if (c.prompts) expect(result.prompts.map((p) => p.kind)).toEqual(c.prompts);
+			if (c.nudges) expect(result.nudges.map((p) => p.kind)).toEqual(c.nudges);
 		});
 	}
 });

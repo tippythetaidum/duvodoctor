@@ -232,8 +232,8 @@
 				{#if done.result.verdict === 'unknown'}<Mascot mood="puzzled" size={92} />{/if}
 				<div>
 					<h2 id="verdict">{verdictText}</h2>
-					{#each done.result.prompts as p}
-						<p class="prompt">{p.text}</p>
+					{#each done.result.nudges as p}
+						<p class="nudge">{p.text}</p>
 					{/each}
 				</div>
 			</div>
@@ -455,7 +455,7 @@
 	.verdict h2 {
 		margin: 0;
 	}
-	.prompt {
+	.nudge {
 		margin: 0.5rem 0 0;
 		background: var(--highlight-soft);
 		color: var(--ink);

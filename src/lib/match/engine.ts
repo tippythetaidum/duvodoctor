@@ -31,7 +31,7 @@ export interface NoiseFold {
 
 export type Verdict = 'problems' | 'healthy' | 'inconclusive' | 'unknown' | 'empty';
 
-export interface Prompt {
+export interface Nudge {
 	kind: FileKind;
 	text: string;
 }
@@ -42,7 +42,7 @@ export interface MatchResult {
 	flat: Diagnosis[];
 	noise: NoiseFold[];
 	unexplainedErrors: Evidence[];
-	prompts: Prompt[];
+	nudges: Nudge[];
 }
 
 const MAX_EVIDENCE = 200;
@@ -197,10 +197,10 @@ function dedupe(evidence: Evidence[]): Evidence[] {
 		.sort((x, y) => x.file - y.file || x.line - y.line);
 }
 
-function promptsFor(a: Analysis, verdict: Verdict): Prompt[] {
+function nudgesFor(a: Analysis, verdict: Verdict): Nudge[] {
 	const has = (k: FileKind) => present(a.files, k);
 	const usable = a.files.filter((f) => !f.binary && !f.empty);
-	const out: Prompt[] = [];
+	const out: Nudge[] = [];
 	const crashFiles = a.files.filter((f) => f.kind === 'crash');
 	const onlyEmptyCrash = crashFiles.length > 0 && usable.length === 0;
 	if (onlyEmptyCrash) {
@@ -340,6 +340,6 @@ export function diagnose(a: Analysis, catalog: Catalog): MatchResult {
 		flat,
 		noise,
 		unexplainedErrors,
-		prompts: promptsFor(a, verdict)
+		nudges: nudgesFor(a, verdict)
 	};
 }
