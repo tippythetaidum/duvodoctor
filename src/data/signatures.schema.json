@@ -1,0 +1,218 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Duvo Doctor signature catalog",
+	"type": "object",
+	"required": ["version", "updated", "signatures"],
+	"additionalProperties": false,
+	"properties": {
+		"version": { "type": "integer", "minimum": 1 },
+		"updated": { "$ref": "#/$defs/date" },
+		"signatures": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/signature" } }
+	},
+	"$defs": {
+		"date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+		"url": { "type": "string", "pattern": "^https://" },
+		"text": { "type": "string", "minLength": 1 },
+		"link": {
+			"type": "object",
+			"required": ["label", "url"],
+			"additionalProperties": false,
+			"properties": { "label": { "$ref": "#/$defs/text" }, "url": { "$ref": "#/$defs/url" } }
+		},
+		"pattern": {
+			"oneOf": [
+				{ "type": "string", "minLength": 3 },
+				{
+					"type": "object",
+					"required": ["re"],
+					"additionalProperties": false,
+					"properties": {
+						"re": { "type": "string", "minLength": 3 },
+						"min": { "type": "integer", "minimum": 1 }
+					}
+				}
+			]
+		},
+		"fileRule": {
+			"type": "object",
+			"additionalProperties": false,
+			"minProperties": 1,
+			"properties": {
+				"all": { "type": "array", "items": { "$ref": "#/$defs/pattern" } },
+				"any": { "type": "array", "items": { "$ref": "#/$defs/pattern" } },
+				"none": { "type": "array", "items": { "$ref": "#/$defs/pattern" } }
+			}
+		},
+		"fileKind": {
+			"enum": [
+				"any",
+				"client",
+				"crash",
+				"launcher",
+				"launcher-update",
+				"app",
+				"studio",
+				"state",
+				"settings",
+				"terminal",
+				"event-viewer",
+				"unknown"
+			]
+		},
+		"when": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"os": { "type": "array", "items": { "enum": ["windows", "linux", "macos"] } },
+				"vendor": {
+					"type": "array",
+					"items": { "enum": ["nvidia", "amd", "intel", "apple", "microsoft-software", "llvmpipe", "unknown"] }
+				},
+				"backend": { "type": "array", "items": { "enum": ["vulkan", "d3d12", "metal"] } },
+				"build": {
+					"type": "object",
+					"additionalProperties": false,
+					"properties": { "min": { "type": "integer" }, "max": { "type": "integer" } }
+				},
+				"has": { "type": "array", "items": { "$ref": "#/$defs/fileKind" } },
+				"missing": { "type": "array", "items": { "$ref": "#/$defs/fileKind" } },
+				"clean_quit": { "type": "boolean" },
+				"errors": { "type": "boolean" },
+				"non_ascii_user": { "type": "boolean" },
+				"crash_module": { "type": "array", "items": { "enum": ["gpu-driver", "luduvo", "windows", "other"] } }
+			}
+		},
+		"matchRule": {
+			"type": "object",
+			"additionalProperties": false,
+			"minProperties": 1,
+			"properties": {
+				"files": {
+					"type": "object",
+					"propertyNames": { "$ref": "#/$defs/fileKind" },
+					"additionalProperties": { "$ref": "#/$defs/fileRule" }
+				},
+				"when": { "$ref": "#/$defs/when" }
+			}
+		},
+		"signature": {
+			"type": "object",
+			"required": [
+				"id",
+				"ref",
+				"title",
+				"headline",
+				"summary",
+				"who",
+				"blame",
+				"severity",
+				"platforms",
+				"steps",
+				"dont",
+				"status",
+				"sources",
+				"credits",
+				"last_checked"
+			],
+			"additionalProperties": false,
+			"properties": {
+				"id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+				"ref": { "type": "string", "pattern": "^(S\\d+|noise)$" },
+				"title": { "$ref": "#/$defs/text" },
+				"headline": { "$ref": "#/$defs/text" },
+				"summary": { "$ref": "#/$defs/text" },
+				"who": { "$ref": "#/$defs/text" },
+				"blame": { "enum": ["luduvo", "hardware", "setup", "network", "noise"] },
+				"severity": { "enum": ["blocks-launch", "blocks-join", "crash-in-game", "studio", "info"] },
+				"platforms": {
+					"type": "array",
+					"minItems": 1,
+					"items": { "enum": ["windows", "linux", "macos", "all"] }
+				},
+				"vendors": {
+					"type": "array",
+					"items": { "enum": ["nvidia", "amd", "intel", "apple", "microsoft-software", "llvmpipe", "unknown"] }
+				},
+				"unconfirmed": { "type": "boolean" },
+				"cause": {
+					"type": "object",
+					"required": ["text"],
+					"additionalProperties": false,
+					"properties": { "text": { "$ref": "#/$defs/text" }, "unconfirmed": { "type": "boolean" } }
+				},
+				"match": { "$ref": "#/$defs/matchRule" },
+				"hint": {
+					"type": "object",
+					"required": ["match", "say"],
+					"additionalProperties": false,
+					"properties": { "match": { "$ref": "#/$defs/matchRule" }, "say": { "$ref": "#/$defs/text" } }
+				},
+				"fold": {
+					"type": "object",
+					"required": ["label"],
+					"additionalProperties": false,
+					"properties": { "label": { "$ref": "#/$defs/text" } }
+				},
+				"leads_to": { "type": "array", "items": { "type": "string" } },
+				"symptoms": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+				"steps": {
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"type": "object",
+						"required": ["text"],
+						"additionalProperties": false,
+						"properties": {
+							"text": { "$ref": "#/$defs/text" },
+							"unconfirmed": { "type": "boolean" },
+							"link": { "$ref": "#/$defs/link" }
+						}
+					}
+				},
+				"dont": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+				"status": {
+					"type": "object",
+					"required": ["state", "fixed_in", "staff_note"],
+					"additionalProperties": false,
+					"properties": {
+						"state": { "enum": ["open", "workaround", "fixed", "unknown"] },
+						"fixed_in": { "type": ["integer", "null"] },
+						"staff_note": {
+							"oneOf": [
+								{ "type": "null" },
+								{
+									"type": "object",
+									"required": ["quote", "handle", "date", "url"],
+									"additionalProperties": false,
+									"properties": {
+										"quote": { "$ref": "#/$defs/text" },
+										"handle": { "$ref": "#/$defs/text" },
+										"date": { "$ref": "#/$defs/date" },
+										"url": { "$ref": "#/$defs/url" },
+										"unconfirmed": { "type": "boolean" },
+										"context": { "$ref": "#/$defs/text" }
+									}
+								}
+							]
+						}
+					}
+				},
+				"sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/link" } },
+				"credits": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"required": ["handle", "url", "for"],
+						"additionalProperties": false,
+						"properties": {
+							"handle": { "$ref": "#/$defs/text" },
+							"url": { "$ref": "#/$defs/url" },
+							"for": { "$ref": "#/$defs/text" }
+						}
+					}
+				},
+				"last_checked": { "$ref": "#/$defs/date" }
+			}
+		}
+	}
+}

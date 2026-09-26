@@ -1,0 +1,1421 @@
+{
+	"version": 1,
+	"updated": "2026-09-26",
+	"signatures": [
+		{
+			"id": "d3d12-cluster-pso-fail",
+			"ref": "S1",
+			"title": "D3D12 renderer fails at startup",
+			"headline": "Luduvo's D3D12 renderer fails on your PC before the game opens. This is a known Luduvo bug, not your PC.",
+			"summary": "A popup says Luduvo failed to launch and to check client.log. Studio says the Client did not start.",
+			"who": "Anyone whose game ends up on D3D12. Intel UHD and HD laptops, a GTX 1650 and an RX 9060 XT have all hit it.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"cause": {
+				"text": "One of Luduvo's D3D12 compute shaders fails to build on these drivers. matt traced it to the cluster build-grid shader, and said it may not be the only one."
+			},
+			"match": {
+				"files": {
+					"any": {
+						"all": [
+							"\\[nvrhi\\] Failed to create a compute pipeline state object",
+							"ClusteredForward: failed to create build-grid pipeline"
+						]
+					}
+				}
+			},
+			"symptoms": [
+				"A popup says Luduvo failed to launch and to check client.log",
+				"Studio says the Client did not start"
+			],
+			"steps": [
+				{ "text": "There's nothing you can fix on your end yet. Reinstalling drivers or Luduvo won't change this one." },
+				{ "text": "Update Luduvo when the next build comes out, then try again." },
+				{
+					"text": "Follow the main thread for news.",
+					"link": { "label": "I cant play luduvo because of this bug", "url": "https://forum.luduvo.com/t/2616" }
+				}
+			],
+			"dont": [
+				"Reinstalling your graphics driver again. Players on up-to-date drivers hit this too.",
+				"Patching or swapping Luduvo's shader files. The integrity check puts them back, and it's against Luduvo's terms."
+			],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "This will most likely be resolved in tomorrow's update, Luduvo 45. If it continues, please let us know.",
+					"handle": "Isaac",
+					"date": "2026-09-24",
+					"url": "https://forum.luduvo.com/t/3549/4",
+					"unconfirmed": true,
+					"context": "He was replying to a general startup crash, so it isn't certain he meant this one."
+				}
+			},
+			"sources": [
+				{ "label": "The popup players see", "url": "https://forum.luduvo.com/t/2616/43" },
+				{ "label": "Intel Comet Lake log, build 44", "url": "https://forum.luduvo.com/t/2616/38" },
+				{ "label": "GTX 1650 laptop log, build 44", "url": "https://forum.luduvo.com/t/2431/3" },
+				{ "label": "AMD RX 9060 XT log, build 44", "url": "https://forum.luduvo.com/t/2241/5" },
+				{ "label": "Jediweirdo's build 44 report", "url": "https://forum.luduvo.com/t/2649/1" },
+				{ "label": "matt on the shader", "url": "https://forum.luduvo.com/t/2241/6" },
+				{ "label": "matt on the integrity check", "url": "https://forum.luduvo.com/t/2241/7" }
+			],
+			"credits": [
+				{ "handle": "matt", "url": "https://forum.luduvo.com/t/2241/6", "for": "traced the failure to a D3D12 shader" },
+				{ "handle": "Jediweirdo", "url": "https://forum.luduvo.com/t/2649/1", "for": "the clearest build 44 report" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "d3d12-without-vulkan-attempt",
+			"ref": "S1",
+			"title": "D3D12 used without trying Vulkan",
+			"headline": "Your log goes straight to D3D12 without trying Vulkan first. Your graphics setting might be forcing D3D12.",
+			"summary": "The log shows D3D12 starting up with no Vulkan lines before it.",
+			"who": "Seen on an AMD RX 9060 XT on builds 41 and 44.",
+			"blame": "setup",
+			"severity": "info",
+			"platforms": ["windows"],
+			"unconfirmed": true,
+			"cause": {
+				"text": "An early release note said Windows users default to D3D12. If Settings.cfg says graphics_api=D3D12, Luduvo may skip Vulkan entirely.",
+				"unconfirmed": true
+			},
+			"match": {
+				"files": {
+					"any": {
+						"all": ["\\[d3d12\\] backend init begin"],
+						"none": ["Vulkan backend failed", "Vulkan unavailable", "\\[vk\\] "]
+					}
+				}
+			},
+			"steps": [
+				{ "text": "Press Win + R, paste %APPDATA%\\Luduvo\\Client and press Enter. Copy Settings.cfg somewhere safe first." },
+				{ "text": "Open Settings.cfg in Notepad and find the graphics_api line." },
+				{
+					"text": "If it says D3D12 and your graphics card supports Vulkan 1.3, you could change it to Vulkan and save. Nobody on the forum has confirmed this fixes the client yet.",
+					"unconfirmed": true
+				}
+			],
+			"dont": ["Editing any other Luduvo file."],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "AMD log with no Vulkan attempt, build 41", "url": "https://forum.luduvo.com/t/2241/2" },
+				{ "label": "AMD log with no Vulkan attempt, build 44", "url": "https://forum.luduvo.com/t/2241/5" },
+				{ "label": "Switching Studio to Vulkan fixed a D3D12 crash in July", "url": "https://forum.luduvo.com/t/1427/11" }
+			],
+			"credits": [
+				{ "handle": "alaz", "url": "https://forum.luduvo.com/t/1427/11", "for": "showed switching the API can help" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "amd-amdvlk-crash",
+			"ref": "S2",
+			"title": "AMD graphics driver crashes on Windows",
+			"headline": "Your AMD graphics driver is crashing when Luduvo starts. This is a known Luduvo bug, not your PC.",
+			"summary": "A black screen for a couple of seconds, then the window closes. No error popup.",
+			"who": "AMD graphics on Windows using Vulkan: RX 6700 XT, RX 6500 XT and many Ryzen laptop chips. Some RX 580, RX 570 and RX 9060 XT cards work.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"vendors": ["amd"],
+			"cause": {
+				"text": "Luduvo crashes inside AMD's Vulkan driver, amdvlk64.dll. matt said neither main engine developer has an AMD card to test on."
+			},
+			"match": {
+				"files": { "crash": { "any": ["amdvlk(?:64|32)\\.dll\\+0x"] } }
+			},
+			"hint": {
+				"match": {
+					"files": { "client": { "any": ["Renderer up: "] } },
+					"when": {
+						"os": ["windows"],
+						"vendor": ["amd"],
+						"backend": ["vulkan"],
+						"has": ["client"],
+						"missing": ["crash"],
+						"clean_quit": false,
+						"errors": false
+					}
+				},
+				"say": "client.log looks normal but stops early on an AMD card. That's how this crash looks, but the proof is in crash.log. Drop crash.log from the same folder to be sure."
+			},
+			"symptoms": ["A black screen for a few seconds, then the game closes (AMD graphics)"],
+			"steps": [
+				{ "text": "There's nothing you can fix on Windows yet. Staff said on 23 Sep it'll be fixed by October." },
+				{ "text": "If you already have Linux on this PC, several players with the same hardware say Luduvo works there." },
+				{
+					"text": "Follow the AMD thread for news.",
+					"link": { "label": "AMD support thread", "url": "https://forum.luduvo.com/t/3221" }
+				}
+			],
+			"dont": [
+				"Reinstalling your AMD driver. It doesn't help with this one.",
+				"Clearing your shader cache.",
+				"Downloading DLL files from other sites."
+			],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "This will be resolved by October.",
+					"handle": "Isaac",
+					"date": "2026-09-23",
+					"url": "https://forum.luduvo.com/t/3599/36"
+				}
+			},
+			"sources": [
+				{ "label": "RX 6700 XT client.log", "url": "https://forum.luduvo.com/t/3221/12" },
+				{ "label": "RX 6700 XT crash.log", "url": "https://forum.luduvo.com/t/3221/14" },
+				{ "label": "matt on the driver crash", "url": "https://forum.luduvo.com/t/3221/16" },
+				{ "label": "matt on AMD testing", "url": "https://forum.luduvo.com/t/3221/4" },
+				{ "label": "Original AMD black screen thread", "url": "https://forum.luduvo.com/t/2277/1" },
+				{ "label": "Ryzen 5625U crash.log", "url": "https://forum.luduvo.com/t/3046/1" },
+				{ "label": "Works on Linux with the same PC", "url": "https://forum.luduvo.com/t/2277/2" }
+			],
+			"credits": [
+				{ "handle": "matt", "url": "https://forum.luduvo.com/t/3221/16", "for": "worked out that the AMD driver is what crashes" },
+				{ "handle": "666", "url": "https://forum.luduvo.com/t/2277/1", "for": "the thread that got crash.log added" },
+				{ "handle": "delvern", "url": "https://forum.luduvo.com/t/2277/2", "for": "found Luduvo works on Linux on the same PC" },
+				{ "handle": "Epik", "url": "https://forum.luduvo.com/t/3221/25", "for": "confirmed the Linux workaround" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-intel-blocklist",
+			"ref": "S3",
+			"title": "Intel graphics blocked from Vulkan",
+			"headline": "Luduvo skipped your Intel graphics for Vulkan on purpose, because that driver crashes. It then tried D3D12, which failed too.",
+			"summary": "Luduvo fails to launch on a laptop with Intel UHD or HD graphics.",
+			"who": "Intel 7th to 10th gen integrated graphics (Kaby Lake, Coffee Lake, Comet Lake), for example UHD 620 and HD 620.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"vendors": ["intel"],
+			"cause": {
+				"text": "Luduvo blocks these Intel drivers because their Vulkan 1.3 support crashes at runtime. Build 44 falls back to D3D12, which then hits the D3D12 startup bug."
+			},
+			"match": {
+				"files": { "any": { "all": ["skipped: Intel .*non-conformant Vulkan 1\\.3 driver"] } }
+			},
+			"leads_to": ["d3d12-cluster-pso-fail"],
+			"steps": [
+				{ "text": "There's nothing you can fix on your end yet. A newer Intel driver doesn't take these chips off the list." },
+				{ "text": "The real blocker is the D3D12 bug listed with this. Once that's fixed, the fallback should get you in." }
+			],
+			"dont": [
+				"Setting LDV_VK_SKIP_BLOCKLIST=1. It gets further, then the game floods with Device Removed errors.",
+				"Installing the LunarG Vulkan runtime or older Intel drivers. Players in thread 2616 tried both."
+			],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Comet Lake log, build 44", "url": "https://forum.luduvo.com/t/2616/38" },
+				{ "label": "Kaby Lake HD 620 log", "url": "https://forum.luduvo.com/t/2616/153" },
+				{ "label": "Coffee Lake UHD 620 log", "url": "https://forum.luduvo.com/t/3314/1" },
+				{ "label": "What the override does", "url": "https://forum.luduvo.com/t/3759/4" }
+			],
+			"credits": [
+				{ "handle": "Roxubo", "url": "https://forum.luduvo.com/t/3759/4", "for": "showed what happens with the override on" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-version-too-low",
+			"ref": "S4",
+			"title": "Graphics only supports Vulkan 1.2",
+			"headline": "Your graphics card or its driver only offers Vulkan 1.2. Luduvo needs Vulkan 1.3, so it tried D3D12 instead.",
+			"summary": "Luduvo fails to launch on older graphics.",
+			"who": "Older graphics such as Intel UHD 600 and the GeForce GT 710.",
+			"blame": "hardware",
+			"severity": "blocks-launch",
+			"platforms": ["all"],
+			"match": {
+				"files": { "any": { "all": ["skipped: Vulkan 1\\.[0-2] < 1\\.3"] } }
+			},
+			"leads_to": ["d3d12-cluster-pso-fail", "d3d12-no-adapter"],
+			"steps": [
+				{
+					"text": "Look for a newer graphics driver from your laptop maker or the chip maker's own site. A newer driver sometimes adds Vulkan 1.3.",
+					"unconfirmed": true
+				},
+				{
+					"text": "If there's no newer driver, this hardware is below what Luduvo needs right now. Isaac confirmed a DirectX 11 renderer is in development.",
+					"link": { "label": "Isaac on DirectX 11", "url": "https://forum.luduvo.com/t/3609/4" }
+				}
+			],
+			"dont": ["Downloading drivers or DLLs from unofficial sites."],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "This is true.",
+					"handle": "Isaac",
+					"date": "2026-09-23",
+					"url": "https://forum.luduvo.com/t/3609/4",
+					"context": "Replying to a player who said a DirectX 11 renderer is in development."
+				}
+			},
+			"sources": [
+				{ "label": "Intel UHD on Vulkan 1.2, build 44", "url": "https://forum.luduvo.com/t/2716/1" },
+				{ "label": "Intel UHD 600 log", "url": "https://forum.luduvo.com/t/2703/4" },
+				{ "label": "GeForce GT 710 log", "url": "https://forum.luduvo.com/t/2609/4" },
+				{ "label": "Driver update suggestion", "url": "https://forum.luduvo.com/t/2609/8" }
+			],
+			"credits": [
+				{ "handle": "Starte", "url": "https://forum.luduvo.com/t/2609/8", "for": "suggested checking for a newer driver" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "d3d12-no-adapter",
+			"ref": "S5",
+			"title": "Graphics can't run D3D12 feature level 12.0",
+			"headline": "Your graphics card can't create the kind of D3D12 device Luduvo needs, and Vulkan wasn't available either.",
+			"summary": "A popup says: No compatible GPU found. Luduvo requires a compatible Vulkan 1.3/ Metal3/ D3D12 GPU or driver.",
+			"who": "Graphics from around 2012 or earlier, such as Intel HD 2000 (Sandy Bridge), Ivy Bridge graphics and the GeForce GT 710.",
+			"blame": "hardware",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["no adapter satisfies D3D12 feature level 12\\.0"] } }
+			},
+			"symptoms": [
+				"No compatible GPU found. Luduvo requires a compatible Vulkan 1.3/ Metal3/ D3D12 GPU or driver."
+			],
+			"steps": [
+				{ "text": "Check for a newer graphics driver. On hardware this old there usually isn't one that helps." },
+				{ "text": "Luduvo doesn't support this graphics hardware yet. Staff say a DirectX 11 renderer is coming, and OpenGL isn't planned." }
+			],
+			"dont": ["Reinstalling Luduvo. It won't change what your graphics card supports."],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "vulkan, dx12 and dx11 of which vulkan and dx12 are already in use",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/1645/28"
+				}
+			},
+			"sources": [
+				{ "label": "Intel HD 2000 log", "url": "https://forum.luduvo.com/t/2672/1" },
+				{ "label": "GeForce GT 710 log", "url": "https://forum.luduvo.com/t/2609/4" },
+				{ "label": "The popup", "url": "https://forum.luduvo.com/t/2215/1" },
+				{ "label": "Isaac on DirectX 11", "url": "https://forum.luduvo.com/t/3609/4" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-blocklist-override",
+			"ref": "S6",
+			"title": "GPU blocklist override is switched on",
+			"headline": "LDV_VK_SKIP_BLOCKLIST is set on this PC. That forces Luduvo onto a graphics driver it knows is broken.",
+			"summary": "Someone followed the hint in the error message and switched the blocklist off.",
+			"who": "Anyone who set the LDV_VK_SKIP_BLOCKLIST environment variable.",
+			"blame": "setup",
+			"severity": "crash-in-game",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["LDV_VK_SKIP_BLOCKLIST set; GPU blocklist disabled"] } }
+			},
+			"leads_to": ["nvrhi-device-removed"],
+			"steps": [
+				{ "text": "Search Windows for \"Edit environment variables for your account\" and open it." },
+				{ "text": "Select LDV_VK_SKIP_BLOCKLIST in the top list, click Delete, then OK." },
+				{ "text": "Start Luduvo again. You'll most likely land on the Intel blocklist issue, which has no fix yet, but your PC won't be fighting a broken driver." }
+			],
+			"dont": ["Setting the override again."],
+			"status": { "state": "workaround", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Log with the override on", "url": "https://forum.luduvo.com/t/3759/4" },
+				{ "label": "What the player saw", "url": "https://forum.luduvo.com/t/3759/1" }
+			],
+			"credits": [
+				{ "handle": "Roxubo", "url": "https://forum.luduvo.com/t/3759/4", "for": "posted the log that showed it" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "nvrhi-device-removed",
+			"ref": "S6",
+			"title": "Graphics device lost after joining",
+			"headline": "Your graphics driver stopped responding after you joined a game, and Luduvo lost the GPU.",
+			"summary": "The game or the Studio viewport freezes. Windows may say it blocked LuduvoEditor.exe from accessing graphics hardware.",
+			"who": "Seen on Intel HD 620 with the blocklist override switched on.",
+			"blame": "hardware",
+			"severity": "crash-in-game",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": [{ "re": "\\[nvrhi\\] Device Removed", "min": 5 }] } }
+			},
+			"symptoms": ["Windows says it blocked LuduvoEditor.exe from accessing graphics hardware"],
+			"steps": [
+				{ "text": "If LDV_VK_SKIP_BLOCKLIST is set, remove it first. That's almost certainly the cause." },
+				{ "text": "Otherwise, update your graphics driver and try again. If it keeps happening, send the report below." }
+			],
+			"dont": ["Disabling Windows' GPU protection or editing the registry to stop the warning."],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Device Removed flood", "url": "https://forum.luduvo.com/t/3759/4" },
+				{ "label": "What the player saw", "url": "https://forum.luduvo.com/t/3759/1" }
+			],
+			"credits": [
+				{ "handle": "Roxubo", "url": "https://forum.luduvo.com/t/3759/4", "for": "posted the log" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-no-physical-devices",
+			"ref": "S7",
+			"title": "Vulkan found no graphics card",
+			"headline": "Vulkan couldn't see any graphics card on your PC. From build 44, Luduvo then tries D3D12.",
+			"summary": "Luduvo fails to launch on a laptop with two graphics chips.",
+			"who": "Seen on a laptop with AMD Vega 10 and NVIDIA GTX 1650 graphics.",
+			"blame": "setup",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["\\[vk\\] no physical devices found"] } }
+			},
+			"leads_to": ["d3d12-cluster-pso-fail"],
+			"steps": [
+				{ "text": "If you're on build 43 or older, update Luduvo. Build 44 falls back to D3D12 when this happens." },
+				{
+					"text": "Update the drivers for both graphics chips, from your laptop maker's site if it has them.",
+					"unconfirmed": true
+				},
+				{ "text": "If the D3D12 error shows up after that, it's the bug everyone is waiting on." }
+			],
+			"dont": ["Downloading Vulkan DLLs from other sites."],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "will be fixed soon. The vulkan drivers lack certain features. The d3d12 backend will be enabled in the next update",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2431/2"
+				}
+			},
+			"sources": [
+				{ "label": "Build 42 log", "url": "https://forum.luduvo.com/t/2431/1" },
+				{ "label": "Build 44 log", "url": "https://forum.luduvo.com/t/2431/3" },
+				{ "label": "Nikhil's reply", "url": "https://forum.luduvo.com/t/2431/2" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-khr-surface-missing",
+			"ref": "S8",
+			"title": "Broken Vulkan install stops the window opening",
+			"headline": "Your PC's Vulkan install is broken, so Luduvo couldn't open a window. Build 44 works around this by switching to D3D12.",
+			"summary": "Luduvo fails to launch straight away on builds 39 to 43.",
+			"who": "Seen on an RX 5700 XT, Intel HD 2000 and others.",
+			"blame": "setup",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": {
+					"any": {
+						"all": ["Failed to create window: Installed Vulkan doesn't implement the VK_KHR_surface extension"]
+					}
+				}
+			},
+			"steps": [
+				{ "text": "Update Luduvo to build 44 or newer. It switches to D3D12 when Vulkan is broken." },
+				{ "text": "Update your graphics driver from the chip maker's own site." }
+			],
+			"dont": [
+				"Deleting Vulkan registry entries by hand or copying Vulkan files into System32. One player got Studio working that way, but it's easy to break Windows."
+			],
+			"status": {
+				"state": "fixed",
+				"fixed_in": 44,
+				"staff_note": {
+					"quote": "vulkan drivers on windows are very buggy",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2469/4"
+				}
+			},
+			"sources": [
+				{ "label": "Build 39 log", "url": "https://forum.luduvo.com/t/2152/1" },
+				{ "label": "Build 42 log", "url": "https://forum.luduvo.com/t/2298/3" },
+				{ "label": "Another report", "url": "https://forum.luduvo.com/t/2511/1" },
+				{ "label": "Build 44 release notes", "url": "https://forum.luduvo.com/t/2589/1" }
+			],
+			"credits": [
+				{ "handle": "Kitty-kitkat", "url": "https://forum.luduvo.com/t/2589/1", "for": "credited in the build 44 notes for the fallback fix" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-unavailable-fallback",
+			"ref": "S8",
+			"title": "Vulkan unavailable, D3D12 used instead",
+			"headline": "Vulkan isn't working on your PC, so Luduvo switched to D3D12 for this run.",
+			"summary": "The log says Vulkan is unavailable and D3D12 is being used.",
+			"who": "PCs with a broken or missing Vulkan install, on build 44 or newer.",
+			"blame": "setup",
+			"severity": "info",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["Vulkan unavailable: .*using D3D12"] } }
+			},
+			"leads_to": ["d3d12-cluster-pso-fail", "d3d12-no-adapter"],
+			"steps": [
+				{ "text": "On its own this is fine. Luduvo can run on D3D12." },
+				{ "text": "If something failed after the switch, it's listed under this. Start there." },
+				{ "text": "A newer graphics driver may bring Vulkan back.", "unconfirmed": true }
+			],
+			"dont": [],
+			"status": { "state": "fixed", "fixed_in": 44, "staff_note": null },
+			"sources": [
+				{ "label": "Build 44 log with the fallback", "url": "https://forum.luduvo.com/t/2672/1" },
+				{ "label": "Build 44 release notes", "url": "https://forum.luduvo.com/t/2589/1" }
+			],
+			"credits": [
+				{ "handle": "Kitty-kitkat", "url": "https://forum.luduvo.com/t/2589/1", "for": "credited in the build 44 notes for the fallback fix" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vulkan-dll-missing",
+			"ref": "S9",
+			"title": "vulkan-1.dll was not found",
+			"headline": "Windows can't find Vulkan on your PC. Your graphics driver normally installs it.",
+			"summary": "A Windows popup: The code execution cannot proceed because vulkan-1.dll was not found.",
+			"who": "PCs with an old or incomplete graphics driver.",
+			"blame": "setup",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["vulkan-1\\.dll was not found"] } }
+			},
+			"symptoms": ["The code execution cannot proceed because vulkan-1.dll was not found"],
+			"steps": [
+				{ "text": "Update your graphics driver from NVIDIA, AMD or Intel's own website, then restart your PC." },
+				{ "text": "If that doesn't do it, install the Vulkan Runtime from LunarG's official site (vulkan.lunarg.com) and restart." }
+			],
+			"dont": ["Downloading vulkan-1.dll on its own from a DLL site. Those files can be anything."],
+			"status": { "state": "workaround", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "First report", "url": "https://forum.luduvo.com/t/1365/1" },
+				{ "label": "Launch week report", "url": "https://forum.luduvo.com/t/2015/1" },
+				{ "label": "Driver advice", "url": "https://forum.luduvo.com/t/2015/2" },
+				{ "label": "Vulkan Runtime advice", "url": "https://forum.luduvo.com/t/1334/2" }
+			],
+			"credits": [
+				{ "handle": "radio", "url": "https://forum.luduvo.com/t/2015/2", "for": "warned against DLL download sites" },
+				{ "handle": "AntE", "url": "https://forum.luduvo.com/t/1334/2", "for": "suggested the Vulkan Runtime" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "third-party-layer-crash",
+			"ref": "S10",
+			"title": "A recorder or overlay crashes Luduvo",
+			"headline": "Luduvo crashed inside another program's file, not Luduvo's or your graphics driver's. Screen recorders and overlays hook into games like this.",
+			"summary": "The game closes at startup. crash.log names a file from another program's folder.",
+			"who": "Confirmed with Bandicam installed. Other recorders and overlays are a guess.",
+			"blame": "setup",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"cause": {
+				"text": "Bandicam's Vulkan layer is the only confirmed case. Other overlays could do the same.",
+				"unconfirmed": true
+			},
+			"match": {
+				"files": {
+					"crash": {
+						"any": [
+							"^crash: exception 0x[0-9a-fA-F]+ at (?![A-Za-z]:\\\\[Ww][Ii][Nn][Dd][Oo][Ww][Ss]\\\\)(?!.*\\\\(?:LuduvoGame|LuduvoEditor|Luduvo)\\.exe\\+).+\\.dll\\+0x"
+						]
+					}
+				},
+				"when": { "crash_module": ["other"] }
+			},
+			"steps": [
+				{ "text": "Look at the crash line for the program's folder, for example Bandicam." },
+				{ "text": "Close that program, or uninstall it from Windows Settings, then start Luduvo again. Uninstalling Bandicam's layer fixed it for the player who found this." }
+			],
+			"dont": [
+				"Deleting files out of another program's folder. Uninstall it properly instead.",
+				"Turning off your antivirus."
+			],
+			"status": { "state": "workaround", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Bandicam crash.log", "url": "https://forum.luduvo.com/t/3562/1" },
+				{ "label": "The fix", "url": "https://forum.luduvo.com/t/3562/5" },
+				{ "label": "Installed Vulkan layers show in client.log", "url": "https://forum.luduvo.com/t/1645/15" }
+			],
+			"credits": [
+				{ "handle": "skrubbed", "url": "https://forum.luduvo.com/t/3562/5", "for": "found the Bandicam file was the cause" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "vk-validation-noise",
+			"ref": "S11",
+			"title": "Vulkan validation warnings",
+			"headline": "Vulkan validation warnings. They're harmless and don't explain a crash.",
+			"summary": "Lines about vertex attributes not consumed by the vertex shader.",
+			"who": "Anyone with Vulkan validation layers switched on.",
+			"blame": "noise",
+			"severity": "info",
+			"platforms": ["all"],
+			"fold": { "label": "Vulkan validation warnings" },
+			"match": {
+				"files": { "any": { "any": ["\\[vk\\] vkCreateGraphicsPipelines\\(\\): .*not consumed by vertex shader"] } }
+			},
+			"steps": [{ "text": "Ignore these. Staff need the whole log, not just these lines." }],
+			"dont": [],
+			"status": {
+				"state": "unknown",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "this doesnt help with the bug : share the full log (omit information you deem personal)",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2424/4"
+				}
+			},
+			"sources": [
+				{ "label": "Log full of these", "url": "https://forum.luduvo.com/t/2616/10" },
+				{ "label": "Nikhil's reply", "url": "https://forum.luduvo.com/t/2424/4" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "razor-walks-noise",
+			"ref": "noise",
+			"title": "Razor shadow warnings",
+			"headline": "Shadow warnings from Luduvo's Razor renderer. Healthy logs are full of them.",
+			"summary": "Hundreds of lines saying texel walks were truncated and shadows are missing.",
+			"who": "Everyone.",
+			"blame": "noise",
+			"severity": "info",
+			"platforms": ["all"],
+			"fold": { "label": "Razor shadow warnings" },
+			"match": {
+				"files": { "any": { "any": ["Razor: up to \\d+ texel walks truncated at RAZOR_MAX_WALK"] } }
+			},
+			"steps": [{ "text": "Ignore these." }],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{
+					"label": "533 of them in my own healthy build 44 log",
+					"url": "https://github.com/tippythetaidum/duvodoctor/blob/main/fixtures/joe/healthy-session/client.log"
+				}
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "physics-scale-noise",
+			"ref": "noise",
+			"title": "Part with an unusable scale",
+			"headline": "A part in the game you joined has a zero scale. That's for the game's creator to fix, not you.",
+			"summary": "A physics warning naming a part with an unusable Scale.",
+			"who": "Anyone joining that game.",
+			"blame": "noise",
+			"severity": "info",
+			"platforms": ["all"],
+			"fold": { "label": "Game content warnings" },
+			"match": {
+				"files": { "any": { "any": ["physics: part .* has an unusable Scale"] } }
+			},
+			"steps": [{ "text": "Ignore it." }],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{
+					"label": "In my own healthy build 44 log",
+					"url": "https://github.com/tippythetaidum/duvodoctor/blob/main/fixtures/joe/healthy-session/client.log"
+				}
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "studio-not-a-project",
+			"ref": "noise",
+			"title": "Folder isn't a Luduvo project",
+			"headline": "Studio was pointed at a folder that isn't a Luduvo project. Harmless.",
+			"summary": "An error saying there's no project.json in a folder.",
+			"who": "Anyone who opened the wrong folder in Studio.",
+			"blame": "noise",
+			"severity": "info",
+			"platforms": ["all"],
+			"fold": { "label": "Studio open-folder errors" },
+			"match": {
+				"files": { "any": { "any": ["\\[ERROR\\] No project\\.json in "] } }
+			},
+			"steps": [{ "text": "Open the project's own folder, the one with project.json in it." }],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{
+					"label": "In my own studio.log",
+					"url": "https://github.com/tippythetaidum/duvodoctor/blob/main/fixtures/joe/studio-session/studio.log"
+				}
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "content-store-rename",
+			"ref": "S12",
+			"title": "Corrupted content cache",
+			"headline": "Luduvo's downloaded content folder is corrupted, so it can't update itself.",
+			"summary": "Luduvo won't update and keeps using old content.",
+			"who": "Seen on build 39 during launch week.",
+			"blame": "setup",
+			"severity": "blocks-join",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["content store: cannot rename .*manifest\\.json.*MoveFileExW"] } }
+			},
+			"steps": [
+				{ "text": "Close Luduvo completely." },
+				{ "text": "Press Win + R, paste %APPDATA%\\Luduvo and press Enter." },
+				{ "text": "Copy Client\\Settings.cfg somewhere safe if you want to keep your settings." },
+				{ "text": "Delete the Luduvo folder you just opened, then start Luduvo. It downloads fresh content." }
+			],
+			"dont": ["Deleting anything outside that Luduvo folder."],
+			"status": {
+				"state": "fixed",
+				"fixed_in": 40,
+				"staff_note": {
+					"quote": "delete the appdata/Roaming/Luduvo completely it looks like its corrupted.",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2086/12"
+				}
+			},
+			"sources": [
+				{ "label": "Build 39 log", "url": "https://forum.luduvo.com/t/2086/1" },
+				{ "label": "Another build 39 log", "url": "https://forum.luduvo.com/t/2152/1" },
+				{ "label": "Nikhil's fix", "url": "https://forum.luduvo.com/t/2086/12" },
+				{ "label": "Build 40 release notes", "url": "https://forum.luduvo.com/t/2558/1" }
+			],
+			"credits": [
+				{ "handle": "Evrayne", "url": "https://forum.luduvo.com/t/2558/1", "for": "credited in the build 40 notes for the cache fix" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "shader-missing",
+			"ref": "S13",
+			"title": "Shader files missing",
+			"headline": "Luduvo couldn't find its shader files, so the renderer couldn't start.",
+			"summary": "Luduvo fails to launch after an update. Seen on launch day.",
+			"who": "Windows players around launch day, 12 to 13 Sep.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": {
+					"any": {
+						"any": ["Load_shader: failed to read transpiled shader", "FATAL: shader directory '.*' does not exist"]
+					}
+				}
+			},
+			"steps": [
+				{ "text": "Update Luduvo. This was a launch-day bug and hasn't turned up in build 44 logs." },
+				{ "text": "If it still happens, close Luduvo, press Win + R, paste %APPDATA%\\Luduvo\\Client and delete the content folder. Luduvo downloads it again next time." }
+			],
+			"dont": ["Copying shader files from someone else's PC."],
+			"status": {
+				"state": "fixed",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "Some of you who previously installed or joined Luduvo were completely locked out due to a shader issue. This is our top priority",
+					"handle": "Isaac",
+					"date": "2026-09-13",
+					"url": "https://forum.luduvo.com/t/1971/1"
+				}
+			},
+			"sources": [
+				{ "label": "Launch day log", "url": "https://forum.luduvo.com/t/1896/1" },
+				{ "label": "Alpha version of the error", "url": "https://forum.luduvo.com/t/1645/18" },
+				{ "label": "Isaac's launch week post", "url": "https://forum.luduvo.com/t/1971/1" }
+			],
+			"credits": [
+				{ "handle": "Jediweirdo", "url": "https://forum.luduvo.com/t/1896/1", "for": "reported it with the full log" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "non-ascii-username-launcher",
+			"ref": "S14",
+			"title": "Non-Latin Windows username breaks the launcher",
+			"headline": "Your Windows username has non-Latin letters in it. Before build 44 that made the launcher close without a word.",
+			"summary": "Luduvo.exe opens in the background and closes after a few seconds.",
+			"who": "Windows users whose username uses Cyrillic, Greek or accented letters, on build 43 or older.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["windows"],
+			"match": {
+				"files": {
+					"any": {
+						"any": [
+							"[A-Za-z]:\\\\+Users\\\\+(?:<non-ascii user>|[^\\\\]*\\\\x[0-9A-Fa-f]{2}|[^\\\\]*[^\\u0000-\\u007f])"
+						]
+					}
+				},
+				"when": { "non_ascii_user": true, "build": { "max": 43 } }
+			},
+			"symptoms": ["Luduvo.exe opens in the background and closes after a few seconds"],
+			"steps": [
+				{ "text": "Update Luduvo to build 44 or newer. That build fixed the launcher for Cyrillic and other non-Latin usernames." }
+			],
+			"dont": ["Renaming your Windows user folder. It can break other programs."],
+			"status": {
+				"state": "fixed",
+				"fixed_in": 44,
+				"staff_note": {
+					"quote": "The saga finally ends.",
+					"handle": "Isaac",
+					"date": "2026-09-25",
+					"url": "https://forum.luduvo.com/t/1603/20"
+				}
+			},
+			"sources": [
+				{ "label": "silo's report", "url": "https://forum.luduvo.com/t/2140/1" },
+				{ "label": "Launcher log", "url": "https://forum.luduvo.com/t/1603/3" },
+				{ "label": "Fix confirmed", "url": "https://forum.luduvo.com/t/1603/18" },
+				{ "label": "Windows 10 report with an accented name", "url": "https://forum.luduvo.com/t/2160/1" },
+				{ "label": "Build 44 release notes", "url": "https://forum.luduvo.com/t/2589/1" }
+			],
+			"credits": [
+				{ "handle": "silo", "url": "https://forum.luduvo.com/t/2140/1", "for": "reported it; credited in the build 44 notes" },
+				{ "handle": "PlushPersik", "url": "https://forum.luduvo.com/t/1603/18", "for": "confirmed the fix works" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "non-ascii-content-store",
+			"ref": "S14",
+			"title": "Content folder can't be created under a non-Latin username",
+			"headline": "Luduvo couldn't create its content folder under your Windows username, which has non-Latin letters in it.",
+			"summary": "The log warns it cannot create a content folder under your user profile.",
+			"who": "Seen once, with a Greek username on build 42.",
+			"blame": "luduvo",
+			"severity": "blocks-join",
+			"platforms": ["windows"],
+			"cause": {
+				"text": "The one report also had an AMD Vega 8, so the AMD driver crash may be the real reason the game didn't start.",
+				"unconfirmed": true
+			},
+			"match": {
+				"files": { "any": { "all": ["content store: cannot create "] } },
+				"when": { "non_ascii_user": true }
+			},
+			"steps": [
+				{ "text": "Update Luduvo first. Build 44 fixed a related launcher bug for non-Latin usernames." },
+				{ "text": "If it still happens on build 44 or newer, send the report below. Changing the APPDATA folder and the UTF-8 beta setting didn't help the player who tried them." }
+			],
+			"dont": ["Renaming your Windows user folder. It can break other programs."],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Greek username log", "url": "https://forum.luduvo.com/t/2424/9" },
+				{ "label": "What was tried", "url": "https://forum.luduvo.com/t/2424/21" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "launcher-manifest-fail",
+			"ref": "S15",
+			"title": "Launcher can't download updates",
+			"headline": "The launcher couldn't reach Luduvo's update server, so it started the copy you already had.",
+			"summary": "Luduvo won't update, or starts an old version that can't join games.",
+			"who": "Players on flaky networks, VPNs or networks behind a Cloudflare check.",
+			"blame": "network",
+			"severity": "blocks-join",
+			"platforms": ["all"],
+			"match": {
+				"files": {
+					"any": {
+						"any": [
+							"update: manifest fetch failed",
+							"launcher: manifest fetch failed",
+							"update: manifest rejected",
+							"update: bundle download failed",
+							"launcher: update failed, launching cached",
+							"curl: \\(22\\) The requested URL returned error: 403"
+						]
+					}
+				}
+			},
+			"steps": [
+				{ "text": "Try a different network, for example your phone's hotspot, with any VPN or proxy turned off." },
+				{
+					"text": "Close Luduvo. If there's a file called .luduvo-update.lock in %LocalAppData%\\Luduvo, delete it, then start Luduvo again.",
+					"unconfirmed": true
+				},
+				{ "text": "If it keeps failing, reinstall Luduvo from luduvo.com/download." }
+			],
+			"dont": [],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "Is under investigation. Is a VPN in use?",
+					"handle": "IgorAlexey",
+					"date": "2026-06-11",
+					"url": "https://forum.luduvo.com/t/1178/2"
+				}
+			},
+			"sources": [
+				{ "label": "Manifest fetch failed", "url": "https://forum.luduvo.com/t/1603/3" },
+				{ "label": "Signature rejected", "url": "https://forum.luduvo.com/t/1808/1" },
+				{ "label": "Linux download blocked", "url": "https://forum.luduvo.com/t/1178/1" },
+				{ "label": "Worked on another network", "url": "https://forum.luduvo.com/t/1178/3" },
+				{ "label": "The lock file", "url": "https://forum.luduvo.com/t/1603/14" }
+			],
+			"credits": [
+				{ "handle": "eeviika", "url": "https://forum.luduvo.com/t/1178/3", "for": "found it worked on another network" },
+				{ "handle": "Starte", "url": "https://forum.luduvo.com/t/1603/14", "for": "pointed at the update lock file" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "net-pkt-wire-schema",
+			"ref": "S16",
+			"title": "Disconnected: the connection broke",
+			"headline": "The server dropped you because a packet arrived garbled. A VPN or proxy seems to cause this.",
+			"summary": "You join a game and get \"Disconnected: the connection broke\" straight away.",
+			"who": "Players on a VPN or proxy.",
+			"blame": "network",
+			"severity": "blocks-join",
+			"platforms": ["all"],
+			"match": {
+				"files": {
+					"any": {
+						"any": ["state before PKT_WIRE_SCHEMA; disconnecting", "peer sent an unparseable packet"]
+					}
+				}
+			},
+			"symptoms": ["Disconnected: the connection broke"],
+			"steps": [
+				{ "text": "If you use a VPN, proxy or network filter, turn it off and try again." },
+				{ "text": "If you don't use one, send the report below. This one is still open." },
+				{ "text": "If Luduvo isn't available in your country, there's no supported way around that yet." }
+			],
+			"dont": [],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Log lines", "url": "https://forum.luduvo.com/t/2044/3" },
+				{ "label": "The VPN link", "url": "https://forum.luduvo.com/t/2044/5" },
+				{ "label": "New report, 25 Sep", "url": "https://forum.luduvo.com/t/3913/1" }
+			],
+			"credits": [
+				{ "handle": "Milk", "url": "https://forum.luduvo.com/t/2044/5", "for": "worked out the VPN link" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "net-failed-to-connect",
+			"ref": "S17",
+			"title": "Can't connect to the game server",
+			"headline": "Your client couldn't reach Luduvo's game server.",
+			"summary": "The game loads, then never connects. Input and camera stop responding.",
+			"who": "Seen from Iran and on stale launch links.",
+			"blame": "network",
+			"severity": "blocks-join",
+			"platforms": ["all"],
+			"match": {
+				"files": { "any": { "any": ["failed to connect to \\S+:\\d+"] } }
+			},
+			"steps": [
+				{ "text": "Close Luduvo, refresh the game page in your browser and press Join again." },
+				{ "text": "Try another network with any VPN turned off." },
+				{ "text": "Advanced: in PowerShell, run Test-NetConnection with the address and port from the highlighted line, for example Test-NetConnection 5.78.177.147 -Port 27015." },
+				{
+					"text": "Players in Iran report that the server host blocks their connection. There's no fix for that on your end.",
+					"unconfirmed": true
+				}
+			],
+			"dont": [],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "did you refresh the brower page and launch the game again?",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2086/14"
+				}
+			},
+			"sources": [
+				{ "label": "Build 39 log", "url": "https://forum.luduvo.com/t/2086/1" },
+				{ "label": "Build 43 log", "url": "https://forum.luduvo.com/t/2086/13" },
+				{ "label": "Nikhil's reply", "url": "https://forum.luduvo.com/t/2086/14" },
+				{ "label": "Test-NetConnection tip", "url": "https://forum.luduvo.com/t/2086/5" },
+				{ "label": "Hosting explanation (second-hand)", "url": "https://forum.luduvo.com/t/2086/43" }
+			],
+			"credits": [
+				{ "handle": "Starte", "url": "https://forum.luduvo.com/t/2086/5", "for": "suggested the Test-NetConnection check" },
+				{ "handle": "Evrayne", "url": "https://forum.luduvo.com/t/2086/43", "for": "passed on the hosting explanation" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "sign-in-own-game",
+			"ref": "S18",
+			"title": "\"Sign in again to play\" on your own game",
+			"headline": "Some creators get this when they join their own game. Staff want logs to track it down.",
+			"summary": "Disconnected: Sign in again to play, every time you join a game you made.",
+			"who": "Some creators joining their own games.",
+			"blame": "luduvo",
+			"severity": "blocks-join",
+			"platforms": ["all"],
+			"symptoms": ["Disconnected: Sign in again to play, when I join my own game"],
+			"steps": [
+				{
+					"text": "Post your client.log in the thread below. Nikhil said it's rare and hard to reproduce, so a log helps.",
+					"link": { "label": "Sign in again thread", "url": "https://forum.luduvo.com/t/2456" }
+				}
+			],
+			"dont": [],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "pls share client.log this one is a rare problem and hard to reproduce",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2456/3"
+				}
+			},
+			"sources": [
+				{ "label": "Happens on own games", "url": "https://forum.luduvo.com/t/2456/6" },
+				{ "label": "Nikhil's reply", "url": "https://forum.luduvo.com/t/2456/3" }
+			],
+			"credits": [
+				{ "handle": "Wind", "url": "https://forum.luduvo.com/t/2456/6", "for": "noticed it happens on their own game" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "sign-in-rate-limit",
+			"ref": "S18",
+			"title": "\"Sign in again to play\" from rate limiting",
+			"headline": "You've probably been rate limited for sending too many requests. It clears on its own.",
+			"summary": "Disconnected: Sign in again to play, or a message about strange activity.",
+			"who": "Anyone who hit Luduvo's rate limits.",
+			"blame": "network",
+			"severity": "blocks-join",
+			"platforms": ["all"],
+			"symptoms": ["Disconnected: Sign in again to play", "Blocked for strange activity"],
+			"steps": [
+				{ "text": "Wait about an hour, then try again." },
+				{ "text": "Close any tools or browser tabs that keep refreshing Luduvo pages." }
+			],
+			"dont": [],
+			"status": {
+				"state": "workaround",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "It's just you being ratelimited.",
+					"handle": "Isaac",
+					"date": "2026-09-25",
+					"url": "https://forum.luduvo.com/t/3750/6"
+				}
+			},
+			"sources": [
+				{ "label": "Cleared after an hour", "url": "https://forum.luduvo.com/t/3750/4" },
+				{ "label": "Isaac's reply", "url": "https://forum.luduvo.com/t/3750/6" }
+			],
+			"credits": [
+				{ "handle": "Box", "url": "https://forum.luduvo.com/t/3750/4", "for": "said it cleared after about an hour" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "sign-in-mac-token",
+			"ref": "S18",
+			"title": "\"Sign in again to play\" after starting the game by hand",
+			"headline": "Launch links expire quickly. If you started the game by hand on a Mac, the link had already run out.",
+			"summary": "Disconnected: Sign in again to play, after pasting a launch link into Terminal.",
+			"who": "Mac players using the manual launch workaround.",
+			"blame": "setup",
+			"severity": "blocks-join",
+			"platforms": ["macos"],
+			"symptoms": ["Disconnected: Sign in again to play, after starting the game by hand on a Mac"],
+			"steps": [{ "text": "Press Join on the website again and start the game straight away." }],
+			"dont": [],
+			"status": { "state": "workaround", "fixed_in": null, "staff_note": null },
+			"sources": [{ "label": "tunics on token expiry", "url": "https://forum.luduvo.com/t/2530/11" }],
+			"credits": [
+				{ "handle": "tunics", "url": "https://forum.luduvo.com/t/2530/11", "for": "explained the token expiry" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "macos-metal-shaders-missing",
+			"ref": "S19",
+			"title": "Mac download missing its Metal shaders",
+			"headline": "Your Mac download was missing Luduvo's Metal shaders, so it couldn't start.",
+			"summary": "The Mac client aborts straight away.",
+			"who": "Mac players on build 42 or older.",
+			"blame": "luduvo",
+			"severity": "blocks-launch",
+			"platforms": ["macos"],
+			"match": {
+				"files": { "any": { "all": ["The content root has no \\.metallib shader tree"] } }
+			},
+			"steps": [{ "text": "Download Luduvo again from luduvo.com. Build 43 fixed the missing shaders." }],
+			"dont": [],
+			"status": {
+				"state": "fixed",
+				"fixed_in": 43,
+				"staff_note": {
+					"quote": "its fixed now",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2373/3"
+				}
+			},
+			"sources": [
+				{ "label": "The error", "url": "https://forum.luduvo.com/t/2360/1" },
+				{ "label": "Nikhil's reply", "url": "https://forum.luduvo.com/t/2373/3" }
+			],
+			"credits": [
+				{ "handle": "dan", "url": "https://forum.luduvo.com/t/2360/1", "for": "reported it" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "macos-join-does-nothing",
+			"ref": "S20",
+			"title": "Join does nothing on macOS",
+			"headline": "On macOS, the Join button can't find the game client yet. Studio works, but joining from the website doesn't.",
+			"summary": "The browser asks to open Luduvo URI Handler, then nothing happens.",
+			"who": "Mac players (Apple Silicon preview).",
+			"blame": "luduvo",
+			"severity": "blocks-join",
+			"platforms": ["macos"],
+			"cause": {
+				"text": "The URI handler looks for an app in /Applications, but the Mac download isn't packaged as an app yet, so the handler times out."
+			},
+			"symptoms": [
+				"Clicking Join on a Mac does nothing",
+				"The browser asks to open Luduvo URI Handler, then nothing happens"
+			],
+			"steps": [
+				{ "text": "There's no simple fix yet. Studio works in the meantime." },
+				{
+					"text": "Advanced: tunics posted a way to start the game from Terminal with the launch link. You have to be quick, because the link expires.",
+					"link": { "label": "tunics' workaround", "url": "https://forum.luduvo.com/t/2530/3" }
+				}
+			],
+			"dont": ["Moving the Luduvo folder into Applications. It doesn't help, because the client isn't an .app yet."],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "there are some issues with launching games on mac, but the studio should work fine",
+					"handle": "Nikhil",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/2373/3"
+				}
+			},
+			"sources": [
+				{ "label": "Report", "url": "https://forum.luduvo.com/t/2518/1" },
+				{ "label": "Why the handler times out", "url": "https://forum.luduvo.com/t/2530/3" },
+				{ "label": "Moving it doesn't help", "url": "https://forum.luduvo.com/t/2530/14" }
+			],
+			"credits": [
+				{ "handle": "tunics", "url": "https://forum.luduvo.com/t/2530/3", "for": "worked out why the handler times out" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "linux-qt-xcb",
+			"ref": "S21",
+			"title": "Studio needs libxcb-cursor0 on Linux",
+			"headline": "Studio needs a system library your Linux install doesn't have: libxcb-cursor0.",
+			"summary": "Studio aborts on start with a Qt platform plugin error.",
+			"who": "Seen on Linux Mint 22.3.",
+			"blame": "setup",
+			"severity": "studio",
+			"platforms": ["linux"],
+			"match": {
+				"files": { "any": { "all": ["xcb-cursor0 or libxcb-cursor0 is needed"] } }
+			},
+			"steps": [
+				{
+					"text": "Install libxcb-cursor0 with your package manager. On Ubuntu or Mint: sudo apt install libxcb-cursor0",
+					"unconfirmed": true
+				},
+				{ "text": "Start Studio again from the terminal." }
+			],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [{ "label": "The error", "url": "https://forum.luduvo.com/t/2487/1" }],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "linux-missing-shared-lib",
+			"ref": "S22",
+			"title": "Missing shared library on Linux",
+			"headline": "Luduvo needs a system library that isn't installed on your Linux PC.",
+			"summary": "Luduvo won't start and the terminal says it can't load a shared library.",
+			"who": "Seen on a fresh Ubuntu install.",
+			"blame": "setup",
+			"severity": "blocks-launch",
+			"platforms": ["linux"],
+			"match": {
+				"files": { "any": { "all": ["error while loading shared libraries: \\S+: cannot open shared object file"] } }
+			},
+			"steps": [
+				{
+					"text": "The missing file is named in the highlighted line. For libOpenGL.so.0, install your distro's libopengl0 package, for example sudo apt install libopengl0.",
+					"unconfirmed": true
+				},
+				{ "text": "For any other file, search your distro's packages for that file name." }
+			],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [{ "label": "The error", "url": "https://forum.luduvo.com/t/1184/1" }],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "linux-no-new-logs",
+			"ref": "S23",
+			"title": "No client.log on Linux",
+			"headline": "On Linux, Luduvo may not write client.log. Run it from a terminal and copy what it prints instead.",
+			"summary": "client.log is missing or never changes.",
+			"who": "Linux players.",
+			"blame": "luduvo",
+			"severity": "info",
+			"platforms": ["linux"],
+			"symptoms": ["On Linux, client.log is missing or never changes"],
+			"steps": [
+				{ "text": "Open a terminal and run luduvo --singleplayer." },
+				{ "text": "When it fails, copy everything the terminal printed and paste it into the box at the top of this page." }
+			],
+			"dont": [],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "No new logs", "url": "https://forum.luduvo.com/t/1749/1" },
+				{ "label": "Running from a terminal", "url": "https://forum.luduvo.com/t/2638/1" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "illegal-instruction-old-cpu",
+			"ref": "S24",
+			"title": "Illegal instruction on an old CPU",
+			"headline": "Your processor may be missing an instruction Luduvo uses. That's a guess, not confirmed.",
+			"summary": "Event Viewer shows EXCEPTION_ILLEGAL_INSTRUCTION when you join a game.",
+			"who": "Seen once, on an Intel i5-2500 from 2011.",
+			"blame": "hardware",
+			"severity": "blocks-join",
+			"platforms": ["windows"],
+			"unconfirmed": true,
+			"symptoms": ["Event Viewer shows EXCEPTION_ILLEGAL_INSTRUCTION when I join"],
+			"steps": [
+				{ "text": "Note your CPU model (Settings, System, About)." },
+				{ "text": "Send the report below with your CPU model. The original thread was marked resolved without saying how." }
+			],
+			"dont": [],
+			"status": { "state": "unknown", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Report", "url": "https://forum.luduvo.com/t/1432/1" },
+				{ "label": "Marked resolved", "url": "https://forum.luduvo.com/t/1432/5" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "studio-fullscreen-viewport",
+			"ref": "S25",
+			"title": "Studio viewport ignores clicks",
+			"headline": "Studio's viewport ignored clicks when the game was set to fullscreen. Build 44 fixed it.",
+			"summary": "Clicking in the Studio viewport does nothing and Windows plays a ding.",
+			"who": "Studio users on build 43 or older with fullscreen switched on.",
+			"blame": "luduvo",
+			"severity": "studio",
+			"platforms": ["windows"],
+			"symptoms": ["Studio's viewport ignores my clicks and Windows plays a ding"],
+			"steps": [
+				{ "text": "Update Luduvo." },
+				{ "text": "On older builds, open %APPDATA%\\Luduvo\\Client\\Settings.cfg in Notepad, change fullscreen=1 to fullscreen=0 and save. IgorAlexey confirmed that's safe." }
+			],
+			"dont": ["Deleting the whole Roaming Luduvo folder. You don't need to."],
+			"status": {
+				"state": "fixed",
+				"fixed_in": 44,
+				"staff_note": {
+					"quote": "the fullscreen=0 workaround in Settings.cfg is safe. You do not need to delete the Roaming Luduvo folder",
+					"handle": "IgorAlexey",
+					"date": "2026-09-14",
+					"url": "https://forum.luduvo.com/t/1989/13"
+				}
+			},
+			"sources": [
+				{ "label": "The workaround", "url": "https://forum.luduvo.com/t/1989/11" },
+				{ "label": "IgorAlexey's reply", "url": "https://forum.luduvo.com/t/1989/13" },
+				{ "label": "Build 44 release notes", "url": "https://forum.luduvo.com/t/2589/1" }
+			],
+			"credits": [
+				{ "handle": "0v3r5e3r", "url": "https://forum.luduvo.com/t/1989/11", "for": "found the fullscreen=0 workaround" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "d3d12-descriptor-heap",
+			"ref": "S26",
+			"title": "Studio crashes growing a descriptor heap",
+			"headline": "Studio's D3D12 renderer ran out of descriptor space and crashed.",
+			"summary": "Studio crashes every few minutes.",
+			"who": "Seen on a GTX 1650 Ti laptop using D3D12 in July.",
+			"blame": "luduvo",
+			"severity": "studio",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "any": { "all": ["\\[nvrhi\\] Failed to grow a descriptor heap"] } }
+			},
+			"steps": [
+				{ "text": "If your Studio has File > Settings > Studio Settings > Rendering > Graphics API, set it to Vulkan and restart Studio." },
+				{ "text": "Newer builds may have hidden that option. If it's gone, update Luduvo and send the report below if it still happens." }
+			],
+			"dont": [],
+			"status": { "state": "workaround", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Report", "url": "https://forum.luduvo.com/t/1427/1" },
+				{ "label": "The fix", "url": "https://forum.luduvo.com/t/1427/11" },
+				{ "label": "Confirmed", "url": "https://forum.luduvo.com/t/1427/12" },
+				{ "label": "Option hidden later", "url": "https://forum.luduvo.com/t/1939/4" }
+			],
+			"credits": [
+				{ "handle": "alaz", "url": "https://forum.luduvo.com/t/1427/11", "for": "found the Vulkan switch" },
+				{ "handle": "zxenowc", "url": "https://forum.luduvo.com/t/1427/12", "for": "confirmed it" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "gtao-resize-crash",
+			"ref": "S27",
+			"title": "Renderer fails when the window resizes",
+			"headline": "The renderer failed when the game window changed size during a playtest.",
+			"summary": "A Studio playtest stops rendering after the window is resized.",
+			"who": "Seen on Linux with Intel UHD 620.",
+			"blame": "luduvo",
+			"severity": "crash-in-game",
+			"platforms": ["linux"],
+			"match": {
+				"files": { "any": { "all": ["GTAO: depth SRV .* does not match source"] } }
+			},
+			"steps": [
+				{ "text": "Avoid resizing or maximising the window during a playtest for now.", "unconfirmed": true },
+				{ "text": "Send the report below. There's no staff reply on this one yet." }
+			],
+			"dont": [],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [{ "label": "The log", "url": "https://forum.luduvo.com/t/3043/1" }],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "console-command-crash",
+			"ref": "S27",
+			"title": "Console command crashes the game",
+			"headline": "Running a command in the in-game console crashed Luduvo.",
+			"summary": "Typing a command into the F9 console closes the game.",
+			"who": "Seen on Linux and Windows.",
+			"blame": "luduvo",
+			"severity": "crash-in-game",
+			"platforms": ["all"],
+			"match": {
+				"files": {
+					"any": { "all": ["terminate called after throwing an instance of 'std::out_of_range'"] }
+				}
+			},
+			"steps": [
+				{ "text": "Avoid typing commands into the F9 console for now." },
+				{ "text": "Send the report below." }
+			],
+			"dont": [],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [
+				{ "label": "Linux report", "url": "https://forum.luduvo.com/t/2638/1" },
+				{ "label": "Windows crash.log", "url": "https://forum.luduvo.com/t/2638/2" }
+			],
+			"credits": [
+				{ "handle": "ferry", "url": "https://forum.luduvo.com/t/2638/1", "for": "reported it with steps" }
+			],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "luduvo-binary-crash",
+			"ref": "S27",
+			"title": "Luduvo itself crashed",
+			"headline": "Luduvo crashed inside its own program, not your graphics driver.",
+			"summary": "crash.log names LuduvoGame.exe or LuduvoEditor.exe.",
+			"who": "Anyone who hits a bug in Luduvo's own code.",
+			"blame": "luduvo",
+			"severity": "crash-in-game",
+			"platforms": ["windows"],
+			"match": {
+				"files": { "crash": { "any": ["\\\\(?:LuduvoGame|LuduvoEditor|Luduvo)\\.exe\\+0x"] } }
+			},
+			"steps": [
+				{ "text": "Write down what you were doing just before it closed. One known cause is typing a command into the F9 console." },
+				{ "text": "Send the report below with those steps. The crash address helps staff find the exact spot." }
+			],
+			"dont": ["Reinstalling your graphics driver. The crash wasn't in the driver."],
+			"status": { "state": "open", "fixed_in": null, "staff_note": null },
+			"sources": [{ "label": "Windows crash.log from the console crash", "url": "https://forum.luduvo.com/t/2638/2" }],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		},
+		{
+			"id": "linux-wayland-fullscreen-crash",
+			"ref": "S27",
+			"title": "Crash going fullscreen on Wayland",
+			"headline": "Luduvo crashes going fullscreen on some Wayland desktops. Staff are looking into it.",
+			"summary": "The game closes when you switch to fullscreen on Linux.",
+			"who": "Linux players on Wayland.",
+			"blame": "luduvo",
+			"severity": "crash-in-game",
+			"platforms": ["linux"],
+			"symptoms": ["On Linux with Wayland, Luduvo crashes when I go fullscreen"],
+			"steps": [
+				{ "text": "Stay in windowed mode for now." },
+				{ "text": "If your login screen offers an X11 session, you could try that instead.", "unconfirmed": true }
+			],
+			"dont": [],
+			"status": {
+				"state": "open",
+				"fixed_in": null,
+				"staff_note": {
+					"quote": "Looking into this!",
+					"handle": "IgorAlexey",
+					"date": "2026-09-15",
+					"url": "https://forum.luduvo.com/t/2272/2"
+				}
+			},
+			"sources": [
+				{ "label": "Report", "url": "https://forum.luduvo.com/t/2272/1" },
+				{ "label": "IgorAlexey's reply", "url": "https://forum.luduvo.com/t/2272/2" }
+			],
+			"credits": [],
+			"last_checked": "2026-09-26"
+		}
+	]
+}
