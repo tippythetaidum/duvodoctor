@@ -17,9 +17,13 @@
 	);
 </script>
 
-<section class="sheet chart" aria-labelledby="setup-heading">
-	<h2 id="setup-heading">Your setup</h2>
-	<p class="note">Read from your logs. Nothing here was sent anywhere.</p>
+<section class="card chart" aria-labelledby="setup-heading">
+	<div class="card-head">
+		<div>
+			<h2 id="setup-heading">Your setup</h2>
+			<p class="card-sub">Read from your logs. Nothing here was sent anywhere.</p>
+		</div>
+	</div>
 	<dl>
 		<div>
 			<dt>Operating system</dt>
@@ -36,7 +40,7 @@
 			</dd>
 		</div>
 		<div>
-			<dt>Graphics API used</dt>
+			<dt>Graphics API</dt>
 			<dd>
 				{backend ?? 'Not in the logs'}
 				{#each setup.fallback as f}<span class="aside">{f}</span>{/each}
@@ -50,7 +54,7 @@
 						{#each setup.adapters as a}
 							<li class:picked={a === setup.selected} class:skipped={a.skipped}>
 								<span class="name">{a.name}</span>
-								{#if a === setup.selected}<strong class="tag">selected</strong>{/if}
+								{#if a === setup.selected}<span class="badge green">selected</span>{/if}
 								<span class="aside">
 									{a.api === 'd3d12' ? 'D3D12' : 'Vulkan'}{a.index !== null ? ` adapter ${a.index}` : ''}{a.vendorId
 										? `, ${VENDOR_NAMES[a.vendor]} ${a.vendorId}:${a.deviceId}`
@@ -97,8 +101,8 @@
 		{#if settingsShown.length}
 			<div>
 				<dt>Settings.cfg</dt>
-				<dd>
-					{#each settingsShown as [k, v]}<code>{k}={v}</code> {/each}
+				<dd class="settings">
+					{#each settingsShown as [k, v]}<code>{k}={v}</code>{/each}
 				</dd>
 			</div>
 		{/if}
@@ -118,44 +122,33 @@
 </section>
 
 <style>
-	.chart {
-		padding: 1rem 1.2rem;
-	}
-	h2 {
-		font-size: var(--step-1);
-		margin-bottom: 0.2rem;
-	}
-	.note {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
-		margin-bottom: 0.6rem;
-	}
 	dl {
 		margin: 0;
 	}
 	dl > div {
 		display: grid;
-		grid-template-columns: 9.5rem 1fr;
+		grid-template-columns: 8.5rem 1fr;
 		gap: 0.2rem 0.8rem;
-		padding: 0.45rem 0;
-		border-top: 1px solid var(--rule);
+		padding: 0.6rem 1.1rem;
+		border-bottom: 1px solid var(--border);
+	}
+	dl > div:last-child {
+		border-bottom: 0;
 	}
 	dt {
-		font-family: var(--mono);
-		font-size: 0.78rem;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		color: var(--ink-soft);
-		padding-top: 0.15rem;
+		font-size: 0.85rem;
+		color: var(--muted-fg);
 	}
 	dd {
 		margin: 0;
 		overflow-wrap: anywhere;
+		font-weight: 600;
 	}
 	.aside {
 		display: block;
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.85rem;
+		font-weight: 400;
+		color: var(--muted-fg);
 	}
 	.adapters {
 		list-style: none;
@@ -163,28 +156,27 @@
 		margin: 0;
 	}
 	.adapters li {
-		margin-bottom: 0.4rem;
+		margin-bottom: 0.45rem;
 	}
-	.picked .name {
-		font-weight: 700;
+	.adapters .name {
+		margin-right: 0.3rem;
 	}
 	.skipped .name {
 		text-decoration: line-through;
-		text-decoration-color: var(--stamp);
-	}
-	.tag {
-		font-family: var(--mono);
-		font-size: 0.72rem;
-		text-transform: uppercase;
-		color: var(--green);
-		margin-left: 0.3rem;
+		text-decoration-color: var(--danger-fg);
+		color: var(--muted-fg);
 	}
 	.skip {
-		color: var(--stamp-ink);
+		color: var(--danger-fg);
+	}
+	.settings {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.3rem;
+		font-weight: 400;
 	}
 	.warn {
-		color: var(--stamp-ink);
-		font-weight: 700;
+		color: var(--danger-fg);
 	}
 	@media (max-width: 480px) {
 		dl > div {

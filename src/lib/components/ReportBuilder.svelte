@@ -67,13 +67,18 @@
 	}
 </script>
 
-<section class="sheet report" aria-labelledby="report-heading" id="report">
-	<h2 id="report-heading">Bug report for the forum</h2>
-	<p>
-		This follows the layout staff already answer. Your logs don't include your CPU, so type it in. Personal details are
-		taken out before anything is copied or downloaded.
-	</p>
+<section class="card report" aria-labelledby="report-heading" id="report">
+	<div class="card-head">
+		<div>
+			<h2 id="report-heading">Bug report for the forum</h2>
+			<p class="card-sub">
+				In the layout staff already answer. Your logs don't include your CPU, so type it in. Personal details are taken
+				out before anything is copied or downloaded.
+			</p>
+		</div>
+	</div>
 
+	<div class="card-body">
 	<div class="fields">
 		<label>
 			<span>CPU</span>
@@ -134,42 +139,44 @@
 		Post it in <a href={FORUM_CATEGORY[report.category]}>Bug Reports → {report.category} Bugs</a>. New forum accounts can't
 		post links, but pasting this is fine.
 	</p>
+	</div>
 </section>
 
 <style>
 	.report {
-		padding: 1.1rem 1.25rem;
 		margin-top: 1.5rem;
 	}
-	h2 {
-		font-size: var(--step-1);
-	}
 	h3 {
-		font-size: 1.05rem;
-		margin-top: 1rem;
+		font-size: 1rem;
+		margin-top: 1.1rem;
 	}
 	.fields {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 		gap: 0.8rem 1rem;
-		margin-bottom: 0.8rem;
+		margin-bottom: 0.9rem;
 	}
 	.fields .wide {
 		grid-column: 1 / -1;
 	}
 	label span {
 		display: block;
-		font-weight: 700;
-		margin-bottom: 0.2rem;
+		font-weight: 600;
+		font-size: 0.92rem;
+		margin-bottom: 0.25rem;
 	}
 	input[type='text'],
 	textarea {
 		width: 100%;
-		padding: 0.55rem 0.65rem;
-		border: 1px solid var(--ink-soft);
-		border-radius: var(--radius);
-		background: #fffef9;
+		padding: 0.55rem 0.7rem;
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius-sm);
+		background: var(--input);
 		line-height: 1.4;
+	}
+	input::placeholder,
+	textarea::placeholder {
+		color: var(--muted-fg);
 	}
 	.toggle {
 		display: flex;
@@ -177,39 +184,45 @@
 		align-items: flex-start;
 		max-width: var(--measure);
 		cursor: pointer;
+		font-size: 0.95rem;
 	}
 	.toggle input {
-		width: 1.15rem;
-		height: 1.15rem;
+		width: 1.1rem;
+		height: 1.1rem;
 		margin-top: 0.2rem;
 		flex: none;
-		accent-color: var(--ink);
+		accent-color: var(--primary);
+	}
+	.toggle span {
+		font-weight: 400;
 	}
 	.removed {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.88rem;
+		color: var(--muted-fg);
 	}
 	.preview {
 		max-height: 24rem;
 		overflow: auto;
-		padding: 0.8rem;
-		border: 1px solid var(--rule);
-		background: #fffef9;
+		padding: 0.8rem 0.9rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		background: var(--bg);
 		white-space: pre-wrap;
 		overflow-wrap: anywhere;
 		font-size: 0.78rem;
-		line-height: 1.45;
-		margin: 0 0 0.8rem;
+		line-height: 1.5;
+		margin: 0 0 0.9rem;
 	}
 	mark {
-		background: var(--highlight);
-		color: var(--ink);
-		padding: 0 0.1em;
-		border-bottom: 2px solid var(--stamp);
+		background: var(--mark-bg);
+		color: var(--fg);
+		padding: 0 0.15em;
+		border-radius: 3px;
+		box-shadow: inset 0 -2px 0 var(--mark-line);
 	}
 	.warn {
-		color: var(--stamp-ink);
-		font-weight: 700;
+		color: var(--danger-fg);
+		font-weight: 600;
 	}
 	.actions {
 		display: flex;
@@ -218,10 +231,11 @@
 		align-items: center;
 	}
 	.status {
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 	.where {
-		margin-top: 0.8rem;
-		font-size: var(--step--1);
+		margin: 0.9rem 0 0;
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 	}
 </style>

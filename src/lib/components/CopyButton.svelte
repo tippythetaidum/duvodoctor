@@ -22,15 +22,15 @@
 		min-height: 36px;
 		min-width: 5.5rem;
 		padding: 0.2rem 0.7rem;
-		border: 1px solid var(--ink);
+		border: 1px solid var(--fg);
 		border-radius: var(--radius);
 		background: var(--card);
-		color: var(--ink);
+		color: var(--fg);
 		font-size: 0.85rem;
 		font-weight: 700;
 		cursor: pointer;
 	}
 	.copy:hover {
-		background: var(--highlight-soft);
+		background: var(--mark-bg);
 	}
 </style>

@@ -156,9 +156,12 @@
 </script>
 
 {#if readable.length}
-	<section class="xray sheet" aria-labelledby="xray-heading">
-		<div class="bar">
-			<h2 id="xray-heading">Log X-ray</h2>
+	<section class="xray card" aria-labelledby="xray-heading">
+		<div class="bar card-head">
+			<div>
+				<h2 id="xray-heading">Log X-ray</h2>
+				<p class="card-sub">Your log, with errors marked and the lines behind each diagnosis highlighted.</p>
+			</div>
 			<div class="controls">
 				<label><input type="checkbox" bind:checked={showAll} /> Show folded lines</label>
 				<label><input type="checkbox" bind:checked={wrap} /> Wrap long lines</label>
@@ -227,76 +230,69 @@
 
 <style>
 	.xray {
-		padding: 1rem 1.2rem 0.8rem;
 		margin-top: 1.5rem;
-	}
-	.bar {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: baseline;
-		gap: 0.5rem 1rem;
-	}
-	h2 {
-		font-size: var(--step-1);
-		margin: 0;
+		overflow: hidden;
 	}
 	.controls {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.3rem 1rem;
-		font-size: var(--step--1);
+		gap: 0.2rem 1rem;
+		font-size: 0.9rem;
 	}
 	.controls label {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.35rem;
+		gap: 0.4rem;
 		min-height: 36px;
 		cursor: pointer;
 	}
 	.controls input {
-		width: 1.1rem;
-		height: 1.1rem;
-		accent-color: var(--ink);
+		width: 1.05rem;
+		height: 1.05rem;
+		accent-color: var(--primary);
 	}
 	.tabs {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.4rem;
-		margin: 0.6rem 0 0.2rem;
+		padding: 0.7rem 1.1rem 0;
 	}
 	.tab {
-		min-height: 40px;
-		padding: 0.25rem 0.7rem;
-		border: 1px solid var(--rule);
-		border-radius: var(--radius);
-		background: var(--tint);
-		color: var(--ink);
+		min-height: 38px;
+		padding: 0.2rem 0.75rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		background: var(--muted);
+		color: var(--fg);
 		cursor: pointer;
-		font-family: var(--mono);
-		font-size: 0.85rem;
+		font-weight: 600;
+		font-size: 0.88rem;
+	}
+	.tab:hover {
+		background: var(--hover);
 	}
 	.tab[aria-pressed='true'] {
-		background: var(--ink);
-		color: var(--card);
-		border-color: var(--ink);
+		background: var(--fg);
+		color: var(--bg);
+		border-color: var(--fg);
 	}
 	.kind {
-		font-family: var(--body);
-		font-size: 0.75rem;
+		font-weight: 400;
 		opacity: 0.8;
 		margin-left: 0.3rem;
 	}
 	.stats {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
-		margin: 0.4rem 0;
+		font-size: 0.88rem;
+		color: var(--muted-fg);
+		margin: 0;
+		padding: 0.6rem 1.1rem;
 	}
 	.viewport {
 		height: min(65vh, 34rem);
 		overflow: auto;
-		border: 1px solid var(--rule);
-		background: #fffef9;
+		border-top: 1px solid var(--border);
+		border-bottom: 1px solid var(--border);
+		background: var(--bg);
 		font-family: var(--mono);
 		font-size: 0.8rem;
 		overscroll-behavior: contain;
@@ -325,7 +321,7 @@
 		margin: 0;
 		border: 0;
 		background: none;
-		color: var(--ink);
+		color: var(--fg);
 		text-align: left;
 		font: inherit;
 	}
@@ -338,51 +334,61 @@
 		flex: none;
 		width: 4.2rem;
 		padding-right: 0.6rem;
+		margin-right: 0.7rem;
 		text-align: right;
-		color: #57533f;
+		color: var(--muted-fg);
 		user-select: none;
-		border-right: 1px solid var(--rule);
-		margin-right: 0.6rem;
+		border-right: 1px solid var(--border);
 		position: sticky;
 		left: 0;
-		background: inherit;
-		background-color: #fffef9;
+		background-color: var(--bg);
 	}
 	.text {
 		padding-right: 1rem;
 	}
 	.row.warning .text {
-		color: #6b4b00;
+		color: var(--warning-fg);
 	}
-	.row.error {
-		background: var(--error-bg);
-	}
+	.row.error,
 	.row.error .gutter {
-		background-color: var(--error-bg);
-		color: var(--stamp-ink);
-		font-weight: 600;
+		background-color: var(--danger-bg);
+	}
+	.row.error .text,
+	.row.error .gutter {
+		color: var(--danger-fg);
 	}
 	.row.evidence,
 	.row.evidence .gutter {
-		background-color: var(--highlight);
+		background-color: var(--mark-bg);
+	}
+	.row.evidence .text {
+		color: var(--fg);
+	}
+	.row.evidence .gutter {
+		color: var(--fg);
+		box-shadow: inset 3px 0 0 var(--mark-line);
 	}
 	.row.focused {
-		outline: 2px solid var(--ink);
+		outline: 2px solid var(--fg);
 		outline-offset: -2px;
 	}
 	.fold {
 		cursor: pointer;
-		color: var(--ink-soft);
-		font-style: italic;
-		background: repeating-linear-gradient(135deg, transparent 0 6px, #f1ecde 6px 12px);
+		color: var(--muted-fg);
+		background: var(--muted);
+	}
+	.fold .gutter {
+		background-color: var(--muted);
 	}
 	.fold:hover .text {
+		color: var(--fg);
 		text-decoration: underline;
 	}
 	.legend {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
-		margin: 0.5rem 0 0;
+		font-size: 0.85rem;
+		color: var(--muted-fg);
+		margin: 0;
+		padding: 0.6rem 1.1rem 0.8rem;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -392,13 +398,14 @@
 		display: inline-block;
 		width: 1rem;
 		height: 0.8rem;
-		border: 1px solid var(--rule);
+		border-radius: 3px;
 	}
 	.swatch.ev {
-		background: var(--highlight);
+		background: var(--mark-bg);
+		box-shadow: inset 3px 0 0 var(--mark-line);
 	}
 	.swatch.er {
-		background: var(--error-bg);
+		background: var(--danger-bg);
 		margin-left: 0.6rem;
 	}
 </style>

@@ -47,17 +47,17 @@
 		margin-top: 2rem;
 	}
 	h2 {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 	}
 	select {
 		width: 100%;
 		max-width: 40rem;
 		min-height: 44px;
 		padding: 0.45rem 0.6rem;
-		border: 1px solid var(--ink-soft);
+		border: 1px solid var(--muted-fg);
 		border-radius: var(--radius);
 		background: var(--card);
-		color: var(--ink);
+		color: var(--fg);
 	}
 	.answer {
 		margin-top: 1rem;
