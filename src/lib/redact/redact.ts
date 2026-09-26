@@ -70,6 +70,12 @@ const RULES: Rule[] = [
 		replacement: '<user>@<host>'
 	},
 	{
+		kind: 'host',
+		re: /\b([\w.-]+@[\w-]+(?:\.[\w-]+)*)(?=:[~/])/dg,
+		group: 1,
+		replacement: '<user>@<host>'
+	},
+	{
 		kind: 'install-id',
 		re: /"install_id"\s*:\s*"([^"]*)"/dg,
 		group: 1,

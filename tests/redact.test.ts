@@ -25,6 +25,10 @@ describe('redaction', () => {
 		expect(redact('/home/meowzers/.local/share/Luduvo').text).toBe('/home/<user>/.local/share/Luduvo');
 		expect(redact('/Users/jane/Downloads/Luduvo').text).toBe('/Users/<user>/Downloads/Luduvo');
 		expect(redact('pc@fedora:~$ luduvo --singleplayer').text).toBe('<user>@<host>:~$ luduvo --singleplayer');
+		expect(redact('2026-09-20 - 12:00:00.000 [INFO] alice@DESKTOP-7K2M:~/Luduvo').text).toBe(
+			'2026-09-20 - 12:00:00.000 [INFO] <user>@<host>:~/Luduvo'
+		);
+		expect(redact('  bob@work.laptop.lan:/opt/luduvo$ ./LuduvoGame').text).toBe('  <user>@<host>:/opt/luduvo$ ./LuduvoGame');
 	});
 
 	it('leaves placeholders people already typed', () => {
