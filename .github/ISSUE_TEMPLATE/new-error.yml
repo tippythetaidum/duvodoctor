@@ -1,0 +1,39 @@
+name: New error I saw
+description: A Luduvo error or log line the Doctor doesn't recognise yet.
+title: "New error: "
+labels: ["new signature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Please run your logs through the report builder on duvodoctor.com first and paste from its preview, so your username and install id are already removed.
+  - type: textarea
+    id: excerpt
+    attributes:
+      label: Log excerpt
+      description: The lines around the error, from the report builder. Redacted, please.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you saw on screen, and when (starting the game, joining, in Studio).
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Luduvo build
+      placeholder: "44"
+  - type: input
+    id: setup
+    attributes:
+      label: OS and graphics card
+      placeholder: Windows 11, AMD Radeon RX 6700 XT
+  - type: input
+    id: thread
+    attributes:
+      label: Forum thread
+      description: If there's a thread about it, link it.
