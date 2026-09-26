@@ -4,8 +4,8 @@
 		"title": "First version",
 		"notes": [
 			"Reads client.log, crash.log, launcher.log, app.log, studio.log, state.json and Settings.cfg in your browser.",
-			"Knows 38 issues from the forum, checked against build 44. Build 45 hasn't shipped yet, so every status is as of 44.",
-			"Tested against 50 real logs from the forum and my own, plus a few nasty made-up ones."
+			"Knows 35 issues from forum reports and staff replies, checked against build 44. Build 45 hasn't shipped yet, so every status is as of 44.",
+			"Tested against 50 real logs, 44 from the forum and 6 of my own, plus a few nasty made-up ones."
 		]
 	}
 ]
