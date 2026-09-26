@@ -1,0 +1,223 @@
+2026-09-24 - 00:08:32.157 [INFO] Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 network_epoch=40 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-24 - 00:08:33.758 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-24 - 00:08:33.759 [INFO] IP: "???????? NO INFO 😐"
+2026-09-24 - 00:08:33.785 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-24 - 00:08:34.558 [INFO] content store: fetched 100 of 564 objects
+2026-09-24 - 00:08:34.610 [INFO] content store: fetched 150 of 564 objects
+2026-09-24 - 00:08:34.772 [INFO] content store: fetched 200 of 564 objects
+2026-09-24 - 00:08:34.817 [INFO] content store: fetched 250 of 564 objects
+2026-09-24 - 00:08:34.860 [INFO] content store: fetched 300 of 564 objects
+2026-09-24 - 00:08:34.901 [INFO] content store: fetched 350 of 564 objects
+2026-09-24 - 00:08:34.943 [INFO] content store: fetched 400 of 564 objects
+2026-09-24 - 00:08:34.986 [INFO] content store: fetched 450 of 564 objects
+2026-09-24 - 00:08:35.030 [INFO] content store: fetched 500 of 564 objects
+2026-09-24 - 00:08:35.074 [INFO] content store: fetched 550 of 564 objects
+2026-09-24 - 00:08:35.122 [INFO] content store: version 7 is ready, current names it
+2026-09-24 - 00:08:35.168 [INFO] client content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-24 - 00:08:35.239 [INFO] Window created. 1 pixel density, 1 display scale
+2026-09-24 - 00:08:35.285 [INFO] [vk] available instance layers: 1
+2026-09-24 - 00:08:35.299 [INFO] [vk] available instance extensions: 11
+2026-09-24 - 00:08:35.301 [INFO] [vk] loader API 1.3.204
+2026-09-24 - 00:08:35.301 [INFO] [vk] requested instance API 1.3.0
+2026-09-24 - 00:08:35.301 [INFO] [vk] validation requested=true enabled=false
+2026-09-24 - 00:08:35.301 [INFO] [vk] debug utils enabled=true
+2026-09-24 - 00:08:35.324 [WARNING] [vk] LDV_VK_SKIP_BLOCKLIST set; GPU blocklist disabled
+2026-09-24 - 00:08:35.324 [INFO] [adapter 0] Intel(R) HD Graphics 620 (Integrated, vendor=0x8086 device=0x5916, 4043 MB)
+2026-09-24 - 00:08:35.324 [INFO] Selected adapter 0: Intel(R) HD Graphics 620 (Integrated)
+2026-09-24 - 00:08:35.327 [INFO] [vk] conservative raster: true, fragment barycentric: false
+2026-09-24 - 00:08:35.327 [INFO] [vk] device API 1.3.215
+2026-09-24 - 00:08:35.327 [INFO] [vk] driver version 1656925
+2026-09-24 - 00:08:35.327 [INFO] [vk] selected device: Intel(R) HD Graphics 620 (Integrated, vendor=0x8086 device=0x5916, 4043 MB)
+2026-09-24 - 00:08:35.327 [INFO] [vk] pipelineCacheUUID=6c3f6b336b335b32643f673160356201
+2026-09-24 - 00:08:35.328 [INFO] [vk] memory heaps: 1
+2026-09-24 - 00:08:35.328 [INFO] [vk] memory types: 3
+2026-09-24 - 00:08:35.329 [INFO] [vk] device extensions: 109
+2026-09-24 - 00:08:35.329 [INFO] [vk] queue families: 1
+2026-09-24 - 00:08:35.350 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-24 - 00:08:35.350 [INFO] [vk] swapchain present mode: FIFO
+2026-09-24 - 00:08:35.405 [INFO] Renderer: max_textures=168 (GPU reports 200)
+2026-09-24 - 00:08:35.405 [INFO] Renderer up: 1366x705, 3 swap images
+2026-09-24 - 00:08:35.526 [INFO] Razor: trace path: GS dilation (with mesh ICB on mac)
+2026-09-24 - 00:08:35.526 [INFO] Razor: 2048x2048 head atlas, 1366x705 screen lists
+2026-09-24 - 00:08:35.572 [INFO] physics_sounds: 56 voices, 64 banks, 12288 KiB arena
+2026-09-24 - 00:08:35.577 [INFO] physics world created
+2026-09-24 - 00:08:35.601 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855953.ogg (1 ch, 48000 Hz, 157440 samples)
+2026-09-24 - 00:08:35.603 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855954.ogg (1 ch, 48000 Hz, 7710 samples)
+2026-09-24 - 00:08:35.607 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855955.ogg (1 ch, 48000 Hz, 28800 samples)
+2026-09-24 - 00:08:35.710 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1860x1860
+2026-09-24 - 00:08:35.822 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1892x1892
+2026-09-24 - 00:08:35.878 [INFO] [FontAtlas] Loaded 1379 glyphs, atlas 1596x1480
+2026-09-24 - 00:08:35.884 [INFO] content from cache C:\Users\<user>\AppData\Roaming\Luduvo\Client\content\versions\7 (manifest version 7, 564 names)
+2026-09-24 - 00:08:35.888 [INFO] [vk] swapchain present mode: IMMEDIATE
+2026-09-24 - 00:08:36.183 [INFO] connected to 5.78.177.147:27016 (encrypted)
+2026-09-24 - 00:08:36.380 [INFO] Script '@core://scripts/Hotbar.client.lua' loaded (gen=1, Update=true, PhysicsUpdate=false)
+2026-09-24 - 00:08:36.403 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855943.ogg (1 ch, 44100 Hz, 7104 samples)
+2026-09-24 - 00:08:36.407 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855944.ogg (1 ch, 44100 Hz, 5182 samples)
+2026-09-24 - 00:08:36.410 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855945.ogg (1 ch, 44100 Hz, 7104 samples)
+2026-09-24 - 00:08:36.414 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855946.ogg (1 ch, 44100 Hz, 6085 samples)
+2026-09-24 - 00:08:36.574 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\165.glb (6 submeshes, 884 verts, 2.7ms)
+2026-09-24 - 00:08:36.575 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\617.glb (1 submeshes, 333 verts, 1.5ms)
+2026-09-24 - 00:08:36.576 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\618.glb (1 submeshes, 139 verts, 0.7ms)
+2026-09-24 - 00:08:36.577 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\652.glb (1 submeshes, 34 verts, 1.3ms)
+2026-09-24 - 00:08:36.695 [INFO] WorldRenderer: two-phase Hi-Z occlusion culling on
+2026-09-24 - 00:08:41.763 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.768 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.771 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.777 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.782 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.787 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.793 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.797 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.801 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.805 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.809 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.813 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.816 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.821 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.824 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.831 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.835 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.840 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.843 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.847 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.852 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.858 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.863 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.869 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.871 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.880 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.885 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.888 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.893 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.899 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.902 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.905 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.910 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.915 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.919 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.922 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.925 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.930 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.935 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.939 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.944 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.949 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.954 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.961 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.964 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.969 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.974 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.980 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.983 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.989 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.992 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:41.998 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.002 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.005 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.010 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.014 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.017 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.022 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.027 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.030 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.034 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.039 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.044 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.049 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.053 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.056 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.060 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.064 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.070 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.073 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.080 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.087 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.093 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.099 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.102 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.108 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.113 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.116 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.122 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.126 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.131 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.136 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.141 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.145 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.149 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.153 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.157 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.162 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.167 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.171 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.177 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.181 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.187 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.193 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.196 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.201 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.206 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.212 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.215 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.219 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.223 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.230 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.233 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.236 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.239 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.242 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.247 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.252 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.255 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.260 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.264 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.267 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.272 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.275 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.280 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.283 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.289 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.292 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.297 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.302 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.307 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.312 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.316 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.321 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.326 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.332 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.337 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.341 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.346 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.350 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.355 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.359 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.363 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.366 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.369 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.374 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.380 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.383 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.386 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.390 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.396 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.401 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.406 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.410 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.414 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.417 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.420 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.423 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.430 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.433 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.439 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.442 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.446 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.449 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.454 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.459 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.464 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.469 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.474 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.478 [ERROR] [nvrhi] Device Removed!
+2026-09-24 - 00:08:42.483 [ERROR] [nvrhi] Device Removed! ................................. and it goes on and on

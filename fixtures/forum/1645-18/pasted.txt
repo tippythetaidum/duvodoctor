@@ -1,0 +1,2 @@
+[ERROR] FATAL: shader directory 'shaders_transpiled\vulkan' does not exist.
+[ERROR] Build was likely configured with LUDUVO_SKIP_SHADER_COMPILE=ON; no transpiled .spv shaders were produced.

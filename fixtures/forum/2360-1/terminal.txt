@@ -1,0 +1,3 @@
+'/Library/Application Support/Luduvo/Client/content/versions/6/shaders/metal' does not exist.
+2026-09-14 - 03:12:12.184 [ERROR] The content root has no .metallib shader tree. Set LDV_CONTENT_DIR to a valid content root, or build the ldv_content_root target in a dev tree.
+zsh: abort      /Users/<user>/Downloads/Luduvo/bundle/usr/bin/LuduvoEditor

@@ -1,0 +1,57 @@
+2026-09-15 - 12:04:31.596 [INFO] Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 network_epoch=40 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-15 - 12:04:31.741 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-15 - 12:04:31.743 [INFO] IP: 5.78.177.147, Port: 27017
+2026-09-15 - 12:04:31.860 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 12:04:32.858 [INFO] content store: version 7 is ready, current names it
+2026-09-15 - 12:04:32.933 [INFO] client content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 12:04:33.098 [INFO] Window created. 1 pixel density, 1.25 display scale
+2026-09-15 - 12:04:33.152 [INFO] [vk] available instance layers: 13
+2026-09-15 - 12:04:33.162 [INFO] [vk] available instance extensions: 20
+2026-09-15 - 12:04:33.164 [INFO] [vk] loader API 1.4.357
+2026-09-15 - 12:04:33.164 [INFO] [vk] requested instance API 1.3.0
+2026-09-15 - 12:04:33.164 [INFO] [vk] validation requested=true enabled=true
+2026-09-15 - 12:04:33.164 [INFO] [vk] debug utils enabled=true
+2026-09-15 - 12:04:33.267 [ERROR] [vk] no physical devices found
+2026-09-15 - 12:04:33.282 [WARNING] Vulkan backend failed; trying D3D12
+2026-09-15 - 12:04:33.282 [INFO] [d3d12] backend init begin; debug_layer=false
+2026-09-15 - 12:04:33.282 [INFO] [d3d12] Win32 HWND acquired: 0x3c0072
+2026-09-15 - 12:04:33.282 [INFO] [d3d12] debug layer disabled
+2026-09-15 - 12:04:33.282 [INFO] [d3d12] creating DXGI factory debug=false
+2026-09-15 - 12:04:33.283 [INFO] [d3d12] DXGI factory created
+2026-09-15 - 12:04:33.283 [INFO] [d3d12] variable refresh tearing support=true
+2026-09-15 - 12:04:33.283 [INFO] [d3d12] adapter 0: 'AMD Radeon(TM) RX Vega 10 Graphics' (Hardware, vendor=0x1002 device=0x15d8, 498 MB)
+2026-09-15 - 12:04:33.394 [INFO] [d3d12] adapter 'AMD Radeon(TM) RX Vega 10 Graphics' created probe device for feature checks
+2026-09-15 - 12:04:33.394 [INFO] [d3d12] adapter 1: 'NVIDIA GeForce GTX 1650' (Hardware, vendor=0x10de device=0x1f91, 3935 MB)
+2026-09-15 - 12:04:33.649 [INFO] [d3d12] adapter 'NVIDIA GeForce GTX 1650' created probe device for feature checks
+2026-09-15 - 12:04:33.658 [INFO] [d3d12] adapter 2: 'Microsoft Basic Render Driver' (Software, vendor=0x1414 device=0x008c, 0 MB)
+2026-09-15 - 12:04:33.658 [INFO] [d3d12] adapter 'Microsoft Basic Render Driver' skipped: software adapter
+2026-09-15 - 12:04:33.658 [INFO] [d3d12] selected adapter: 'NVIDIA GeForce GTX 1650' (vendor=0x10de device=0x1f91, 3935 MB)
+2026-09-15 - 12:04:33.658 [INFO] [d3d12] resourceBindingTier=3 meshShaderTier=10 samplerFeedbackTier=90
+2026-09-15 - 12:04:33.714 [INFO] [d3d12] command queue created: graphics type=0 flags=0x0
+2026-09-15 - 12:04:33.754 [INFO] [d3d12] command queue created: compute type=2 flags=0x0
+2026-09-15 - 12:04:33.770 [INFO] [d3d12] command queue created: copy type=3 flags=0x0
+2026-09-15 - 12:04:33.770 [INFO] [d3d12] caps sampler_anisotropy=true max_anisotropy=16
+2026-09-15 - 12:04:33.770 [INFO] [d3d12] context created
+2026-09-15 - 12:04:33.770 [INFO] [d3d12] creating NVRHI device: rtv_heap=1024 dsv_heap=1024 srv_heap=32768 sampler_heap=16
+2026-09-15 - 12:04:33.773 [INFO] [d3d12] NVRHI device created
+2026-09-15 - 12:04:33.773 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-15 - 12:04:33.773 [INFO] [d3d12] backend create_swapchain requested: 1920x991, vsync=true
+2026-09-15 - 12:04:33.773 [INFO] [d3d12] creating swapchain: 1920x991, buffers=3, format=28, flags=0x800, vsync=true
+2026-09-15 - 12:04:33.882 [INFO] [d3d12] IDXGISwapChain1 created
+2026-09-15 - 12:04:33.882 [INFO] [d3d12] DXGI window association set: no_alt_enter=true
+2026-09-15 - 12:04:33.882 [INFO] [d3d12] IDXGISwapChain3 acquired
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swap image 0 wrapped: resource=0x1e379cd86b0 format=23 size=1920x991
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swap image 1 wrapped: resource=0x1e379cda0e0 format=23 size=1920x991
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swap image 2 wrapped: resource=0x1e379cdba10 format=23 size=1920x991
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swap image wrappers created: count=3
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] frame event queries created: count=3
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swapchain present mode: vsync
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] swapchain created: current_backbuffer=0
+2026-09-15 - 12:04:33.886 [INFO] [d3d12] backend swapchain ready: 1920x991, images=3
+2026-09-15 - 12:04:33.907 [INFO] Renderer: max_textures=1024 (GPU reports 0)
+2026-09-15 - 12:04:33.913 [INFO] Renderer up: 1920x991, 3 swap images
+2026-09-15 - 12:04:33.991 [ERROR] [nvrhi] Failed to create a compute pipeline state object
+2026-09-15 - 12:04:33.995 [ERROR] ClusteredForward: failed to create build-grid pipeline
+2026-09-15 - 12:04:33.998 [ERROR] WorldRenderer: clustered forward init failed
+2026-09-15 - 12:04:34.010 [ERROR] SceneRenderer: gfx_wr_init failed
+2026-09-15 - 12:04:34.014 [ERROR] ClientApp::Init failed

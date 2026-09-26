@@ -1,0 +1,10 @@
+2026-09-14 - 15:23:58.635 [INFO] launcher: up to date (42 seq=2000042000)
+2026-09-14 - 15:23:59.444 [INFO] launcher content: warmed 50 of 388 objects
+2026-09-14 - 15:23:59.589 [INFO] launcher content: warmed 100 of 388 objects
+2026-09-14 - 15:23:59.710 [INFO] launcher content: warmed 150 of 388 objects
+2026-09-14 - 15:23:59.787 [INFO] launcher content: warmed 200 of 388 objects
+2026-09-14 - 15:23:59.857 [INFO] launcher content: warmed 250 of 388 objects
+2026-09-14 - 15:24:00.005 [INFO] launcher content: warmed 300 of 388 objects
+2026-09-14 - 15:24:00.170 [INFO] launcher content: warmed 350 of 388 objects
+2026-09-14 - 15:24:00.357 [INFO] launcher content: version 6 ready, 388 names in C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 15:24:00.358 [INFO] launcher: luduvo:// handler registered

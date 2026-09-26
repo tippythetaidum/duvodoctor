@@ -1,0 +1,68 @@
+2026-09-18 - 14:45:58.664 [INFO] content store fetches from https://api.luduvo.com into /home/<user>/.local/share/Luduvo/Client/content
+2026-09-18 - 14:45:58.687 [WARNING] content manifest fetch failed (Could not establish connection)
+2026-09-18 - 14:46:03.689 [WARNING] content manifest fetch failed (Could not establish connection)
+2026-09-18 - 14:46:08.691 [WARNING] content manifest fetch failed (Could not establish connection)
+2026-09-18 - 14:46:13.673 [WARNING] content: no fresh version from https://api.luduvo.com; using what /home/<user>/.local/share/Luduvo/Client/content holds
+2026-09-18 - 14:46:13.686 [INFO] studio content: version 7 from /home/<user>/.local/share/Luduvo/Client/content
+2026-09-18 - 14:46:13.782 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=queued
+2026-09-18 - 14:46:13.862 [INFO] content from cache /home/<user>/.local/share/Luduvo/Client/content/versions/7 (manifest version 7, 564 names)
+2026-09-18 - 14:46:13.894 [INFO] studio assets: https://api.luduvo.com cached under /home/<user>/.cache/Luduvo/Luduvo Studio/remote_assets, public assets from https://api.luduvo.com
+2026-09-18 - 14:46:14.034 [ERROR] http_get_bytes: GET /users/69/avatar/headshot failed: Could not establish connection
+2026-09-18 - 14:46:17.031 [INFO] Opened project 'factorygame' with 1 assets
+2026-09-18 - 14:46:17.206 [INFO] place=1 port=0 max=32 pubkey=c69c425bd0be0a31f2280e8fb7560d6c3b8ea4ea892b99bd4fcfcd7ad026d029
+2026-09-18 - 14:46:17.213 [INFO] content from cache /home/<user>/.local/share/Luduvo/Client/content/versions/7 (manifest version 7, 564 names)
+2026-09-18 - 14:46:17.221 [INFO] world from memory (21729 bytes)
+2026-09-18 - 14:46:17.221 [INFO] local-dev mode, backend disabled
+2026-09-18 - 14:46:17.300 [INFO] physics world created
+2026-09-18 - 14:46:17.304 [INFO] networked entities: 76
+2026-09-18 - 14:46:17.311 [INFO] Script '@core://scripts/Tools.server.lua' loaded (gen=1, Update=true, PhysicsUpdate=true)
+2026-09-18 - 14:46:17.312 [INFO] Script '@core://scripts/PlayerSpawner.lua' loaded (gen=1, Update=true, PhysicsUpdate=false)
+2026-09-18 - 14:46:17.312 [INFO] Script '@scripts/Main_Handler.server.lua' loaded (gen=1, Update=false, PhysicsUpdate=false)
+2026-09-18 - 14:46:17.319 [INFO] world ready
+2026-09-18 - 14:46:17.411 [INFO] IP: 127.0.0.1, Port: 37876
+2026-09-18 - 14:46:17.422 [INFO] Render host attached. 1848x564 pixels, 2 display scale
+2026-09-18 - 14:46:17.537 [INFO] [vk] available instance layers: 6
+2026-09-18 - 14:46:17.545 [INFO] [vk] available instance extensions: 26
+2026-09-18 - 14:46:17.545 [INFO] [vk] loader API 1.4.341
+2026-09-18 - 14:46:17.545 [INFO] [vk] requested instance API 1.3.0
+2026-09-18 - 14:46:17.545 [INFO] [vk] validation requested=true enabled=false
+2026-09-18 - 14:46:17.545 [INFO] [vk] debug utils enabled=true
+2026-09-18 - 14:46:17.607 [INFO] [adapter 0] Intel(R) UHD Graphics 620 (KBL GT2) (Integrated, vendor=0x8086 device=0x5917, 5879 MB)
+2026-09-18 - 14:46:17.607 [INFO] [adapter 1] llvmpipe (LLVM 22.1.8, 256 bits) (Software, vendor=0x10005 device=0x0000, 7839 MB)
+2026-09-18 - 14:46:17.607 [INFO] Selected adapter 0: Intel(R) UHD Graphics 620 (KBL GT2) (Integrated)
+2026-09-18 - 14:46:17.607 [INFO] [vk] conservative raster: true, fragment barycentric: false
+2026-09-18 - 14:46:17.607 [INFO] [vk] device API 1.4.354
+2026-09-18 - 14:46:17.607 [INFO] [vk] driver version 109060098
+2026-09-18 - 14:46:17.607 [INFO] [vk] selected device: Intel(R) UHD Graphics 620 (KBL GT2) (Integrated, vendor=0x8086 device=0x5917, 5879 MB)
+2026-09-18 - 14:46:17.607 [INFO] [vk] pipelineCacheUUID=e0e8f7f9fa72cf3c631bca6500152cfe
+2026-09-18 - 14:46:17.607 [INFO] [vk] memory heaps: 1
+2026-09-18 - 14:46:17.607 [INFO] [vk] memory types: 6
+2026-09-18 - 14:46:17.607 [INFO] [vk] device extensions: 194
+2026-09-18 - 14:46:17.608 [INFO] [vk] queue families: 1
+2026-09-18 - 14:46:17.616 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-18 - 14:46:17.616 [INFO] [vk] swapchain present mode: FIFO
+2026-09-18 - 14:46:17.641 [INFO] Renderer: max_textures=1024 (GPU reports 201326592)
+2026-09-18 - 14:46:17.641 [INFO] Renderer up: 1848x564, 4 swap images
+2026-09-18 - 14:46:17.821 [INFO] Razor: trace path: GS dilation (with mesh ICB on mac)
+2026-09-18 - 14:46:17.821 [INFO] Razor: 2048x2048 head atlas, 1848x564 screen lists
+2026-09-18 - 14:46:17.929 [INFO] physics_sounds: 56 voices, 64 banks, 12288 KiB arena
+2026-09-18 - 14:46:17.939 [INFO] physics world created
+2026-09-18 - 14:46:17.961 [INFO] audio: loaded /home/<user>/.local/share/Luduvo/Client/cdn_cache/cdn/144115188075855953.ogg (1 ch, 48000 Hz, 157440 samples)
+2026-09-18 - 14:46:17.963 [INFO] audio: loaded /home/<user>/.local/share/Luduvo/Client/cdn_cache/cdn/144115188075855954.ogg (1 ch, 48000 Hz, 7710 samples)
+2026-09-18 - 14:46:17.967 [INFO] audio: loaded /home/<user>/.local/share/Luduvo/Client/cdn_cache/cdn/144115188075855955.ogg (1 ch, 48000 Hz, 28800 samples)
+2026-09-18 - 14:46:18.111 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1860x1860
+2026-09-18 - 14:46:18.253 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1892x1892
+2026-09-18 - 14:46:18.321 [INFO] [FontAtlas] Loaded 1379 glyphs, atlas 1596x1480
+2026-09-18 - 14:46:18.323 [INFO] content from cache /home/<user>/.local/share/Luduvo/Client/content/versions/7 (manifest version 7, 564 names)
+2026-09-18 - 14:46:18.324 [INFO] peer connected 127.0.0.1:41305
+2026-09-18 - 14:46:18.325 [INFO] connected to 127.0.0.1:37876 (encrypted)
+2026-09-18 - 14:46:18.326 [INFO] player 69 joined (1/32)
+2026-09-18 - 14:46:18.327 [WARNING] avatar manifest fetch failed for 69 (HTTP 0)
+2026-09-18 - 14:46:18.361 [INFO] Script '@core://scripts/Hotbar.client.lua' loaded (gen=1, Update=true, PhysicsUpdate=false)
+2026-09-18 - 14:46:18.511 [INFO] WorldRenderer: two-phase Hi-Z occlusion culling off: msaa 4x
+2026-09-18 - 19:56:09.915 [WARNING] disconnected from server: connection closed (reason=0)
+2026-09-18 - 19:56:14.474 [WARNING] the camera sample ring is full. The client drops camera input
+2026-09-18 - 19:56:19.425 [INFO] player 69 disconnected
+2026-09-18 - 19:56:20.132 [INFO] [vk] swapchain present mode: FIFO
+2026-09-18 - 19:56:20.186 [ERROR] GTAO: depth SRV %ux%u does not match source %ux%u; the prefilter gather would rescale
+2026-09-18 - 19:56:20.187 [ERROR] ClientRenderer: scene OnResize failed

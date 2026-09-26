@@ -1,0 +1,12 @@
+Faulting application name: Luduvo.exe
+Faulting application version: 0.0.0.0
+Faulting module name: ucrtbase.dll
+Faulting module version: 10.0.19041.3636
+Exception code: 0xc0000409
+Fault offset: 0x000000000007286e
+
+Faulting application path:
+C:\Users\<non-ascii user>\Saved Games\Luduvo\Luduvo.exe
+
+Faulting module path:
+C:\Windows\System32\ucrtbase.dll

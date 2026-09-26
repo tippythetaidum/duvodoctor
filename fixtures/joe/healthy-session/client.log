@@ -1,0 +1,618 @@
+2026-09-17 - 20:23:05.991 [INFO] Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 network_epoch=40 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-17 - 20:23:06.071 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-17 - 20:23:06.071 [INFO] IP: 5.78.177.147, Port: 27020
+2026-09-17 - 20:23:06.090 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-17 - 20:23:09.685 [INFO] content store: version 7 is ready, current names it
+2026-09-17 - 20:23:09.703 [INFO] client content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-17 - 20:23:09.789 [INFO] Window created. 1 pixel density, 1.5 display scale
+2026-09-17 - 20:23:09.798 [INFO] [vk] available instance layers: 8
+2026-09-17 - 20:23:09.801 [INFO] [vk] available instance extensions: 20
+2026-09-17 - 20:23:09.801 [INFO] [vk] loader API 1.4.341
+2026-09-17 - 20:23:09.801 [INFO] [vk] requested instance API 1.3.0
+2026-09-17 - 20:23:09.801 [INFO] [vk] validation requested=true enabled=false
+2026-09-17 - 20:23:09.801 [INFO] [vk] debug utils enabled=true
+2026-09-17 - 20:23:09.922 [INFO] [adapter 0] NVIDIA GeForce RTX 5080 (Discrete, vendor=0x10de device=0x2c02, 15977 MB)
+2026-09-17 - 20:23:09.922 [INFO] [adapter 1] AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x13c0, 10771 MB)
+2026-09-17 - 20:23:09.922 [INFO] Selected adapter 0: NVIDIA GeForce RTX 5080 (Discrete)
+2026-09-17 - 20:23:09.923 [INFO] [vk] conservative raster: true, fragment barycentric: true
+2026-09-17 - 20:23:09.923 [INFO] [vk] device API 1.4.341
+2026-09-17 - 20:23:09.923 [INFO] [vk] driver version 2559967232
+2026-09-17 - 20:23:09.923 [INFO] [vk] selected device: NVIDIA GeForce RTX 5080 (Discrete, vendor=0x10de device=0x2c02, 15977 MB)
+2026-09-17 - 20:23:09.923 [INFO] [vk] pipelineCacheUUID=3d19fb82df5fbc02ef670dc3bf805afd
+2026-09-17 - 20:23:09.923 [INFO] [vk] memory heaps: 2
+2026-09-17 - 20:23:09.923 [INFO] [vk] memory types: 5
+2026-09-17 - 20:23:09.923 [INFO] [vk] device extensions: 280
+2026-09-17 - 20:23:09.923 [INFO] [vk] queue families: 6
+2026-09-17 - 20:23:09.962 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-17 - 20:23:09.968 [INFO] [vk] swapchain present mode: FIFO
+2026-09-17 - 20:23:10.122 [INFO] Renderer: max_textures=1024 (GPU reports 1048576)
+2026-09-17 - 20:23:10.122 [INFO] Renderer up: 2560x1406, 3 swap images
+2026-09-17 - 20:23:10.207 [INFO] Razor: trace path: hardware conservative raster
+2026-09-17 - 20:23:10.208 [INFO] Razor: 2048x2048 head atlas, 2560x1406 screen lists
+2026-09-17 - 20:23:10.409 [INFO] physics_sounds: 56 voices, 64 banks, 12288 KiB arena
+2026-09-17 - 20:23:10.412 [INFO] physics world created
+2026-09-17 - 20:23:10.421 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855953.ogg (1 ch, 48000 Hz, 157440 samples)
+2026-09-17 - 20:23:10.425 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855954.ogg (1 ch, 48000 Hz, 7710 samples)
+2026-09-17 - 20:23:10.437 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855955.ogg (1 ch, 48000 Hz, 28800 samples)
+2026-09-17 - 20:23:10.466 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1860x1860
+2026-09-17 - 20:23:10.493 [INFO] [FontAtlas] Loaded 1423 glyphs, atlas 1892x1892
+2026-09-17 - 20:23:10.513 [INFO] [FontAtlas] Loaded 1379 glyphs, atlas 1596x1480
+2026-09-17 - 20:23:10.514 [INFO] content from cache C:\Users\<user>\AppData\Roaming\Luduvo\Client\content\versions\7 (manifest version 7, 564 names)
+2026-09-17 - 20:23:10.555 [INFO] [vk] swapchain present mode: MAILBOX
+2026-09-17 - 20:23:10.904 [INFO] connected to 5.78.177.147:27020 (encrypted)
+2026-09-17 - 20:23:11.102 [INFO] Script '@core://scripts/Hotbar.client.lua' loaded (gen=1, Update=true, PhysicsUpdate=false)
+2026-09-17 - 20:23:11.108 [INFO] WorldRenderer: two-phase Hi-Z occlusion culling off: msaa 8x
+2026-09-17 - 20:23:11.277 [INFO] [Script] Registered	RepBullet
+2026-09-17 - 20:23:11.277 [INFO] [Script] Registered	ChangeSpeed
+2026-09-17 - 20:23:11.277 [INFO] [Script] Registered	Damage
+2026-09-17 - 20:23:11.277 [INFO] [Script] Registered	BreakGlass
+2026-09-17 - 20:23:11.277 [INFO] [Script] Ready!
+2026-09-17 - 20:23:11.278 [INFO] Script '@scripts/imcurious.client.lua' loaded (gen=1, Update=true, PhysicsUpdate=true)
+2026-09-17 - 20:23:11.278 [WARNING] physics: part 'Part' (4294967952) has an unusable Scale (0, 0, 0); its collider is clamped to (0.04, 0.04, 0.04)
+2026-09-17 - 20:23:11.291 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\165.glb (6 submeshes, 834 verts, 4.0ms)
+2026-09-17 - 20:23:11.295 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\174.glb (1 submeshes, 108 verts, 3.6ms)
+2026-09-17 - 20:23:11.308 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855943.ogg (1 ch, 44100 Hz, 7104 samples)
+2026-09-17 - 20:23:11.308 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855944.ogg (1 ch, 44100 Hz, 5182 samples)
+2026-09-17 - 20:23:11.309 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855945.ogg (1 ch, 44100 Hz, 7104 samples)
+2026-09-17 - 20:23:11.309 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855946.ogg (1 ch, 44100 Hz, 6085 samples)
+2026-09-17 - 20:23:11.310 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\260.glb (1 submeshes, 132 verts, 14.9ms)
+2026-09-17 - 20:23:11.326 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\227.glb (1 submeshes, 3045 verts, 15.8ms)
+2026-09-17 - 20:23:11.343 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\246.glb (1 submeshes, 246 verts, 17.5ms)
+2026-09-17 - 20:23:11.360 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\278.glb (1 submeshes, 299 verts, 16.4ms)
+2026-09-17 - 20:23:11.375 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\249.glb (1 submeshes, 207 verts, 15.4ms)
+2026-09-17 - 20:23:11.396 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\292.glb (1 submeshes, 680 verts, 20.2ms)
+2026-09-17 - 20:23:11.533 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\254.glb (6 submeshes, 770 verts, 4.2ms)
+2026-09-17 - 20:23:13.302 [WARNING] Razor: up to 31 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:13.740 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:14.128 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\464.glb (1 submeshes, 979 verts, 4.1ms)
+2026-09-17 - 20:23:14.195 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\462.glb (1 submeshes, 619 verts, 3.4ms)
+2026-09-17 - 20:23:14.211 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\460.glb (1 submeshes, 814 verts, 3.3ms)
+2026-09-17 - 20:23:14.213 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\465.glb (1 submeshes, 213 verts, 2.6ms)
+2026-09-17 - 20:23:14.261 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\461.glb (1 submeshes, 531 verts, 3.2ms)
+2026-09-17 - 20:23:14.264 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\468.glb (1 submeshes, 430 verts, 3.2ms)
+2026-09-17 - 20:23:14.295 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\469.glb (1 submeshes, 2007 verts, 3.4ms)
+2026-09-17 - 20:23:14.395 [INFO] [Model] Loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\470.glb (1 submeshes, 2183 verts, 3.9ms)
+2026-09-17 - 20:23:17.384 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:17.605 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:18.706 [WARNING] Razor: up to 38 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:18.941 [WARNING] Razor: up to 28 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:19.637 [WARNING] Razor: up to 25 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:19.861 [WARNING] Razor: up to 18 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:23.526 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:23.758 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:23.989 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:24.222 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:24.451 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:24.681 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:24.896 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:25.110 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:25.325 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:25.539 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:25.756 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:25.975 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:26.189 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:26.410 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:26.625 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:26.843 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:27.070 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:27.286 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:27.510 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:27.729 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:27.946 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:28.160 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:33.304 [WARNING] Razor: up to 66 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:33.519 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:33.736 [WARNING] Razor: up to 25 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:33.977 [WARNING] Razor: up to 89 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:34.282 [WARNING] Razor: up to 113 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:34.579 [WARNING] Razor: up to 64 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:34.812 [WARNING] Razor: up to 62 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:36.526 [WARNING] Razor: up to 30 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:36.797 [WARNING] Razor: up to 259 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:37.023 [WARNING] Razor: up to 83 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:38.313 [WARNING] Razor: up to 52 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:38.630 [WARNING] Razor: up to 276 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:38.974 [WARNING] Razor: up to 48 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:39.317 [WARNING] Razor: up to 56 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:39.558 [WARNING] Razor: up to 94 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:39.777 [WARNING] Razor: up to 78 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:41.959 [WARNING] Razor: up to 63 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:42.275 [WARNING] Razor: up to 83 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:42.549 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:42.836 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:43.194 [WARNING] Razor: up to 96 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:43.491 [WARNING] Razor: up to 83 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:43.765 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:44.031 [WARNING] Razor: up to 27 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:44.460 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:44.674 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:44.889 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:45.103 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:45.317 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:45.532 [WARNING] Razor: up to 13 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:45.746 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:45.960 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:46.175 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:46.389 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:46.603 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:46.818 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:47.035 [WARNING] Razor: up to 34 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:47.255 [WARNING] Razor: up to 45 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:47.500 [WARNING] Razor: up to 63 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:48.572 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:49.008 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:49.237 [WARNING] Razor: up to 30 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:49.472 [WARNING] Razor: up to 882 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:50.329 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:50.543 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:51.001 [WARNING] Razor: up to 169 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:51.222 [WARNING] Razor: up to 244 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:53.614 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:53.857 [WARNING] Razor: up to 97 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:54.084 [WARNING] Razor: up to 22 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:54.299 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:54.974 [WARNING] Razor: up to 252 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:55.277 [WARNING] Razor: up to 46 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:55.590 [WARNING] Razor: up to 29 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:23:55.848 [WARNING] Razor: up to 32 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:02.546 [WARNING] Razor: up to 208 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:02.820 [WARNING] Razor: up to 29 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:03.073 [WARNING] Razor: up to 24 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:03.292 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:04.578 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:05.022 [WARNING] Razor: up to 1195 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:05.245 [WARNING] Razor: up to 41 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:05.464 [WARNING] Razor: up to 59 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:06.559 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:06.775 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:07.208 [WARNING] Razor: up to 282 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:07.422 [WARNING] Razor: up to 907 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:07.643 [WARNING] Razor: up to 516 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:08.082 [WARNING] Razor: up to 16 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:08.330 [WARNING] Razor: up to 22 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:08.581 [WARNING] Razor: up to 33 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:08.793 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:09.013 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:09.235 [WARNING] Razor: up to 487 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:09.482 [WARNING] Razor: up to 280 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:09.738 [WARNING] Razor: up to 249 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:09.958 [WARNING] Razor: up to 306 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:10.172 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:11.071 [WARNING] Razor: up to 266 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:11.322 [WARNING] Razor: up to 255 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:11.567 [WARNING] Razor: up to 100 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:11.575 [INFO] audio: normalized C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855903.ogg (gain=0.94)
+2026-09-17 - 20:24:11.575 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855903.ogg (1 ch, 44100 Hz, 14670 samples)
+2026-09-17 - 20:24:11.575 [INFO] audio: normalized C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855904.ogg (gain=0.96)
+2026-09-17 - 20:24:11.575 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855904.ogg (1 ch, 44100 Hz, 14670 samples)
+2026-09-17 - 20:24:11.576 [INFO] audio: normalized C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855905.ogg (gain=0.89)
+2026-09-17 - 20:24:11.576 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855905.ogg (1 ch, 44100 Hz, 14671 samples)
+2026-09-17 - 20:24:11.576 [INFO] audio: normalized C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855906.ogg (gain=0.89)
+2026-09-17 - 20:24:11.576 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855906.ogg (1 ch, 44100 Hz, 14670 samples)
+2026-09-17 - 20:24:11.792 [WARNING] Razor: up to 119 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:12.023 [WARNING] Razor: up to 106 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:12.299 [WARNING] Razor: up to 121 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:12.535 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:12.764 [WARNING] Razor: up to 16 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:13.213 [WARNING] Razor: up to 190 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:13.469 [WARNING] Razor: up to 117 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:14.969 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:16.042 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:16.255 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:17.970 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:18.184 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:18.431 [WARNING] Razor: up to 223 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:18.679 [WARNING] Razor: up to 116 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:19.755 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:19.981 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:20.414 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:20.628 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:20.853 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:21.067 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:21.285 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:22.789 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:23.021 [WARNING] Razor: up to 13 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:23.664 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:23.883 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:24.097 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:24.311 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:24.525 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:24.983 [WARNING] Razor: up to 451 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:25.239 [WARNING] Razor: up to 154 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:25.882 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:26.101 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:26.314 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:26.533 [WARNING] Razor: up to 16 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:27.392 [WARNING] Razor: up to 108 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:27.608 [WARNING] Razor: up to 298 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:27.822 [WARNING] Razor: up to 97 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:28.468 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:28.683 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:28.897 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:29.112 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:29.326 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:29.541 [WARNING] Razor: up to 18 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:29.762 [WARNING] Razor: up to 20 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:30.404 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:30.622 [WARNING] Razor: up to 98 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:30.895 [WARNING] Razor: up to 160 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:31.112 [WARNING] Razor: up to 20 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:31.755 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:31.969 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:32.398 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:33.075 [WARNING] Razor: up to 137 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:33.345 [WARNING] Razor: up to 231 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:33.559 [WARNING] Razor: up to 15 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:33.773 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:33.991 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:34.206 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:34.420 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:34.634 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:34.849 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:35.066 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:35.281 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:35.495 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:35.709 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:35.924 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:36.138 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:36.352 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:36.567 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:36.781 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:36.995 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:37.210 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:37.424 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:37.642 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:37.856 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:38.071 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:38.285 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:38.499 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:38.714 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:38.928 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:39.142 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:39.365 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:39.662 [WARNING] Razor: up to 445 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:40.536 [WARNING] Razor: up to 26 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:40.750 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:43.322 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:44.608 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:44.849 [WARNING] Razor: up to 127 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:45.136 [WARNING] Razor: up to 106 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:45.464 [WARNING] Razor: up to 338 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:45.686 [WARNING] Razor: up to 44 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:45.901 [WARNING] Razor: up to 29 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:46.119 [WARNING] Razor: up to 34 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:46.334 [WARNING] Razor: up to 54 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:46.553 [WARNING] Razor: up to 39 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:46.768 [WARNING] Razor: up to 47 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:46.984 [WARNING] Razor: up to 32 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:47.197 [WARNING] Razor: up to 47 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:47.412 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:47.626 [WARNING] Razor: up to 20 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:47.856 [WARNING] Razor: up to 30 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:48.069 [WARNING] Razor: up to 15 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:55.412 [WARNING] Razor: up to 19 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:55.637 [WARNING] Razor: up to 26 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:55.881 [WARNING] Razor: up to 94 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:57.064 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:57.329 [WARNING] Razor: up to 13 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:57.391 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855913.ogg (1 ch, 44100 Hz, 23962 samples)
+2026-09-17 - 20:24:57.391 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855914.ogg (1 ch, 44100 Hz, 23962 samples)
+2026-09-17 - 20:24:57.393 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855915.ogg (1 ch, 44100 Hz, 23962 samples)
+2026-09-17 - 20:24:57.393 [INFO] audio: loaded C:\Users\<user>\AppData\Roaming\Luduvo\Client\cdn_cache\cdn\144115188075855916.ogg (1 ch, 44100 Hz, 23961 samples)
+2026-09-17 - 20:24:57.989 [WARNING] Razor: up to 34 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:58.236 [WARNING] Razor: up to 97 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:24:58.492 [WARNING] Razor: up to 240 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:02.350 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:07.065 [WARNING] Razor: up to 28 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:07.494 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:09.021 [WARNING] Razor: up to 283 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:09.251 [WARNING] Razor: up to 356 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:10.543 [WARNING] Razor: up to 26 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:10.791 [WARNING] Razor: up to 195 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:12.935 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:13.181 [WARNING] Razor: up to 988 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:13.616 [WARNING] Razor: up to 16 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:13.834 [WARNING] Razor: up to 24 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:14.049 [WARNING] Razor: up to 18 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:14.264 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:14.707 [WARNING] Razor: up to 109 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:14.968 [WARNING] Razor: up to 75 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:15.181 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:15.395 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:15.824 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:16.038 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:16.253 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:16.467 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:16.896 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:17.110 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:17.753 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:17.967 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:18.825 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:19.468 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:19.751 [WARNING] Razor: up to 788 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:21.465 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:22.323 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:23.829 [WARNING] Razor: up to 96 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:24.051 [WARNING] Razor: up to 28 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:24.479 [WARNING] Razor: up to 53 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:24.701 [WARNING] Razor: up to 222 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:26.201 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:26.415 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:26.630 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:26.844 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:27.058 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:27.273 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:27.487 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:27.701 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:27.965 [WARNING] Razor: up to 653 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:28.216 [WARNING] Razor: up to 377 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:29.073 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:29.287 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:29.502 [WARNING] Razor: up to 11 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:29.720 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:29.934 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:30.149 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:30.363 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:30.577 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:30.792 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:31.006 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:31.220 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:31.434 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:31.649 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:31.874 [WARNING] Razor: up to 110 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:32.102 [WARNING] Razor: up to 74 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:33.389 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:33.817 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:34.031 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:34.246 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:34.460 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:34.889 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:35.317 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:35.532 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:35.982 [WARNING] Razor: up to 756 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:36.239 [WARNING] Razor: up to 752 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:37.953 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:38.811 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:39.454 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:39.882 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:40.311 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:40.525 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:41.597 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:41.811 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:42.025 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:42.240 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:42.668 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:43.526 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:44.383 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:45.240 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:45.455 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:46.098 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:46.312 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:46.955 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:47.170 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:47.384 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:47.599 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:47.813 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:48.027 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:48.241 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:48.455 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:48.884 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:49.098 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:50.170 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:50.385 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:50.599 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:51.028 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:51.242 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:51.671 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:51.885 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:52.099 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:52.314 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:52.742 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:52.957 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:53.171 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:53.814 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:54.028 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:54.243 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:54.457 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:54.671 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:54.886 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:55.100 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:55.539 [WARNING] Razor: up to 406 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:25:55.760 [WARNING] Razor: up to 456 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:01.547 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:01.976 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:02.190 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:02.833 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:03.047 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:03.690 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:03.905 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:04.333 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:06.262 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:07.549 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:07.827 [WARNING] Razor: up to 270 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:08.691 [WARNING] Razor: up to 72 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:09.763 [WARNING] Razor: up to 17 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:10.653 [WARNING] Razor: up to 406 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:10.874 [WARNING] Razor: up to 162 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:11.517 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:11.731 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:11.953 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:12.168 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:12.385 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:12.599 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:12.814 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:13.029 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:13.242 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:13.457 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:13.671 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:13.886 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:14.100 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:14.314 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:14.529 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:14.743 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:14.957 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:15.172 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:15.387 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:15.600 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:15.815 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:16.029 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:16.244 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:16.672 [WARNING] Razor: up to 14 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:17.559 [WARNING] Razor: up to 475 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:17.829 [WARNING] Razor: up to 196 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:18.279 [WARNING] Razor: up to 503 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:18.497 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:21.291 [WARNING] Razor: up to 22 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:21.514 [WARNING] Razor: up to 691 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:21.769 [WARNING] Razor: up to 136 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:22.251 [WARNING] Razor: up to 283 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:22.738 [WARNING] Razor: up to 156 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:23.038 [WARNING] Razor: up to 242 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:23.291 [WARNING] Razor: up to 331 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:23.505 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:24.167 [WARNING] Razor: up to 95 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:24.409 [WARNING] Razor: up to 128 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:25.266 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:25.494 [WARNING] Razor: up to 328 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:25.753 [WARNING] Razor: up to 190 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:25.991 [WARNING] Razor: up to 175 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:26.465 [WARNING] Razor: up to 147 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:26.713 [WARNING] Razor: up to 177 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:29.936 [WARNING] Razor: up to 40 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:26:46.045 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:46.544 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:46.787 [WARNING] Razor: up to 1342 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:47.025 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:47.264 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:47.490 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:47.707 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:47.922 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:48.184 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:48.433 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:48.670 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:48.902 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:49.149 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:49.406 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:49.673 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:49.917 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:50.175 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:50.452 [WARNING] Razor: up to 82 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:50.708 [WARNING] Razor: up to 66 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:50.963 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:51.228 [WARNING] Razor: up to 15 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:51.478 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:51.722 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:51.983 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:52.242 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:52.499 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:52.756 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:53.014 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:53.490 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:53.731 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:53.960 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:54.201 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:54.451 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:54.713 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:54.974 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:55.229 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:55.484 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:55.959 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:56.202 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:56.423 [WARNING] Razor: up to 17 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:56.665 [WARNING] Razor: up to 15 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:56.897 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:57.131 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:57.345 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:57.576 [WARNING] Razor: up to 86 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:57.853 [WARNING] Razor: up to 86 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:58.174 [WARNING] Razor: up to 43 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:27:59.917 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:04.914 [WARNING] Razor: up to 598 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:09.441 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:09.679 [WARNING] Razor: up to 13 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:10.128 [WARNING] Razor: up to 148 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:10.601 [WARNING] Razor: up to 518 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:10.829 [WARNING] Razor: up to 61 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:11.072 [WARNING] Razor: up to 35 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:11.302 [WARNING] Razor: up to 145 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:11.547 [WARNING] Razor: up to 20 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:11.779 [WARNING] Razor: up to 124 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:13.538 [WARNING] Razor: up to 25 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:13.758 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:14.407 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:14.671 [WARNING] Razor: up to 82 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:15.752 [WARNING] Razor: up to 20 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:15.973 [WARNING] Razor: up to 10 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:16.204 [WARNING] Razor: up to 363 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:16.524 [WARNING] Razor: up to 101 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:16.816 [WARNING] Razor: up to 63 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:17.110 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:17.384 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:17.624 [WARNING] Razor: up to 271 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:17.848 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:19.349 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:19.574 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:19.801 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:20.023 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:20.249 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:20.467 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:20.686 [WARNING] Razor: up to 9 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:20.899 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:21.113 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:21.328 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:21.542 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:21.971 [WARNING] Razor: up to 11 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:22.196 [WARNING] Razor: up to 12 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:22.414 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:22.847 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:23.064 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:23.278 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:23.493 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:23.707 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:23.922 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:24.139 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:24.353 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:24.568 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:24.782 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:25.002 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:25.222 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:25.435 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:25.650 [WARNING] Razor: up to 1 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:25.866 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:26.092 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:26.315 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:26.546 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:26.772 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:27.000 [WARNING] Razor: up to 8 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:27.222 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:27.444 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:27.658 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:27.875 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:28.097 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:28.315 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:28.533 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:28.747 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:28.965 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:29.191 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:29.410 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:29.631 [WARNING] Razor: up to 7 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:29.853 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:30.074 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:30.291 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:30.505 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:30.723 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:30.944 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:31.162 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:31.380 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:31.598 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:31.812 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:32.026 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:32.241 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:32.455 [WARNING] Razor: up to 2 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:32.669 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:32.887 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:33.101 [WARNING] Razor: up to 3 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:33.319 [WARNING] Razor: up to 4 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:33.534 [WARNING] Razor: up to 6 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:33.748 [WARNING] Razor: up to 5 texel walks truncated at RAZOR_MAX_WALK; shadows missing
+2026-09-17 - 20:28:41.526 [INFO] Quit.

@@ -1,0 +1,4 @@
+2026-09-12 - 21:44:37.487 [ERROR] Load_shader: failed to read transpiled shader C:\Users\<user>\AppData\Roaming\Luduvo\Client\content\versions\2\shaders\vulkan\cull_compact_color.csh.spv
+2026-09-12 - 21:44:37.488 [ERROR] Culling: failed to create compact material resources
+2026-09-12 - 21:44:37.491 [ERROR] WorldRenderer: main culling colour compaction init failed
+2026-09-12 - 21:44:37.500 [ERROR] SceneRenderer: gfx_wr_init failed

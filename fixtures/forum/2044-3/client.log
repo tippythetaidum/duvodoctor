@@ -1,0 +1,4 @@
+2026-09-13 - [INFO] connected to (encrypted)
+2026-09-13 - [ERROR] state before PKT_WIRE_SCHEMA; disconnecting
+2026-09-13 - [WARNING] disconnected from server: peer sent an unparseable packet (reason=8)
+2026-09-13 - [INFO] Quit.

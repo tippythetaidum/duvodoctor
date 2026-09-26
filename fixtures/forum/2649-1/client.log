@@ -1,0 +1,11 @@
+2026-09-15 - 15:26:30.789 [INFO] [d3d12] backend swapchain ready: 1920x991, images=3
+2026-09-15 - 15:26:30.813 [INFO] Renderer: max_textures=1024 (GPU reports 0)
+2026-09-15 - 15:26:30.814 [INFO] Renderer up: 1920x991, 3 swap images
+
+2026-09-15 - 15:26:31.192 [ERROR] [nvrhi] Failed to create a compute pipeline state object
+2026-09-15 - 15:26:31.194 [ERROR] ClusteredForward: failed to create build-grid pipeline
+2026-09-15 - 15:26:31.196 [ERROR] WorldRenderer: clustered forward init failed
+2026-09-15 - 15:26:31.200 [ERROR] SceneRenderer: gfx_wr_init failed
+2026-09-15 - 15:26:31.201 [ERROR] ClientApp::Init failed
+
+2026-09-15 - 15:26:36.486 [INFO] [d3d12] backend destroy_swapchain images=3

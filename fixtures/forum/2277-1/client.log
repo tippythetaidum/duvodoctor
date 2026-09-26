@@ -1,0 +1,28 @@
+2026-09-13 - 19:08:48.836 [INFO] Luduvo 41-dirty (87f96c55a050) sha=87f96c55a050 network_epoch=38 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-13 - 19:08:49.565 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-13 - 19:08:49.566 [INFO] IP: 5.78.177.147, Port: 27025
+2026-09-13 - 19:08:49.586 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 19:08:50.636 [INFO] content store: version 5 is ready, current names it
+2026-09-13 - 19:08:50.656 [INFO] client content: version 5 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 19:08:50.871 [INFO] Window created. 1 pixel density, 1.25 display scale
+2026-09-13 - 19:08:50.889 [INFO] [vk] available instance layers: 4
+2026-09-13 - 19:08:50.894 [INFO] [vk] available instance extensions: 13
+2026-09-13 - 19:08:50.895 [INFO] [vk] loader API 1.3.301
+2026-09-13 - 19:08:50.895 [INFO] [vk] requested instance API 1.3.0
+2026-09-13 - 19:08:50.895 [INFO] [vk] validation requested=true enabled=false
+2026-09-13 - 19:08:50.895 [INFO] [vk] debug utils enabled=true
+2026-09-13 - 19:08:51.155 [INFO] [adapter 0] AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-09-13 - 19:08:51.155 [INFO] Selected adapter 0: AMD Radeon(TM) Graphics (Integrated)
+2026-09-13 - 19:08:51.157 [INFO] [vk] conservative raster: true, fragment barycentric: true
+2026-09-13 - 19:08:51.157 [INFO] [vk] device API 1.3.260
+2026-09-13 - 19:08:51.157 [INFO] [vk] driver version 8388887
+2026-09-13 - 19:08:51.157 [INFO] [vk] selected device: AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-09-13 - 19:08:51.157 [INFO] [vk] pipelineCacheUUID=72aaeb2fd66158399e8e3617784aa741
+2026-09-13 - 19:08:51.157 [INFO] [vk] memory heaps: 3
+2026-09-13 - 19:08:51.157 [INFO] [vk] memory types: 16
+2026-09-13 - 19:08:51.157 [INFO] [vk] device extensions: 148
+2026-09-13 - 19:08:51.157 [INFO] [vk] queue families: 3
+2026-09-13 - 19:08:51.290 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-13 - 19:08:51.293 [INFO] [vk] swapchain present mode: FIFO
+2026-09-13 - 19:08:51.351 [INFO] Renderer: max_textures=1024 (GPU reports 4294967295)
+2026-09-13 - 19:08:51.353 [INFO] Renderer up: 1920x991, 2 swap images

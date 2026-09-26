@@ -1,0 +1,6 @@
+crash: exception 0xc0000005 at C:\Users\<user>\AppData\Local\Luduvo\bundle\LuduvoEditor.exe+0x4dbaf0 read 0x1e9a7039630
+crash: exception 0xc0000005 at C:\Users\<user>\AppData\Local\Luduvo\bundle\LuduvoEditor.exe+0x4dbaf0 read 0x242bd2e1630
+crash: exception 0xc0000005 at C:\Users\<user>\AppData\Local\Luduvo\bundle\LuduvoEditor.exe+0x4dbaf0 read 0x1f2791d7630
+crash: exception 0xc0000005 at C:\Users\<user>\AppData\Local\Luduvo\bundle\LuduvoEditor.exe+0x4dbaf0 read 0x21407096630
+crash: exception 0xc0000005 at C:\Users\<user>\AppData\Local\Luduvo\bundle\LuduvoEditor.exe+0x4dbaf0 read 0x227fec0e630
+crash: exception 0xe06d7363 at C:\WINDOWS\System32\KERNELBASE.dll+0xc41ca

@@ -1,0 +1,22 @@
+2026-09-15 - 14:57:02.857 [INFO] content store fetches from https://api.luduvo.com into C:\Users[not showing my pc name]\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 14:57:04.714 [INFO] content store: version 7 is ready, current names it
+2026-09-15 - 14:57:04.741 [INFO] client content: version 7 from C:\Users[not showing my pc name]\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 14:57:04.750 [WARNING] Vulkan unavailable: Installed Vulkan doesn't implement the VK_KHR_surface extension; using D3D12 for this run
+2026-09-15 - 14:57:04.852 [INFO] Window created. 1 pixel density, 1 display scale
+2026-09-15 - 14:57:04.852 [INFO] [d3d12] backend init begin; debug_layer=false
+2026-09-15 - 14:57:04.852 [INFO] [d3d12] Win32 HWND acquired: 0x903d6
+2026-09-15 - 14:57:04.852 [INFO] [d3d12] debug layer disabled
+2026-09-15 - 14:57:04.852 [INFO] [d3d12] creating DXGI factory debug=false
+2026-09-15 - 14:57:04.853 [INFO] [d3d12] DXGI factory created
+2026-09-15 - 14:57:04.853 [INFO] [d3d12] variable refresh tearing support=true
+2026-09-15 - 14:57:04.853 [INFO] [d3d12] adapter 0: 'Intel(R) HD Graphics' (Hardware, vendor=0x8086 device=0x0102, 32 MB)
+2026-09-15 - 14:57:04.863 [INFO] [d3d12] adapter 'Intel(R) HD Graphics' skipped: D3D12CreateDevice failed 0x887a0004
+2026-09-15 - 14:57:04.864 [INFO] [d3d12] adapter 1: 'Microsoft Basic Render Driver' (Software, vendor=0x1414 device=0x008c, 0 MB)
+2026-09-15 - 14:57:04.864 [INFO] [d3d12] adapter 'Microsoft Basic Render Driver' skipped: software adapter
+2026-09-15 - 14:57:04.864 [ERROR] [d3d12] no adapter satisfies D3D12 feature level 12.0 + binding tier 2
+2026-09-15 - 14:57:04.867 [INFO] [d3d12] context destroy begin
+2026-09-15 - 14:57:04.867 [INFO] [d3d12] context destroyed
+2026-09-15 - 14:57:04.867 [INFO] [d3d12] backend shutdown
+2026-09-15 - 14:57:04.867 [INFO] [d3d12] context destroy begin
+2026-09-15 - 14:57:04.867 [INFO] [d3d12] context destroyed
+2026-09-15 - 14:58:07.672 [ERROR] ClientApp::Init failed

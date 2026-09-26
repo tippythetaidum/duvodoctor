@@ -1,0 +1,4 @@
+==> Fetching manifest: https://assets.luduvo.com/channels/stable/linux-x86_64.txt
+==> Manifest signature OK
+==> Downloading launcher: https://assets.luduvo.com/releases/2026.06.0/linux-x86_64/linux-launcher-33308320.zip
+curl: (22) The requested URL returned error: 403

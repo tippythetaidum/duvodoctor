@@ -1,0 +1,302 @@
+2026-08-01 - 12:02:57.780 [INFO] Start
+2026-08-01 - 12:02:57.811 [INFO] IP: 23.17°S 132.27°E Port: 0.65535
+2026-08-01 - 12:02:57.874 [INFO] Window created. 1 scale
+2026-08-01 - 12:02:57.909 [INFO] [vk] available instance layers: 3
+2026-08-01 - 12:02:57.909 [INFO] [vk] available layer: VK_LAYER_AMD_switchable_graphics spec=1.3.260 impl=0.0.1 desc=AMD switchable graphics layer
+2026-08-01 - 12:02:57.909 [INFO] [vk] available layer: VK_LAYER_VALVE_steam_overlay spec=1.3.207 impl=0.0.1 desc=Steam Overlay Layer
+2026-08-01 - 12:02:57.909 [INFO] [vk] available layer: VK_LAYER_VALVE_steam_fossilize spec=1.4.303 impl=0.0.1 desc=Steam Pipeline Caching Layer
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extensions: 13
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_device_group_creation spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_external_fence_capabilities spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_external_memory_capabilities spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_external_semaphore_capabilities spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_get_physical_device_properties2 spec=2
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_get_surface_capabilities2 spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_surface spec=25
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_win32_surface spec=6
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_EXT_debug_report spec=10
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_EXT_debug_utils spec=2
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_EXT_swapchain_colorspace spec=4
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_KHR_portability_enumeration spec=1
+2026-08-01 - 12:02:57.915 [INFO] [vk] available instance extension: VK_LUNARG_direct_driver_loading spec=1
+2026-08-01 - 12:02:57.916 [INFO] [vk] loader API 1.3.250
+2026-08-01 - 12:02:57.916 [INFO] [vk] requested instance API 1.3.0
+2026-08-01 - 12:02:57.916 [INFO] [vk] validation requested=true enabled=false
+2026-08-01 - 12:02:57.916 [INFO] [vk] debug utils enabled=true
+2026-08-01 - 12:02:57.916 [INFO] [vk] instance extension: VK_KHR_surface
+2026-08-01 - 12:02:57.916 [INFO] [vk] instance extension: VK_KHR_win32_surface
+2026-08-01 - 12:02:57.916 [INFO] [vk] instance extension: VK_EXT_debug_utils
+2026-08-01 - 12:02:57.952 [INFO] [adapter 0] AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-08-01 - 12:02:57.952 [INFO] Selected adapter 0: AMD Radeon(TM) Graphics (Integrated)
+2026-08-01 - 12:02:57.952 [INFO] [vk] conservative raster: true, fragment barycentric: true
+2026-08-01 - 12:02:57.952 [INFO] [vk] device API 1.3.260
+2026-08-01 - 12:02:57.952 [INFO] [vk] driver version 8388887
+2026-08-01 - 12:02:57.952 [INFO] [vk] selected device: AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-08-01 - 12:02:57.952 [INFO] [vk] pipelineCacheUUID=72aaeb2fd66158399e8e3617784aa741
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxImageDimension2D=16384
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageDescriptorSampledImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageDescriptorStorageBuffers=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageDescriptorStorageImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageResources=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxDescriptorSetSampledImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxDescriptorSetStorageBuffers=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxDescriptorSetStorageImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxVertexInputAttributes=64
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxVertexInputBindings=32
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxVertexInputAttributeOffset=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxVertexInputBindingStride=16383
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxVertexOutputComponents=128
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxFragmentInputComponents=128
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxFragmentOutputAttachments=8
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxFragmentCombinedOutputResources=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxComputeSharedMemorySize=32768
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxComputeWorkGroupInvocations=1024
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxSamplerAnisotropy=16
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxBoundDescriptorSets=32
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPushConstantsSize=128
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxColorAttachments=8
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits timestampPeriod=10
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits storageImageSampleCounts=0xf
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageDescriptorUpdateAfterBindSampledImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxDescriptorSetUpdateAfterBindSampledImages=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxPerStageUpdateAfterBindResources=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] limits maxUpdateAfterBindDescriptorsInAllPools=4294967295
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory heaps: 3
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory heap 0 size_mb=1792 device_local=true multi_instance=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory heap 1 size_mb=2738 device_local=false multi_instance=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory heap 2 size_mb=256 device_local=true multi_instance=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory types: 16
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 0 heap=0
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 1 heap=1 device_local=false host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 2 heap=2 device_local=true host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 3 heap=1 device_local=false host_visible=true host_coherent=true host_cached=true lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 4 heap=0 device_local=true host_visible=false host_coherent=false host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 5 heap=1 device_local=false host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 6 heap=2 device_local=true host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 7 heap=1 device_local=false host_visible=true host_coherent=true host_cached=true lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 8 heap=0 device_local=true host_visible=false host_coherent=false host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 9 heap=1 device_local=false host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 10 heap=2 device_local=true host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 11 heap=1 device_local=false host_visible=true host_coherent=true host_cached=true lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 12 heap=0 device_local=true host_visible=false host_coherent=false host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 13 heap=1 device_local=false host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 14 heap=2 device_local=true host_visible=true host_coherent=true host_cached=false lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] memory type 15 heap=1 device_local=false host_visible=true host_coherent=true host_cached=true lazily_allocated=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extensions: 148
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_16bit_storage spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_8bit_storage spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_bind_memory2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_buffer_device_address spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_copy_commands2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_create_renderpass2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_dedicated_allocation spec=3
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_depth_stencil_resolve spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_descriptor_update_template spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_device_group spec=4
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_draw_indirect_count spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_driver_properties spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_dynamic_rendering spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_fence spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_fence_win32 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_memory spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_memory_win32 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_semaphore spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_external_semaphore_win32 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_format_feature_flags2 spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_fragment_shader_barycentric spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_get_memory_requirements2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_global_priority spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_imageless_framebuffer spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_image_format_list spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_maintenance1 spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_maintenance2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_maintenance3 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_maintenance4 spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_map_memory2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_multiview spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_pipeline_executable_properties spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_pipeline_library spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_push_descriptor spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_relaxed_block_layout spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_sampler_mirror_clamp_to_edge spec=3
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_sampler_ycbcr_conversion spec=14
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_separate_depth_stencil_layouts spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_atomic_int64 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_clock spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_draw_parameters spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_float16_int8 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_float_controls spec=4
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_integer_dot_product spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_non_semantic_info spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_subgroup_extended_types spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_subgroup_uniform_control_flow spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_shader_terminate_invocation spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_spirv_1_4 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_storage_buffer_storage_class spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_swapchain spec=70
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_swapchain_mutable_format spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_synchronization2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_timeline_semaphore spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_uniform_buffer_standard_layout spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_variable_pointers spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_vulkan_memory_model spec=3
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_win32_keyed_mutex spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_workgroup_memory_explicit_layout spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_KHR_zero_initialize_workgroup_memory spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_4444_formats spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_attachment_feedback_loop_layout spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_calibrated_timestamps spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_color_write_enable spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_conditional_rendering spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_conservative_rasterization spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_custom_border_color spec=12
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_depth_clamp_zero_one spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_depth_clip_control spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_depth_clip_enable spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_depth_range_unrestricted spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_descriptor_buffer spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_descriptor_indexing spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_device_address_binding_report spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_device_fault spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_dynamic_rendering_unused_attachments spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_extended_dynamic_state spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_extended_dynamic_state2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_extended_dynamic_state3 spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_external_memory_host spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_full_screen_exclusive spec=4
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_global_priority spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_global_priority_query spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_hdr_metadata spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_host_query_reset spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_image_robustness spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_image_view_min_lod spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_index_type_uint8 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_inline_uniform_block spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_line_rasterization spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_load_store_op_none spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_memory_budget spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_memory_priority spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_mutable_descriptor_type spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_non_seamless_cube_map spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_pageable_device_local_memory spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_pipeline_creation_cache_control spec=3
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_pipeline_creation_feedback spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_primitive_topology_list_restart spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_private_data spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_provoking_vertex spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_queue_family_foreign spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_robustness2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_sampler_filter_minmax spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_sample_locations spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_scalar_block_layout spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_separate_stencil_usage spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_atomic_float spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_demote_to_helper_invocation spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_image_atomic_int64 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_module_identifier spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_stencil_export spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_subgroup_ballot spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_subgroup_vote spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_shader_viewport_index_layer spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_subgroup_size_control spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_texel_buffer_alignment spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_tooling_info spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_transform_feedback spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_vertex_attribute_divisor spec=3
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_vertex_input_dynamic_state spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_EXT_ycbcr_image_arrays spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_buffer_marker spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_calibrated_timestamps spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_device_coherent_memory spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_display_native_hdr spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_draw_indirect_count spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_gcn_shader spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_gpa_interface spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_gpu_shader_half_float spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_gpu_shader_int16 spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_memory_overallocation_behavior spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_mixed_attachment_samples spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_rasterization_order spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_ballot spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_core_properties spec=2
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_core_properties2 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_early_and_late_fragment_tests spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_explicit_vertex_parameter spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_fragment_mask spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_image_load_store_lod spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_info spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_shader_trinary_minmax spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_AMD_texture_gather_bias_lod spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_GOOGLE_decorate_string spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_GOOGLE_hlsl_functionality1 spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_GOOGLE_user_type spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] device extension: VK_VALVE_mutable_descriptor_type spec=1
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature robustBufferAccess=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature fullDrawIndexUint32=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature imageCubeArray=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature independentBlend=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature geometryShader=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature tessellationShader=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sampleRateShading=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature dualSrcBlend=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature logicOp=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature multiDrawIndirect=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature drawIndirectFirstInstance=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature depthClamp=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature depthBiasClamp=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature fillModeNonSolid=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature depthBounds=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature wideLines=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature largePoints=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature alphaToOne=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature multiViewport=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature samplerAnisotropy=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature textureCompressionETC2=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature textureCompressionASTC_LDR=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature textureCompressionBC=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature occlusionQueryPrecise=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature pipelineStatisticsQuery=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature vertexPipelineStoresAndAtomics=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature fragmentStoresAndAtomics=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderTessellationAndGeometryPointSize=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderImageGatherExtended=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageImageExtendedFormats=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageImageMultisample=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageImageReadWithoutFormat=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageImageWriteWithoutFormat=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderUniformBufferArrayDynamicIndexing=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderSampledImageArrayDynamicIndexing=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageBufferArrayDynamicIndexing=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderStorageImageArrayDynamicIndexing=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderClipDistance=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderCullDistance=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderFloat64=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderInt64=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderInt16=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderResourceResidency=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderResourceMinLod=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseBinding=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidencyBuffer=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidencyImage2D=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidencyImage3D=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidency2Samples=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidency4Samples=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidency8Samples=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidency16Samples=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature sparseResidencyAliased=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature variableMultisampleRate=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature inheritedQueries=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature samplerMirrorClampToEdge=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature drawIndirectCount=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature storageBuffer8BitAccess=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature uniformAndStorageBuffer8BitAccess=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature storagePushConstant8=false
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderBufferInt64Atomics=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderSharedInt64Atomics=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderFloat16=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderInt8=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature descriptorIndexing=true
+2026-08-01 - 12:02:57.952 [INFO] [vk] feature shaderInputAttachmentArrayDynamicIndexing=true

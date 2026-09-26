@@ -1,0 +1,8 @@
+2026-09-13 - 20:50:42.277 [INFO] Luduvo 42-dirty (70a21e3f5edf) sha=70a21e3f5edf network_epoch=38 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-13 - 20:50:42.860 [INFO] OpenAL: device=Creative Labs Inc. renderer=Software stream=queued
+2026-09-13 - 20:50:42.861 [INFO] no URI, starting singleplayer
+2026-09-13 - 20:50:42.936 [INFO] content store fetches from "luduvo" ( I cannot put links ) into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 20:50:44.961 [INFO] content store: version 6 is ready, current names it
+2026-09-13 - 20:50:44.985 [INFO] client content: version 6 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 20:50:45.004 [ERROR] Failed to create window: Installed Vulkan doesn't implement the VK_KHR_surface extension
+2026-09-13 - 20:50:45.004 [ERROR] ClientApp::Init failed

@@ -1,0 +1,31 @@
+2026-09-14 - 09:20:14.646 [INFO] Luduvo 42-dirty (70a21e3f5edf) sha=70a21e3f5edf network_epoch=38 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-14 - 09:20:15.039 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-14 - 09:20:15.040 [INFO] IP: -------------------------- Port: --------------
+2026-09-14 - 09:20:15.113 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 09:20:15.876 [WARNING] content store: cannot create C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content\versions\6
+2026-09-14 - 09:20:21.535 [WARNING] content store: cannot create C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content\versions\6
+2026-09-14 - 09:20:27.174 [WARNING] content store: cannot create C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content\versions\6
+2026-09-14 - 09:20:30.146 [WARNING] content: no fresh version from https://api.luduvo.com; using what C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content holds
+2026-09-14 - 09:20:30.220 [INFO] client content: version 5 from C:\Users\<non-ascii user>\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 09:20:30.319 [INFO] Window created. 1 pixel density, 1.25 display scale
+2026-09-14 - 09:20:30.369 [INFO] [vk] available instance layers: 3
+2026-09-14 - 09:20:30.385 [INFO] [vk] available instance extensions: 13
+2026-09-14 - 09:20:30.387 [INFO] [vk] loader API 1.3.250
+2026-09-14 - 09:20:30.387 [INFO] [vk] requested instance API 1.3.0
+2026-09-14 - 09:20:30.387 [INFO] [vk] validation requested=true enabled=false
+2026-09-14 - 09:20:30.387 [INFO] [vk] debug utils enabled=true
+2026-09-14 - 09:20:30.446 [INFO] [adapter 0] AMD Radeon(TM) Vega 8 Graphics (Integrated, vendor=0x1002 device=0x15dd, 1024 MB)
+2026-09-14 - 09:20:30.446 [INFO] Selected adapter 0: AMD Radeon(TM) Vega 8 Graphics (Integrated)
+2026-09-14 - 09:20:30.448 [INFO] [vk] conservative raster: true, fragment barycentric: true
+2026-09-14 - 09:20:30.448 [INFO] [vk] device API 1.3.260
+2026-09-14 - 09:20:30.448 [INFO] [vk] driver version 8388887
+2026-09-14 - 09:20:30.448 [INFO] [vk] selected device: AMD Radeon(TM) Vega 8 Graphics (Integrated, vendor=0x1002 device=0x15dd, 1024 MB)
+2026-09-14 - 09:20:30.448 [INFO] [vk] pipelineCacheUUID=5f18ad09864e5ca79560de3272738624
+2026-09-14 - 09:20:30.448 [INFO] [vk] memory heaps: 3
+2026-09-14 - 09:20:30.448 [INFO] [vk] memory types: 16
+2026-09-14 - 09:20:30.448 [INFO] [vk] device extensions: 148
+2026-09-14 - 09:20:30.448 [INFO] [vk] queue families: 3
+2026-09-14 - 09:20:30.482 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-14 - 09:20:30.485 [INFO] [vk] swapchain present mode: FIFO
+2026-09-14 - 09:20:30.519 [INFO] Renderer: max_textures=1024 (GPU reports 4294967295)
+2026-09-14 - 09:20:30.521 [INFO] Renderer up: 1920x1001, 2 swap images

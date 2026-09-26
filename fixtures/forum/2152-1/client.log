@@ -1,0 +1,9 @@
+2026-09-13 - 11:22:02.112 [INFO] Luduvo 39-dirty (45c4fd8f55cf) sha=45c4fd8f55cf network_epoch=38 schema=0x3d80eb6a801498ad project_format=27 (min 22)
+2026-09-13 - 11:22:03.284 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-13 - 11:22:03.284 [INFO] IP: [REDACTED], Port: 27015
+2026-09-13 - 11:22:03.321 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>]\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 11:22:03.777 [ERROR] content store: cannot rename C:\Users\<user>]\AppData\Roaming\Luduvo\Client\content\versions\4\manifest.json.tmp.19596.0 to C:\Users\<user>]\AppData\Roaming\Luduvo\Client\content\versions\4\manifest.json: MoveFileExW: Cannot create a file when that file already exists.
+2026-09-13 - 11:22:03.777 [WARNING] content: no fresh version from https://api.luduvo.com; using what C:\Users\<user>]\AppData\Roaming\Luduvo\Client\content holds
+2026-09-13 - 11:22:03.815 [INFO] client content: version 4 from C:\Users\<user>]\AppData\Roaming\Luduvo\Client\content
+2026-09-13 - 11:22:03.822 [ERROR] Failed to create window: Installed Vulkan doesn't implement the VK_KHR_surface extension
+2026-09-13 - 11:22:03.822 [ERROR] ClientApp::Init failed

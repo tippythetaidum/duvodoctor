@@ -1,0 +1,32 @@
+2026-09-14 - 21:35:51.676 [INFO] Luduvo 43-dirty (e7d3dbe97aab) sha=e7d3dbe97aab network_epoch=38 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-14 - 21:35:51.950 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-14 - 21:35:51.950 [INFO] IP: 23.17°S 132.27°E, Port: 0.65535          <----------|Hide it|
+2026-09-14 - 21:35:51.970 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 21:35:53.221 [INFO] content store: version 7 is ready, current names it
+2026-09-14 - 21:35:53.241 [INFO] client content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 21:35:53.287 [INFO] Window created. 1 pixel density, 1.25 display scale
+2026-09-14 - 21:35:53.314 [INFO] [vk] available instance layers: 10
+2026-09-14 - 21:35:53.318 [INFO] [vk] available instance extensions: 13
+2026-09-14 - 21:35:53.318 [INFO] [vk] loader API 1.4.357
+2026-09-14 - 21:35:53.318 [INFO] [vk] requested instance API 1.3.0
+2026-09-14 - 21:35:53.318 [INFO] [vk] validation requested=true enabled=true
+2026-09-14 - 21:35:53.318 [INFO] [vk] debug utils enabled=true
+2026-09-14 - 21:35:53.360 [INFO] [adapter 0] AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-09-14 - 21:35:53.360 [INFO] Selected adapter 0: AMD Radeon(TM) Graphics (Integrated)
+2026-09-14 - 21:35:53.360 [INFO] [vk] conservative raster: true, fragment barycentric: true
+2026-09-14 - 21:35:53.360 [INFO] [vk] device API 1.3.260
+2026-09-14 - 21:35:53.360 [INFO] [vk] driver version 8388887
+2026-09-14 - 21:35:53.360 [INFO] [vk] selected device: AMD Radeon(TM) Graphics (Integrated, vendor=0x1002 device=0x164c, 2048 MB)
+2026-09-14 - 21:35:53.360 [INFO] [vk] pipelineCacheUUID=72aaeb2fd66158399e8e3617784aa741
+2026-09-14 - 21:35:53.360 [INFO] [vk] memory heaps: 3
+2026-09-14 - 21:35:53.360 [INFO] [vk] memory types: 16
+2026-09-14 - 21:35:53.360 [INFO] [vk] device extensions: 148
+2026-09-14 - 21:35:53.360 [INFO] [vk] queue families: 3
+2026-09-14 - 21:35:53.384 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-14 - 21:35:53.387 [INFO] [vk] swapchain present mode: FIFO
+2026-09-14 - 21:35:53.417 [INFO] Renderer: max_textures=1024 (GPU reports 4294967295)
+2026-09-14 - 21:35:53.419 [INFO] Renderer up: 1920x991, 2 swap images
+2026-09-14 - 21:35:53.577 [WARNING] [vk] vkCreateGraphicsPipelines(): pCreateInfos[0].pVertexInputState Vertex attribute at location 1 not consumed by vertex shader.
+2026-09-14 - 21:35:53.577 [WARNING] [vk] vkCreateGraphicsPipelines(): pCreateInfos[0].pVertexInputState Vertex attribute at location 2 not consumed by vertex shader.
+2026-09-14 - 21:35:53.578 [WARNING] [vk] vkCreateGraphicsPipelines(): pCreateInfos[0].pVertexInputState Vertex attribute at location 1 not consumed by vertex shader.
+2026-09-14 - 21:35:53.578 [WARNING] [vk] vkCreateGraphicsPipelines(): pCreateInfos[0].pVertexInputState Vertex attribute at location 2 not consumed by vertex shader.

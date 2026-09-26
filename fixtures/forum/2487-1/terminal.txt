@@ -1,0 +1,25 @@
+2026-09-14 - 20:32:42.494 [INFO] launcher: up to date (43 seq=2000043000)
+2026-09-14 - 20:32:42.707 [INFO] launcher content: warmed 50 of 564 objects
+2026-09-14 - 20:32:42.708 [INFO] launcher content: warmed 100 of 564 objects
+2026-09-14 - 20:32:42.708 [INFO] launcher content: warmed 150 of 564 objects
+2026-09-14 - 20:32:42.708 [INFO] launcher content: warmed 200 of 564 objects
+2026-09-14 - 20:32:42.709 [INFO] launcher content: warmed 250 of 564 objects
+2026-09-14 - 20:32:42.709 [INFO] launcher content: warmed 300 of 564 objects
+2026-09-14 - 20:32:42.709 [INFO] launcher content: warmed 350 of 564 objects
+2026-09-14 - 20:32:42.709 [INFO] launcher content: warmed 400 of 564 objects
+2026-09-14 - 20:32:42.709 [INFO] launcher content: warmed 450 of 564 objects
+2026-09-14 - 20:32:42.710 [INFO] launcher content: warmed 500 of 564 objects
+2026-09-14 - 20:32:42.710 [INFO] launcher content: warmed 550 of 564 objects
+2026-09-14 - 20:32:42.722 [INFO] launcher content: version 7 ready, 564 names in /home/<user>/.local/share/Luduvo/Client/content
+2026-09-14 - 20:32:42.730 [INFO] launcher: luduvo:// handler registered
+2026-09-14 - 20:32:42.745 [INFO] content store fetches from https://api.luduvo.com into /home/<user>/.local/share/Luduvo/Client/content
+2026-09-14 - 20:32:43.131 [INFO] content store: version 7 is ready, current names it
+2026-09-14 - 20:32:43.235 [INFO] studio content: version 7 from /home/<user>/.local/share/Luduvo/Client/content
+2026-09-14 - 20:32:43.454 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=queued
+qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, vnc, wayland, wayland-egl, minimalegl, offscreen, linuxfb, minimal, xcb, vkkhrdisplay.
+
+Aborted (core dumped)

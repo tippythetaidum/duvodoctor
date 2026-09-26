@@ -1,0 +1,4 @@
+[====================] 100% Downloading Luduvo (5 KB / 5 KB)
+2026-06-10 - 16:14:32.212 [INFO] update available: seq 1780376890 -> 1781063414, version 0.2.95 -> 2026.06.0
+2026-06-10 - 16:14:32.254 [ERROR] update: bundle download failed
+2026-06-10 - 16:14:32.254 [ERROR] launcher: update failed, launching cached

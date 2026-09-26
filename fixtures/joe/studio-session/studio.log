@@ -1,0 +1,11 @@
+2026-09-17 - 22:21:51.582 [INFO] content store fetches from https://api.luduvo.com into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-17 - 22:21:52.397 [INFO] content store: version 7 is ready, current names it
+2026-09-17 - 22:21:52.416 [INFO] studio content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-17 - 22:21:52.436 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-17 - 22:21:52.460 [INFO] content from cache C:\Users\<user>\AppData\Roaming\Luduvo\Client\content\versions\7 (manifest version 7, 564 names)
+2026-09-17 - 22:21:52.463 [INFO] studio assets: https://api.luduvo.com cached under C:/Users/<user>/AppData/Local/Luduvo/Luduvo Studio/cache\remote_assets, public assets from https://api.luduvo.com
+2026-09-17 - 22:21:52.862 [ERROR] No project.json in C:\Projects\luduvo\test_open.ldv
+2026-09-17 - 22:23:47.574 [ERROR] No project.json in C:/Projects/luduvo/studio_test_project
+2026-09-17 - 22:28:26.144 [ERROR] No project.json in C:/Projects/luduvo/worlds
+2026-09-17 - 22:29:12.296 [ERROR] No project.json in C:/Projects/luduvo/worlds
+2026-09-17 - 22:29:30.732 [ERROR] No project.json in C:/Projects/luduvo

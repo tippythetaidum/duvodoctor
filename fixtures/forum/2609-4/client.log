@@ -1,0 +1,33 @@
+2026-09-15 - 09:40:25.144 [INFO] Luduvo 44-dirty (240800eaa6d4) sha=240800eaa6d4 network_epoch=40 schema=0x63d6c59a65f6b6e0 project_format=27 (min 27)
+2026-09-15 - 09:40:25.339 [INFO] OpenAL: device=OpenAL Community renderer=OpenAL Soft stream=callback
+2026-09-15 - 09:40:25.340 [INFO] IP: 5.78.177.147 (fake IP) , Port: 27016
+2026-09-15 - 09:40:25.466 [INFO] content store fetches from [https://api.luduvo.com](https://api.luduvo.com/) into C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 09:40:27.373 [INFO] content store: version 7 is ready, current names it
+2026-09-15 - 09:40:27.494 [INFO] client content: version 7 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-15 - 09:40:27.570 [INFO] Window created. 1 pixel density, 1 display scale
+2026-09-15 - 09:40:27.589 [INFO] [vk] available instance layers: 2
+2026-09-15 - 09:40:27.596 [INFO] [vk] available instance extensions: 13
+2026-09-15 - 09:40:27.597 [INFO] [vk] loader API 1.2.141
+2026-09-15 - 09:40:27.597 [INFO] [vk] requested instance API 1.3.0
+2026-09-15 - 09:40:27.597 [INFO] [vk] validation requested=true enabled=false
+2026-09-15 - 09:40:27.597 [INFO] [vk] debug utils enabled=true
+2026-09-15 - 09:40:27.624 [INFO] [adapter 0] GeForce GT 710 skipped: Vulkan 1.2 < 1.3
+2026-09-15 - 09:40:27.624 [ERROR] [vk] no adapter satisfies Vulkan 1.3 + required features
+2026-09-15 - 09:40:27.627 [WARNING] Vulkan backend failed; trying D3D12
+2026-09-15 - 09:40:27.627 [INFO] [d3d12] backend init begin; debug_layer=false
+2026-09-15 - 09:40:27.627 [INFO] [d3d12] Win32 HWND acquired: 0x13024c
+2026-09-15 - 09:40:27.627 [INFO] [d3d12] debug layer disabled
+2026-09-15 - 09:40:27.627 [INFO] [d3d12] creating DXGI factory debug=false
+2026-09-15 - 09:40:27.628 [INFO] [d3d12] DXGI factory created
+2026-09-15 - 09:40:27.628 [INFO] [d3d12] variable refresh tearing support=true
+2026-09-15 - 09:40:27.628 [INFO] [d3d12] adapter 0: ‘NVIDIA GeForce GT 710’ (Hardware, vendor=0x10de device=0x128b, 4052 MB)
+2026-09-15 - 09:40:27.691 [INFO] [d3d12] adapter ‘NVIDIA GeForce GT 710’ skipped: D3D12CreateDevice failed 0x887a0004
+2026-09-15 - 09:40:27.691 [INFO] [d3d12] adapter 1: ‘Microsoft Basic Render Driver’ (Software, vendor=0x1414 device=0x008c, 0 MB)
+2026-09-15 - 09:40:27.691 [INFO] [d3d12] adapter ‘Microsoft Basic Render Driver’ skipped: software adapter
+2026-09-15 - 09:40:27.691 [ERROR] [d3d12] no adapter satisfies D3D12 feature level 12.0 + binding tier 2
+2026-09-15 - 09:40:27.695 [INFO] [d3d12] context destroy begin
+2026-09-15 - 09:40:27.695 [INFO] [d3d12] context destroyed
+2026-09-15 - 09:40:27.695 [INFO] [d3d12] backend shutdown
+2026-09-15 - 09:40:27.695 [INFO] [d3d12] context destroy begin
+2026-09-15 - 09:40:27.695 [INFO] [d3d12] context destroyed
+2026-09-15 - 09:40:33.663 [ERROR] ClientApp::Init failed

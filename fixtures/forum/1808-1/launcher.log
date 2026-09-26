@@ -1,0 +1,2 @@
+2026-08-28 - 01:59:22.841 [ERROR] update: manifest rejected (ed25519 signature invalid)
+2026-08-28 - 01:59:22.857 [ERROR] launcher: update failed, launching cached

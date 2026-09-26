@@ -1,0 +1,4 @@
+2026-09-14 - 22:26:34.609 [INFO] content store: version 7 is ready, current names it
+2026-09-14 - 22:26:34.631 [INFO] client content: version 7 from C:\Users\<user> showing my pc name]\AppData\Roaming\Luduvo\Client\content
+2026-09-14 - 22:26:34.637 [ERROR] Failed to create window: Installed Vulkan doesn't implement the VK_KHR_surface extension
+2026-09-14 - 22:26:34.637 [ERROR] ClientApp::Init failed"
