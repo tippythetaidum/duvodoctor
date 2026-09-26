@@ -1,0 +1,27 @@
+# unredacted test logs
+fixtures-raw/
+
+# build
+node_modules/
+dist/
+build/
+.svelte-kit/
+.wrangler/
+.output/
+
+# tests
+test-results/
+playwright-report/
+
+# env
+.env
+.env.*
+!.env.example
+
+# vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# os
+.DS_Store
+Thumbs.db
