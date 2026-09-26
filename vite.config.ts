@@ -10,12 +10,15 @@ export default defineConfig(({ command }) => ({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter({ strict: true }),
+			alias: { $data: 'src/data' },
 			csp: {
 				mode: 'hash',
 				directives: {
 					'default-src': ['self'],
 					'script-src': ['self'],
 					'style-src': ['self'],
+					// the one inline style attribute SvelteKit writes: its visually hidden route announcer
+					'style-src-attr': ['unsafe-hashes', 'sha256-S8qMpvofolR8Mpjy4kQvEm7m1q8clzU4dfDH0AmvZjo='],
 					'img-src': ['self', 'data:'],
 					'font-src': ['self'],
 					'worker-src': ['self'],

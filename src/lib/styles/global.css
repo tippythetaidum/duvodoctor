@@ -1,0 +1,294 @@
+@import '@fontsource/atkinson-hyperlegible/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible/latin-700.css';
+@import '@fontsource/atkinson-hyperlegible/latin-400-italic.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';
+@import '@fontsource/zilla-slab/latin-600.css';
+@import '@fontsource/zilla-slab/latin-700.css';
+
+:root {
+	--paper: #f6f3ea;
+	--paper-deep: #ede7d7;
+	--card: #fffdf7;
+	--ink: #1d2a44;
+	--ink-soft: #4a5570;
+	--rule: #d9d3c3;
+	--stamp: #c8372d;
+	--stamp-ink: #a52a22;
+	--green: #2f7d5b;
+	--green-ink: #24634a;
+	--amber: #6f4b00;
+	--highlight: #ffe066;
+	--highlight-soft: #fff3b8;
+	--error-bg: #fbe7e4;
+	--focus: #1d2a44;
+	--link: #1f4f8f;
+	--tint: #f3eee0;
+	--tint-deep: #e7e0cc;
+	--page-rule: color-mix(in srgb, var(--rule) 45%, transparent);
+
+	--body: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif;
+	--mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+	--heading: 'Zilla Slab', Rockwell, 'Roboto Slab', Georgia, serif;
+
+	--step--1: 0.875rem;
+	--step-0: 1.0625rem;
+	--step-1: 1.25rem;
+	--step-2: 1.6rem;
+	--step-3: clamp(1.9rem, 1.2rem + 3vw, 2.9rem);
+
+	--radius: 3px;
+	--gap: 1.25rem;
+	--measure: 68ch;
+	--row: 1.55rem;
+
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--paper: #131b2c;
+		--paper-deep: #0e1422;
+		--card: #efe9d9;
+		--ink: #1d2a44;
+		--ink-soft: #4a5570;
+		--rule: #cfc7b3;
+		--page-ink: #e8e2d2;
+		--page-ink-soft: #b9b3a3;
+		--link-on-page: #9cc3ff;
+		--page-rule: rgb(255 255 255 / 0.035);
+		--page-amber: #f2c86b;
+		color-scheme: dark;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: var(--paper);
+	background-image: repeating-linear-gradient(
+		to bottom,
+		transparent 0,
+		transparent calc(var(--row) - 1px),
+		var(--page-rule) calc(var(--row) - 1px),
+		var(--page-rule) var(--row)
+	);
+	color: var(--page-ink, var(--ink));
+	font-family: var(--body);
+	font-size: var(--step-0);
+	line-height: var(--row);
+}
+
+.app-root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading);
+	font-weight: 700;
+	line-height: 1.15;
+	margin: 0 0 0.5em;
+	letter-spacing: 0.005em;
+}
+
+h1 {
+	font-size: var(--step-3);
+}
+h2 {
+	font-size: var(--step-2);
+}
+h3 {
+	font-size: var(--step-1);
+}
+
+p,
+ul,
+ol {
+	margin: 0 0 1em;
+	max-width: var(--measure);
+}
+
+a {
+	color: var(--link-on-page, var(--link));
+	text-underline-offset: 0.18em;
+	text-decoration-thickness: 1px;
+}
+
+a:hover {
+	text-decoration-thickness: 2px;
+}
+
+.sheet a,
+.card a {
+	color: var(--link);
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: var(--mono);
+	font-size: 0.92em;
+}
+
+code {
+	background: color-mix(in srgb, var(--rule) 55%, transparent);
+	padding: 0.05em 0.3em;
+	border-radius: 2px;
+	overflow-wrap: anywhere;
+}
+
+kbd {
+	border: 1px solid currentColor;
+	border-bottom-width: 2px;
+	border-radius: 3px;
+	padding: 0 0.3em;
+	font-size: 0.85em;
+}
+
+:focus-visible {
+	outline: 3px solid var(--highlight);
+	outline-offset: 2px;
+	box-shadow: 0 0 0 5px var(--focus);
+}
+
+button,
+input,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	min-height: 44px;
+	padding: 0.45em 1em;
+	border: 2px solid var(--ink);
+	border-radius: var(--radius);
+	background: var(--ink);
+	color: var(--card);
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.button:hover {
+	background: color-mix(in srgb, var(--ink) 85%, var(--stamp));
+}
+
+.button.quiet {
+	background: transparent;
+	color: var(--ink);
+}
+
+.button.quiet:hover {
+	background: var(--highlight-soft);
+}
+
+.button:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+.sheet,
+.card {
+	color-scheme: light;
+	background: var(--card);
+	color: var(--ink);
+	border: 1px solid var(--rule);
+	border-radius: var(--radius);
+	box-shadow:
+		0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent),
+		0 10px 24px -18px color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.unconfirmed {
+	display: inline-block;
+	font-family: var(--mono);
+	font-size: 0.72rem;
+	line-height: 1.3;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--page-amber, var(--amber));
+	border: 1px dashed currentColor;
+	border-radius: 2px;
+	padding: 0 0.35em;
+	vertical-align: 0.15em;
+	margin-left: 0.3em;
+	white-space: nowrap;
+}
+
+.sheet .unconfirmed,
+.card .unconfirmed {
+	color: var(--amber);
+}
+
+#svelte-announcer,
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.skip-link {
+	position: absolute;
+	left: 0.5rem;
+	top: -3rem;
+	z-index: 10;
+	background: var(--ink);
+	color: var(--card);
+	padding: 0.5rem 0.8rem;
+	border-radius: var(--radius);
+}
+
+.skip-link:focus {
+	top: 0.5rem;
+}
+
+.wrap {
+	width: min(100% - 2rem, 72rem);
+	margin-inline: auto;
+}
+
+.label {
+	font-family: var(--mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
