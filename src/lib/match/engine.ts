@@ -90,7 +90,7 @@ function present(files: ParsedFile[], kind: FileKind): boolean {
 	return files.some((f) => !f.binary && !f.empty && kinds.includes(f.kind));
 }
 
-function scan(files: ParsedFile[], idx: number[], p: Pattern) {
+function scan(files: ParsedFile[], idx: number[], p: Pattern, cap: number) {
 	const { re, min } = patternOf(p);
 	const hits: Evidence[] = [];
 	let count = 0;
@@ -98,37 +98,37 @@ function scan(files: ParsedFile[], idx: number[], p: Pattern) {
 		for (const l of files[i].lines) {
 			if (re.test(l.text)) {
 				count++;
-				if (hits.length < MAX_EVIDENCE) hits.push({ file: i, line: l.n });
+				if (hits.length < cap) hits.push({ file: i, line: l.n });
 			}
 		}
 	}
 	return { ok: count >= min, count, hits };
 }
 
-function evalFileRule(files: ParsedFile[], key: FileKey, rule: FileRule): Evidence[] | null {
+function evalFileRule(files: ParsedFile[], key: FileKey, rule: FileRule, cap: number): Evidence[] | null {
 	const idx = filesFor(files, key);
 	const evidence: Evidence[] = [];
 	if (rule.all?.length || rule.any?.length) {
 		if (idx.length === 0) return null;
 	}
 	for (const p of rule.all ?? []) {
-		const r = scan(files, idx, p);
+		const r = scan(files, idx, p, cap);
 		if (!r.ok) return null;
-		evidence.push(...r.hits);
+		for (const h of r.hits) evidence.push(h);
 	}
 	if (rule.any?.length) {
 		let anyOk = false;
 		for (const p of rule.any) {
-			const r = scan(files, idx, p);
+			const r = scan(files, idx, p, cap);
 			if (r.ok) {
 				anyOk = true;
-				evidence.push(...r.hits);
+				for (const h of r.hits) evidence.push(h);
 			}
 		}
 		if (!anyOk) return null;
 	}
 	for (const p of rule.none ?? []) {
-		if (scan(files, idx, p).count > 0) return null;
+		if (scan(files, idx, p, 0).count > 0) return null;
 	}
 	return evidence;
 }
@@ -154,12 +154,12 @@ function evalWhen(a: Analysis, w: When): boolean {
 	return true;
 }
 
-export function evalRule(a: Analysis, rule: MatchRule): Evidence[] | null {
+export function evalRule(a: Analysis, rule: MatchRule, cap = MAX_EVIDENCE): Evidence[] | null {
 	const evidence: Evidence[] = [];
 	for (const [key, fr] of Object.entries(rule.files ?? {})) {
-		const r = evalFileRule(a.files, key as FileKey, fr as FileRule);
+		const r = evalFileRule(a.files, key as FileKey, fr as FileRule, cap);
 		if (!r) return null;
-		evidence.push(...r);
+		for (const h of r) evidence.push(h);
 	}
 	if (rule.when && !evalWhen(a, rule.when)) return null;
 	if (!rule.files && !rule.when) return null;
@@ -167,8 +167,9 @@ export function evalRule(a: Analysis, rule: MatchRule): Evidence[] | null {
 }
 
 function firstPos(d: Diagnosis): number {
-	if (!d.evidence.length) return Number.MAX_SAFE_INTEGER;
-	return Math.min(...d.evidence.map((e) => e.file * 10_000_000 + e.line));
+	let best = Number.MAX_SAFE_INTEGER;
+	for (const e of d.evidence) best = Math.min(best, e.file * 10_000_000 + e.line);
+	return best;
 }
 
 function subtreeSeverity(d: Diagnosis): number {
@@ -245,7 +246,7 @@ export function diagnose(a: Analysis, catalog: Catalog): MatchResult {
 
 	for (const sig of catalog.signatures) {
 		if (!sig.match && !sig.hint) continue;
-		const exact = sig.match ? evalRule(a, sig.match) : null;
+		const exact = sig.match ? evalRule(a, sig.match, sig.blame === 'noise' ? Infinity : MAX_EVIDENCE) : null;
 		if (exact) {
 			if (sig.blame === 'noise') {
 				noise.push({ sig, evidence: dedupe(exact) });
