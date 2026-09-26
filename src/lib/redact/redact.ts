@@ -36,7 +36,7 @@ interface Rule {
 
 const SEP = String.raw`(?:\\\\|\\|/)`;
 const NAME_CHAR = String.raw`(?:\\x[0-9A-Fa-f]{2}|[^\\/\r\n"'<>|:*?\t])`;
-const NAME_CHAR_NO_SPACE = String.raw`(?:\\x[0-9A-Fa-f]{2}|[^\\/\s"'<>|:*?,;)\]])`;
+const NAME_CHAR_NO_SPACE = String.raw`(?:\\x[0-9A-Fa-f]{2}|[^\\/\s"'<>|:*?,;)])`;
 const ALREADY_HIDDEN = /^<[a-z -]+>$|^\[[A-Za-z ]+\]$|^-+$/;
 const userPlaceholder = (name: string) =>
 	/\\x[0-9A-Fa-f]{2}|[^\x00-\x7f]/.test(name) ? '<non-ascii user>' : '<user>';
