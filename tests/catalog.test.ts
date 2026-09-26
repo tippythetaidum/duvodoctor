@@ -38,14 +38,28 @@ describe('signature catalog', () => {
 		expect(bad).toEqual([]);
 	});
 
-	it('compiles every pattern and keeps them cheap on a long hostile line', () => {
-		const hostile = 'a'.repeat(4000) + ' ' + '\\x00'.repeat(1000) + 'C:\\Users\\' + '('.repeat(2000);
+	it('compiles every pattern and keeps them cheap on long hostile lines', () => {
+		const cap = 8192;
+		const clip = (s: string) => s.slice(0, cap);
+		const hostile = [
+			clip('a'.repeat(4000) + ' ' + '\\x00'.repeat(1000) + 'C:\\Users\\' + '('.repeat(2000)),
+			clip('crash: exception 0xc0000005 at C:\\' + 'Program Files\\'.repeat(600) + 'x.dl'),
+			clip('crash: exception 0xc0000005 at C:\\' + 'a.dll+'.repeat(1400)),
+			clip('crash: exception 0xc0000005 at ' + 'C:\\Users\\LuduvoGame.exe+'.repeat(400)),
+			clip('2026-09-20 - 12:00:00.000 [ERROR] ' + 'skipped: Intel '.repeat(600)),
+			clip('2026-09-20 - 12:00:00.000 [INFO] ' + 'content store: cannot rename manifest.json '.repeat(200)),
+			clip('2026-09-20 - 12:00:00.000 [WARNING] ' + 'Vulkan unavailable: '.repeat(450)),
+			clip('2026-09-20 - 12:00:00.000 [ERROR] GTAO: depth SRV ' + 'x '.repeat(4000)),
+			clip('C:\\Users\\' + '\\x'.repeat(3000) + 'é'.repeat(1000))
+		];
 		for (const s of catalog.signatures) {
 			for (const p of [...patterns(s.match), ...patterns(s.hint?.match)]) {
 				const re = new RegExp(p);
-				const start = performance.now();
-				re.test(hostile);
-				expect(performance.now() - start, `${s.id}: ${p}`).toBeLessThan(50);
+				for (const line of hostile) {
+					const start = performance.now();
+					for (let i = 0; i < 20; i++) re.test(line);
+					expect(performance.now() - start, `${s.id}: ${p}`).toBeLessThan(100);
+				}
 			}
 		}
 	});

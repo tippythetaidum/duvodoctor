@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { analyse, parseBytes, parseText } from '../src/lib/parse/index.ts';
 import { decodeBytes, MAX_FILE_BYTES } from '../src/lib/parse/decode.ts';
-import { splitLines, MAX_LINE_CHARS } from '../src/lib/parse/lines.ts';
+import { splitLines, MAX_LINE_CHARS, MAX_LINES } from '../src/lib/parse/lines.ts';
 import { decodeDriver } from '../src/lib/parse/driver.ts';
 import { diagnose } from '../src/lib/match/engine.ts';
 import { catalog, fixturesDir, loadDir } from './helpers.ts';
@@ -83,7 +83,7 @@ describe('decoding', () => {
 
 describe('lines', () => {
 	it('splits two log entries that landed on one line', () => {
-		const lines = splitLines(
+		const { lines } = splitLines(
 			'2026-09-20 - 22:16:33.111 [INFO] studio content: version 7 2026-09-20 - 22:16:35.915 [INFO] content store: version 7 is ready\n'
 		);
 		expect(lines.map((l) => l.text)).toEqual([
@@ -93,17 +93,36 @@ describe('lines', () => {
 	});
 
 	it('keeps untimestamped terminal lines', () => {
-		const lines = splitLines("2026-09-15 - 13:23:06.670 [INFO] [Script/S] test\nterminate called after throwing an instance of 'std::out_of_range'\n");
+		const { lines } = splitLines("2026-09-15 - 13:23:06.670 [INFO] [Script/S] test\nterminate called after throwing an instance of 'std::out_of_range'\n");
 		expect(lines[1]).toMatchObject({ level: null, timestamped: false });
 	});
 
 	it('reads levels from lines with the time stripped', () => {
-		const lines = splitLines('2026-09-13 - [ERROR] state before PKT_WIRE_SCHEMA; disconnecting');
+		const { lines } = splitLines('2026-09-13 - [ERROR] state before PKT_WIRE_SCHEMA; disconnecting');
 		expect(lines[0].level).toBe('ERROR');
 	});
 
+	it('refuses to explode one line full of fake timestamps', () => {
+		const fake = ' 2026-09-01 - 12:00:00.000 [INFO] x'.repeat(200_000);
+		const start = performance.now();
+		const { lines } = splitLines('2026-09-01 - 12:00:00.000 [INFO] start' + fake);
+		expect(lines.length).toBe(1);
+		expect(lines[0].clipped).toBe(true);
+		const short = splitLines('2026-09-01 - 12:00:00.000 [INFO] a' + ' 2026-09-01 - 12:00:00.000 [INFO] b'.repeat(40));
+		expect(short.lines.length).toBeLessThanOrEqual(8);
+		expect(performance.now() - start).toBeLessThan(2000);
+	});
+
+	it('caps the number of lines and marks the file as cut short', () => {
+		const start = performance.now();
+		const f = parseBytes('client.log', new TextEncoder().encode('x\n'.repeat(10_000_000)));
+		expect(f.lines.length).toBe(MAX_LINES);
+		expect(f.truncated).toBe(true);
+		expect(performance.now() - start).toBeLessThan(10000);
+	});
+
 	it('clips absurdly long lines', () => {
-		const lines = splitLines('x'.repeat(MAX_LINE_CHARS * 3));
+		const { lines } = splitLines('x'.repeat(MAX_LINE_CHARS * 3));
 		expect(lines[0].clipped).toBe(true);
 		expect(lines[0].text.length).toBe(MAX_LINE_CHARS);
 	});

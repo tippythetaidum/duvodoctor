@@ -534,7 +534,7 @@
 				"files": {
 					"crash": {
 						"any": [
-							"^crash: exception 0x[0-9a-fA-F]+ at (?![A-Za-z]:\\\\[Ww][Ii][Nn][Dd][Oo][Ww][Ss]\\\\)(?!.*\\\\(?:LuduvoGame|LuduvoEditor|Luduvo)\\.exe\\+).+\\.dll\\+0x"
+							"^crash: exception 0x[0-9a-fA-F]+ at (?![A-Za-z]:\\\\[Ww][Ii][Nn][Dd][Oo][Ww][Ss]\\\\)[^\\r\\n]*\\.dll\\+0x[0-9a-fA-F]+"
 						]
 					}
 				},
@@ -681,7 +681,14 @@
 			"severity": "blocks-join",
 			"platforms": ["windows"],
 			"match": {
-				"files": { "any": { "all": ["content store: cannot rename .*manifest\\.json.*MoveFileExW"] } }
+				"files": {
+					"any": {
+						"all": [
+							"content store: cannot rename ",
+							"MoveFileExW: Cannot create a file when that file already exists"
+						]
+					}
+				}
 			},
 			"steps": [
 				{ "text": "Close Luduvo completely." },
