@@ -142,12 +142,12 @@
 </script>
 
 <svelte:head>
-	<title>Duvo Doctor: why won't Luduvo start?</title>
+	<title>Duvo Doctor</title>
 	<meta
 		name="description"
 		content="Drop your Luduvo client.log and find out why the game won't start or join, in plain English. Your log never leaves your browser."
 	/>
-	<meta property="og:title" content="Duvo Doctor: why won't Luduvo start?" />
+	<meta property="og:title" content="Duvo Doctor" />
 	<meta
 		property="og:description"
 		content="Drop your client.log in and find out if it's a Luduvo bug or your PC, and what to do. Your log never leaves your browser."
