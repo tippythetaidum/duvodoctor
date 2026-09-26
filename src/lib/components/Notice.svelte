@@ -31,7 +31,6 @@
 		border-left: 4px solid var(--primary);
 		padding: 0.75rem 1rem;
 		margin-bottom: 1.5rem;
-		max-width: 60rem;
 	}
 	.notice p {
 		margin: 0;

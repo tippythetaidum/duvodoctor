@@ -164,7 +164,10 @@
 				<code>%LocalAppData%\Luduvo\</code>
 				<CopyButton text={'%LocalAppData%\\Luduvo\\'} />
 			</div>
-			<p class="find-more"><a href="/logs">Help finding it, and Linux or Mac</a></p>
+			<p class="find-more">
+				It's rewritten every time Luduvo starts, so grab it straight after the game fails.
+				<a href="/logs">Help finding it, and Linux or Mac</a>
+			</p>
 		</div>
 	</div>
 
@@ -319,22 +322,6 @@
 		<ReportBuilder analysis={done.analysis} result={done.result} />
 	{/if}
 {:else if !items.length}
-	<section class="card empty" aria-labelledby="how-heading">
-		<div class="card-head">
-			<div>
-				<h2 id="how-heading">How it works</h2>
-				<p class="card-sub">Three steps. Most answers take a couple of seconds.</p>
-			</div>
-		</div>
-		<div class="card-body how-body">
-			<Mascot size={92} />
-			<ol class="how">
-				<li><strong>Find client.log</strong> in the folder above. It's rewritten every time Luduvo starts, so grab it straight after the game fails.</li>
-				<li><strong>Drop it in the box above</strong>, with crash.log if the game closed on you.</li>
-				<li><strong>Read what's wrong</strong>, what to do, and what not to bother with.</li>
-			</ol>
-		</div>
-	</section>
 	<SymptomPicker {catalog} />
 {/if}
 
@@ -361,10 +348,8 @@
 		color: var(--muted-fg);
 	}
 	.find {
-		padding: 0.8rem 1rem 0.2rem;
-		border: 1px solid var(--border);
-		border-radius: var(--radius);
-		background: var(--card);
+		border-top: 1px solid var(--border);
+		padding-top: 1rem;
 	}
 	.find p {
 		margin-bottom: 0.6rem;
@@ -384,6 +369,7 @@
 	}
 	.find-more {
 		font-size: 0.92rem;
+		color: var(--muted-fg);
 	}
 	.drop {
 		padding: 1.4rem 1.4rem 1.2rem;
@@ -580,26 +566,5 @@
 	}
 	.next h3 {
 		font-size: 1rem;
-	}
-	.empty {
-		margin-top: 2rem;
-	}
-	.how-body {
-		display: flex;
-		gap: 1.5rem;
-		align-items: center;
-	}
-	.how {
-		margin: 0;
-		padding-left: 1.3rem;
-	}
-	.how li {
-		margin-bottom: 0.5rem;
-	}
-	@media (max-width: 560px) {
-		.how-body {
-			flex-direction: column;
-			align-items: flex-start;
-		}
 	}
 </style>
