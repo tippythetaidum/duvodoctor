@@ -2,7 +2,6 @@
 	import '$lib/styles/global.css';
 	import { page } from '$app/state';
 	import catalog from '$data/signatures.json';
-	import changelog from '$data/changelog.json';
 	import { formatDate } from '$lib/labels';
 
 	let { children } = $props();
@@ -22,7 +21,6 @@
 
 	const isCurrent = (href: string) =>
 		href === '/' ? page.url.pathname === '/' : page.url.pathname.startsWith(href);
-	const latest = changelog[0];
 </script>
 
 <svelte:head>
@@ -52,7 +50,6 @@
 				</svg>
 				<span>Duvo Doctor</span>
 			</a>
-			<span class="unofficial">Unofficial fan tool</span>
 		</div>
 		<nav aria-label="Main">
 			{#each groups as g}
@@ -68,7 +65,7 @@
 		</nav>
 		<a class="version card" href="/about#changelog">
 			<span class="version-top"><strong>Checked {formatDate(catalog.updated)}</strong></span>
-			<span class="version-note">{latest.title}: {catalog.signatures.filter((s) => s.blame !== 'noise').length} known issues, build 44</span>
+			<span class="version-note">{catalog.signatures.filter((s) => s.blame !== 'noise').length} known issues, checked against build {catalog.build}</span>
 			<span class="version-link">View changelog →</span>
 		</a>
 	</header>
@@ -118,15 +115,6 @@
 		color: var(--fg);
 		text-decoration: none;
 		min-height: 44px;
-	}
-	.unofficial {
-		font-size: 0.7rem;
-		font-weight: 600;
-		color: var(--muted-fg);
-		border: 1px solid var(--border);
-		border-radius: 999px;
-		padding: 0.15rem 0.5rem;
-		white-space: nowrap;
 	}
 	nav {
 		display: flex;
