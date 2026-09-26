@@ -8,16 +8,16 @@
 	let { children } = $props();
 
 	const groups = [
-		{ label: null, items: [{ href: '/', label: 'Check my logs' }] },
+		{ label: null, items: [{ href: '/', label: 'Check my logs', short: 'Check logs' }] },
 		{
 			label: 'Help',
 			items: [
-				{ href: '/logs', label: 'Find your logs' },
-				{ href: '/issues', label: 'Known issues' },
-				{ href: '/requirements', label: 'What your PC needs' }
+				{ href: '/logs', label: 'Find your logs', short: 'Find logs' },
+				{ href: '/issues', label: 'Known issues', short: 'Issues' },
+				{ href: '/requirements', label: 'What your PC needs', short: 'PC needs' }
 			]
 		},
-		{ label: 'Site', items: [{ href: '/about', label: 'About' }] }
+		{ label: 'Site', items: [{ href: '/about', label: 'About', short: 'About' }] }
 	];
 
 	const isCurrent = (href: string) =>
@@ -55,7 +55,9 @@
 				<ul>
 					{#each g.items as item}
 						<li>
-							<a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+							<a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}
+								><span class="long">{item.label}</span><span class="short">{item.short}</span></a
+							>
 						</li>
 					{/each}
 				</ul>
@@ -96,16 +98,15 @@
 	.sidebar {
 		background: var(--bg);
 		border-bottom: 1px solid var(--border);
-		padding: 0.6rem 1rem;
+		padding: 0.3rem 0 0;
 		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.4rem 1.2rem;
+		flex-direction: column;
 	}
 	.brand-row {
 		display: flex;
 		align-items: center;
 		gap: 0.6rem;
+		padding: 0 1rem;
 	}
 	.brand {
 		display: inline-flex;
@@ -119,17 +120,22 @@
 	}
 	nav {
 		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0 0.2rem;
+		overflow-x: auto;
+		scrollbar-width: none;
+		padding: 0 0.5rem;
+	}
+	nav::-webkit-scrollbar {
+		display: none;
 	}
 	nav ul {
-		display: flex;
-		flex-wrap: wrap;
+		display: contents;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		max-width: none;
+	}
+	nav li {
+		flex: 1 1 auto;
 	}
 	.group-label {
 		display: none;
@@ -137,20 +143,31 @@
 	nav a {
 		display: flex;
 		align-items: center;
-		min-height: 40px;
-		padding: 0 0.7rem;
-		border-radius: var(--radius-sm);
+		justify-content: center;
+		min-height: 44px;
+		padding: 0 0.5rem;
 		color: var(--fg);
 		text-decoration: none;
 		font-weight: 600;
-		font-size: 0.95rem;
+		font-size: 0.9rem;
+		white-space: nowrap;
 	}
 	nav a:hover {
 		background: var(--hover);
 	}
 	nav a[aria-current='page'] {
-		background: var(--muted);
-		box-shadow: inset 3px 0 0 var(--primary);
+		box-shadow: inset 0 -3px 0 var(--primary);
+	}
+	.long {
+		display: none;
+	}
+	@media (min-width: 640px) {
+		.long {
+			display: inline;
+		}
+		.short {
+			display: none;
+		}
 	}
 	.version {
 		display: none;
@@ -208,13 +225,30 @@
 			align-items: flex-start;
 			gap: 0.1rem;
 			padding: 0 0.4rem 0.8rem;
-		}
-		nav {
+		}		nav {
 			flex-direction: column;
 			align-items: stretch;
+			overflow: visible;
+			padding: 0;
 		}
 		nav ul {
+			display: flex;
 			flex-direction: column;
+		}
+		nav li {
+			flex: none;
+		}
+		nav a {
+			justify-content: flex-start;
+			min-height: 40px;
+			padding: 0 0.7rem;
+			border-radius: var(--radius-sm);
+			font-size: 0.95rem;
+			white-space: normal;
+		}
+		nav a[aria-current='page'] {
+			background: var(--muted);
+			box-shadow: inset 3px 0 0 var(--primary);
 		}
 		.group-label {
 			display: block;
