@@ -44,7 +44,7 @@
 
 <style>
 	.lede {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 		line-height: 1.45;
 	}
 	.group {
@@ -53,15 +53,15 @@
 		max-width: 52rem;
 	}
 	h2 {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 	}
 	li {
 		margin-bottom: 0.6rem;
 	}
 	.sources {
 		display: block;
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 	}
 	.features {
 		columns: 2 16rem;
@@ -73,6 +73,6 @@
 	}
 	.checked {
 		margin-top: 1.5rem;
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 </style>

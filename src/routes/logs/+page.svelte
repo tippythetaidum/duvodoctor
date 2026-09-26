@@ -61,7 +61,7 @@
 
 <style>
 	.lede {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 		line-height: 1.45;
 	}
 	.facts {
@@ -91,7 +91,7 @@
 	}
 	h3 {
 		font-size: 1.08rem;
-		font-family: var(--body);
+		font-family: var(--font);
 	}
 	.path {
 		display: flex;
@@ -102,16 +102,16 @@
 	}
 	.path code {
 		font-size: 0.95rem;
-		padding: 0.25rem 0.5rem;
-		background: var(--highlight-soft);
-		border: 1px solid var(--rule);
+		padding: 0.3rem 0.55rem;
+		background: var(--bg);
+		border: 1px solid var(--border-strong);
 	}
 	.sources {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 	}
 	.credit {
 		margin-top: 2rem;
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 </style>

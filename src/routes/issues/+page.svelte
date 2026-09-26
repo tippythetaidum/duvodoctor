@@ -120,7 +120,7 @@
 
 <style>
 	.lede {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 		line-height: 1.45;
 	}
 	.filters {
@@ -134,20 +134,20 @@
 	.filters label span {
 		display: block;
 		font-weight: 700;
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 	select {
 		min-height: 44px;
 		min-width: 10rem;
 		padding: 0.3rem 0.5rem;
-		border: 1px solid var(--ink-soft);
+		border: 1px solid var(--muted-fg);
 		border-radius: var(--radius);
-		background: #fffef9;
-		color: var(--ink);
+		background: var(--input);
+		color: var(--fg);
 	}
 	.count {
 		margin: 0 0 0.6rem auto;
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 	.group {
 		margin-top: 2rem;
@@ -175,7 +175,7 @@
 	.blame {
 		font-family: var(--mono);
 		font-size: 0.78rem;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
 	}
 	h3 {
 		font-size: 1.15rem;
@@ -183,7 +183,7 @@
 	}
 	.said {
 		font-style: italic;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
 	}
 	dl {
 		display: grid;
@@ -197,7 +197,7 @@
 		font-size: 0.74rem;
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
 		padding-top: 0.2rem;
 	}
 	dd {
@@ -206,8 +206,8 @@
 	.foot {
 		margin-top: auto;
 		font-size: 0.8rem;
-		color: var(--ink-soft);
-		border-top: 1px solid var(--rule);
+		color: var(--muted-fg);
+		border-top: 1px solid var(--border);
 		padding-top: 0.4rem;
 		margin-bottom: 0;
 	}

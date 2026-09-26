@@ -147,7 +147,7 @@
 		margin-bottom: 2rem;
 	}
 	.sign {
-		font-family: var(--heading);
+		font-family: var(--font);
 		font-size: 1.4rem;
 		margin-bottom: 0;
 	}
@@ -160,7 +160,7 @@
 		margin-top: 2rem;
 	}
 	h2 {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 	}
 	li {
 		margin-bottom: 0.5rem;

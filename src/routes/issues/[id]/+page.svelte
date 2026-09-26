@@ -134,7 +134,7 @@
 
 <style>
 	.crumb {
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 	.page {
 		padding: 1.4rem 1.6rem;
@@ -152,36 +152,38 @@
 		gap: 0.2rem 0.9rem;
 		font-family: var(--mono);
 		font-size: 0.8rem;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
 		margin-bottom: 0.4rem;
 	}
 	h1 {
-		font-size: var(--step-2);
+		font-size: 1.4rem;
 	}
 	h2 {
 		font-size: 1.1rem;
 		margin-top: 1.4rem;
 	}
 	.headline {
-		font-size: var(--step-1);
+		font-size: 1.2rem;
 		line-height: 1.4;
 	}
 	.dont li::marker {
 		content: '× ';
-		color: var(--stamp);
+		color: var(--danger-fg);
 		font-weight: 700;
 	}
 	.staff {
 		margin: 0.6rem 0;
 		padding: 0.6rem 0.9rem;
-		border: 1px dashed var(--rule);
+		border: 1px solid var(--border);
+		background: var(--muted);
+		border-radius: var(--radius-sm);
 	}
 	.staff p {
 		font-style: italic;
 		margin-bottom: 0.3rem;
 	}
 	.staff footer {
-		font-size: var(--step--1);
+		font-size: 0.9rem;
 	}
 	.patterns code {
 		font-size: 0.8rem;
@@ -189,12 +191,12 @@
 	.ref {
 		font-family: var(--mono);
 		font-size: 0.75rem;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
 	}
 	.checked {
 		margin-top: 1.4rem;
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 	}
 	@media (max-width: 560px) {
 		.page {

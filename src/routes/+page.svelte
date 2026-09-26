@@ -147,7 +147,7 @@
 	</div>
 
 	<div
-		class="drop sheet"
+		class="drop card"
 		class:dragging
 		role="group"
 		aria-labelledby="drop-label"
@@ -158,6 +158,10 @@
 		ondragleave={() => (dragging = false)}
 		ondrop={onDrop}
 	>
+		<svg class="drop-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+			<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+			<path d="M14 3v5h5M12 17v-6M9.5 13.5 12 11l2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+		</svg>
 		<p id="drop-label" class="drop-title">Drop log files here</p>
 		<p class="drop-sub">
 			client.log, crash.log, launcher.log, app.log, studio.log, state.json or Settings.cfg. Several at once is best.
@@ -239,7 +243,7 @@
 			</div>
 
 			{#if done.result.verdict === 'healthy'}
-				<div class="sheet next">
+				<div class="card next">
 					<h3>If Luduvo still isn't working</h3>
 					<ol>
 						<li>
@@ -251,7 +255,7 @@
 					</ol>
 				</div>
 			{:else if done.result.verdict === 'unknown'}
-				<div class="sheet next">
+				<div class="card next">
 					<p>
 						Your log has {done.result.unexplainedErrors.length}
 						{done.result.unexplainedErrors.length === 1 ? 'error' : 'errors'} that don't match anything I know about yet.
@@ -263,7 +267,7 @@
 					</p>
 				</div>
 			{:else if done.result.verdict === 'inconclusive'}
-				<div class="sheet next">
+				<div class="card next">
 					<p>Nothing in these files matches a known problem, and there are no errors.</p>
 				</div>
 			{/if}
@@ -287,13 +291,21 @@
 		<ReportBuilder analysis={done.analysis} result={done.result} />
 	{/if}
 {:else if !items.length}
-	<section class="empty" aria-label="How it works">
-		<Mascot size={110} />
-		<ol class="how">
-			<li><strong>Find client.log.</strong> On Windows, press <kbd>Win</kbd> + <kbd>R</kbd> and paste <code>%LocalAppData%\Luduvo\</code>.</li>
-			<li><strong>Drop it in the box above</strong>, with crash.log if the game closed on you.</li>
-			<li><strong>Read what's wrong</strong>, what to do, and what not to bother with.</li>
-		</ol>
+	<section class="card empty" aria-labelledby="how-heading">
+		<div class="card-head">
+			<div>
+				<h2 id="how-heading">How it works</h2>
+				<p class="card-sub">Three steps. Most answers take a couple of seconds.</p>
+			</div>
+		</div>
+		<div class="card-body how-body">
+			<Mascot size={92} />
+			<ol class="how">
+				<li><strong>Find client.log.</strong> On Windows, press <kbd>Win</kbd> + <kbd>R</kbd> and paste <code>%LocalAppData%\Luduvo\</code>.</li>
+				<li><strong>Drop it in the box above</strong>, with crash.log if the game closed on you.</li>
+				<li><strong>Read what's wrong</strong>, what to do, and what not to bother with.</li>
+			</ol>
+		</div>
 	</section>
 	<SymptomPicker {catalog} />
 {/if}
@@ -307,61 +319,73 @@
 	}
 	@media (min-width: 900px) {
 		.intake {
-			grid-template-columns: 1.1fr 1fr;
+			grid-template-columns: 1.05fr 1fr;
 		}
 		.privacy {
 			grid-column: 2;
 		}
 	}
 	h1 {
-		max-width: 16ch;
+		max-width: 18ch;
 	}
 	.lede {
-		font-size: var(--step-1);
-		line-height: 1.45;
+		font-size: 1.15rem;
+		color: var(--muted-fg);
+	}
+	.find {
+		font-weight: 600;
 	}
 	.drop {
-		padding: 1.3rem 1.4rem;
-		border: 2px dashed var(--ink-soft);
-		text-align: left;
-		transform: rotate(0.4deg);
+		padding: 1.4rem 1.4rem 1.2rem;
+		border: 1px dashed var(--border-strong);
+		background: var(--card);
 	}
 	.drop.dragging {
-		border-color: var(--stamp);
-		background: var(--highlight-soft);
+		border-color: var(--primary);
+		background: var(--hover);
+	}
+	.drop-icon {
+		color: var(--muted-fg);
+		margin-bottom: 0.4rem;
 	}
 	.drop-title {
-		font-family: var(--heading);
-		font-size: var(--step-2);
-		margin: 0 0 0.3rem;
+		font-size: 1.3rem;
+		font-weight: 700;
+		margin: 0 0 0.2rem;
 	}
 	.drop-sub {
-		font-size: var(--step--1);
-		color: var(--ink-soft);
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 	}
 	.paste {
 		margin-top: 1rem;
+		border-top: 1px solid var(--border);
+		padding-top: 0.5rem;
 	}
 	.paste summary {
 		cursor: pointer;
 		min-height: 40px;
 		display: flex;
 		align-items: center;
-		font-weight: 700;
+		font-weight: 600;
 	}
 	.paste textarea {
 		width: 100%;
 		font-family: var(--mono);
 		font-size: 0.8rem;
-		padding: 0.6rem;
-		border: 1px solid var(--ink-soft);
-		border-radius: var(--radius);
-		background: #fffef9;
+		padding: 0.6rem 0.7rem;
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius-sm);
+		background: var(--input);
 		margin: 0.4rem 0 0.6rem;
-		line-height: 1.4;
+		line-height: 1.45;
+	}
+	.paste textarea::placeholder {
+		color: var(--muted-fg);
 	}
 	.privacy {
-		font-size: var(--step--1);
+		font-size: 0.9rem;
+		color: var(--muted-fg);
 		margin: 0;
 	}
 	.files {
@@ -386,49 +410,53 @@
 		align-items: center;
 		gap: 0.1rem 0.5rem;
 		background: var(--card);
-		color: var(--ink);
-		border: 1px solid var(--rule);
-		border-radius: var(--radius);
-		padding: 0.2rem 0.2rem 0.2rem 0.7rem;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.15rem 0.2rem 0.15rem 0.85rem;
 	}
 	.chip-name {
 		font-family: var(--mono);
-		font-weight: 600;
 		font-size: 0.85rem;
 	}
 	.chip-meta,
 	.chip-warn {
-		font-size: 0.8rem;
-		color: var(--ink-soft);
+		font-size: 0.82rem;
+		color: var(--muted-fg);
 	}
 	.chip-warn {
-		color: var(--stamp-ink);
+		color: var(--danger-fg);
 	}
 	.chip-x {
 		min-width: 36px;
 		min-height: 36px;
 		border: 0;
+		border-radius: 999px;
 		background: none;
-		font-size: 1.3rem;
+		font-size: 1.25rem;
 		cursor: pointer;
-		color: var(--ink-soft);
+		color: var(--muted-fg);
+	}
+	.chip-x:hover {
+		background: var(--hover);
+		color: var(--fg);
 	}
 	.linkish {
 		background: none;
 		border: 0;
 		padding: 0;
 		min-height: 44px;
-		color: var(--link-on-page, var(--link));
+		color: var(--link);
 		text-decoration: underline;
 		cursor: pointer;
+		font-weight: 600;
 	}
 	.live .busy,
 	.live .error {
 		margin-top: 1rem;
 	}
 	.error {
-		color: var(--stamp);
-		font-weight: 700;
+		color: var(--danger-fg);
+		font-weight: 600;
 	}
 	.results {
 		display: grid;
@@ -437,7 +465,7 @@
 		grid-template-columns: 1fr;
 		align-items: start;
 	}
-	@media (min-width: 1000px) {
+	@media (min-width: 1100px) {
 		.results {
 			grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
 		}
@@ -454,40 +482,40 @@
 	}
 	.verdict h2 {
 		margin: 0;
+		font-size: 1.5rem;
 	}
 	.nudge {
 		margin: 0.5rem 0 0;
-		background: var(--highlight-soft);
-		color: var(--ink);
-		padding: 0.4rem 0.7rem;
-		border-left: 3px solid var(--highlight);
+		background: var(--warning-bg);
+		padding: 0.5rem 0.8rem;
+		border-radius: var(--radius-sm);
 	}
 	.next {
-		padding: 0.9rem 1.2rem;
+		padding: 0.9rem 1.15rem 0.4rem;
 		margin-bottom: 1rem;
 	}
 	.next h3 {
-		font-size: 1.05rem;
+		font-size: 1rem;
 	}
 	.empty {
+		margin-top: 2rem;
+	}
+	.how-body {
 		display: flex;
 		gap: 1.5rem;
 		align-items: center;
-		margin-top: 2.2rem;
 	}
 	.how {
 		margin: 0;
+		padding-left: 1.3rem;
 	}
 	.how li {
 		margin-bottom: 0.5rem;
 	}
 	@media (max-width: 560px) {
-		.empty {
+		.how-body {
 			flex-direction: column;
 			align-items: flex-start;
-		}
-		.drop {
-			transform: none;
 		}
 	}
 </style>
