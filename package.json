@@ -21,8 +21,10 @@
 		"fixtures": "node scripts/redact-fixtures.ts"
 	},
 	"devDependencies": {
+		"@axe-core/playwright": "^4.13.0",
 		"@fontsource/atkinson-hyperlegible": "^5.3.0",
 		"@fontsource/ibm-plex-mono": "^5.3.0",
+		"@fontsource/zilla-slab": "^5.3.0",
 		"@playwright/test": "^1.60.0",
 		"@sveltejs/adapter-static": "^3.0.10",
 		"@sveltejs/kit": "^2.63.0",
