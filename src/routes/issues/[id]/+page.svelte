@@ -29,6 +29,8 @@
 <svelte:head>
 	<title>{sig.title} | Duvo Doctor</title>
 	<meta name="description" content={sig.headline} />
+	<meta property="og:title" content={sig.title} />
+	<meta property="og:description" content={sig.headline} />
 </svelte:head>
 
 <p class="crumb"><a href="/issues">Known issues</a> / {sig.ref === 'noise' ? 'harmless lines' : sig.ref}</p>

@@ -27,7 +27,16 @@
 <svelte:head>
 	{#if page.status === 200 && page.url.pathname !== '/404'}
 		<link rel="canonical" href="https://duvodoctor.com{page.url.pathname}" />
+		<meta property="og:url" content="https://duvodoctor.com{page.url.pathname}" />
 	{/if}
+	<meta name="theme-color" content="#d20a2e" />
+	<meta property="og:site_name" content="Duvo Doctor" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://duvodoctor.com/og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Duvo Doctor. Luduvo won't start? Drop your log file here." />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <a class="skip-link" href="#main">Skip to content</a>
