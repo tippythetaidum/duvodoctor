@@ -1,5 +1,6 @@
 <script lang="ts">
 	import req from '$data/requirements.json';
+	import catalog from '$data/signatures.json';
 	import { formatDate } from '$lib/labels';
 </script>
 
@@ -40,7 +41,7 @@
 	<p class="sources">Source: <a href={req.vulkan_features.source.url}>{req.vulkan_features.source.label}</a></p>
 </section>
 
-<p class="checked">Last checked {formatDate(req.last_checked)}, against build 44.</p>
+<p class="checked">Last checked {formatDate(req.last_checked)}, against build {catalog.build}.</p>
 
 <style>
 	.lede {

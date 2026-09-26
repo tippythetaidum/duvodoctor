@@ -1,6 +1,7 @@
 {
 	"version": 1,
 	"updated": "2026-09-26",
+	"build": 45,
 	"signatures": [
 		{
 			"id": "d3d12-cluster-pso-fail",
@@ -8,7 +9,7 @@
 			"title": "D3D12 renderer fails at startup",
 			"headline": "Luduvo's D3D12 renderer fails on your PC before the game opens. This is a known Luduvo bug, not your PC.",
 			"summary": "A popup says Luduvo failed to launch and to check client.log. Studio says the Client did not start.",
-			"who": "Anyone whose game ends up on D3D12. Intel UHD and HD laptops, a GTX 1650 and an RX 9060 XT have all hit it.",
+			"who": "Anyone whose game ends up on D3D12. Build 45 starts Windows PCs on D3D12, and on 26 Sep players posted this failure from a GTX 1050, a GTX 1650, an RX 6600, a Ryzen laptop and an Intel UHD laptop. On build 44 it was mostly Intel UHD and HD laptops, plus a GTX 1650 and an RX 9060 XT.",
 			"blame": "luduvo",
 			"severity": "blocks-launch",
 			"platforms": ["windows"],
@@ -31,7 +32,7 @@
 			],
 			"steps": [
 				{ "text": "There's nothing you can fix on your end yet. Reinstalling drivers or Luduvo won't change this one." },
-				{ "text": "Update Luduvo when the next build comes out, then try again." },
+				{ "text": "Build 45 didn't fix this. Update Luduvo when the next build comes out, then try again." },
 				{
 					"text": "Follow the main thread for news.",
 					"link": { "label": "I cant play luduvo because of this bug", "url": "https://forum.luduvo.com/t/2616" }
@@ -49,12 +50,16 @@
 					"handle": "Isaac",
 					"date": "2026-09-24",
 					"url": "https://forum.luduvo.com/t/3549/4",
-					"unconfirmed": true,
-					"context": "He was replying to a general startup crash, so it isn't certain he meant this one."
+					"context": "Build 45 came out on 26 Sep, and logs posted that day still show this failure. Staff haven't posted about it on the forum since."
 				}
 			},
 			"sources": [
 				{ "label": "The popup players see", "url": "https://forum.luduvo.com/t/2616/43" },
+				{ "label": "GTX 1650 log, build 45", "url": "https://forum.luduvo.com/t/3990/1" },
+				{ "label": "GTX 1050 log, build 45", "url": "https://forum.luduvo.com/t/3990/5" },
+				{ "label": "AMD RX 6600 log, build 45", "url": "https://forum.luduvo.com/t/4011/1" },
+				{ "label": "Ryzen laptop log, build 45", "url": "https://forum.luduvo.com/t/3549/6" },
+				{ "label": "Intel UHD laptop log, build 45", "url": "https://forum.luduvo.com/t/4007/1" },
 				{ "label": "Intel Comet Lake log, build 44", "url": "https://forum.luduvo.com/t/2616/38" },
 				{ "label": "GTX 1650 laptop log, build 44", "url": "https://forum.luduvo.com/t/2431/3" },
 				{ "label": "AMD RX 9060 XT log, build 44", "url": "https://forum.luduvo.com/t/2241/5" },
@@ -72,15 +77,15 @@
 			"id": "d3d12-without-vulkan-attempt",
 			"ref": "S1",
 			"title": "D3D12 used without trying Vulkan",
-			"headline": "Your log goes straight to D3D12 without trying Vulkan first. Your graphics setting might be forcing D3D12.",
+			"headline": "Your game went straight to D3D12 without trying Vulkan first. On build 45 every Windows log posted so far does this.",
 			"summary": "The log shows D3D12 starting up with no Vulkan lines before it.",
-			"who": "Seen on an AMD RX 9060 XT on builds 41 and 44.",
+			"who": "Every build 45 log posted on 26 Sep, on NVIDIA, AMD and Intel. Before that, an AMD RX 9060 XT on builds 41 and 44.",
 			"blame": "setup",
 			"severity": "info",
 			"platforms": ["windows"],
 			"unconfirmed": true,
 			"cause": {
-				"text": "An early release note said Windows users default to D3D12. If Settings.cfg says graphics_api=D3D12, Luduvo may skip Vulkan entirely.",
+				"text": "An early release note said Windows users default to D3D12. If Settings.cfg says graphics_api=D3D12, Luduvo may skip Vulkan entirely. Build 45 seems to start every Windows PC on D3D12, and nobody has said yet whether the setting still changes that.",
 				"unconfirmed": true
 			},
 			"match": {
@@ -104,6 +109,8 @@
 			"sources": [
 				{ "label": "AMD log with no Vulkan attempt, build 41", "url": "https://forum.luduvo.com/t/2241/2" },
 				{ "label": "AMD log with no Vulkan attempt, build 44", "url": "https://forum.luduvo.com/t/2241/5" },
+				{ "label": "NVIDIA log with no Vulkan attempt, build 45", "url": "https://forum.luduvo.com/t/3990/1" },
+				{ "label": "Intel log with no Vulkan attempt, build 45", "url": "https://forum.luduvo.com/t/4007/1" },
 				{ "label": "Switching Studio to Vulkan fixed a D3D12 crash in July", "url": "https://forum.luduvo.com/t/1427/11" }
 			],
 			"credits": [
@@ -117,7 +124,7 @@
 			"title": "AMD graphics driver crashes on Windows",
 			"headline": "Your AMD graphics driver is crashing when Luduvo starts. This is a known Luduvo bug, not your PC.",
 			"summary": "A black screen for a couple of seconds, then the window closes. No error popup.",
-			"who": "AMD graphics on Windows using Vulkan: RX 6700 XT, RX 6500 XT and many Ryzen laptop chips. Some RX 580, RX 570 and RX 9060 XT cards work.",
+			"who": "AMD graphics on Windows using Vulkan: RX 6700 XT, RX 6500 XT and many Ryzen laptop chips. Some RX 580, RX 570 and RX 9060 XT cards work. Build 45 starts on D3D12 instead of Vulkan, so AMD players on 45 are getting the D3D12 startup failure rather than this crash.",
 			"blame": "luduvo",
 			"severity": "blocks-launch",
 			"platforms": ["windows"],
@@ -174,7 +181,8 @@
 				{ "label": "matt on AMD testing", "url": "https://forum.luduvo.com/t/3221/4" },
 				{ "label": "Original AMD black screen thread", "url": "https://forum.luduvo.com/t/2277/1" },
 				{ "label": "Ryzen 5625U crash.log", "url": "https://forum.luduvo.com/t/3046/1" },
-				{ "label": "Works on Linux with the same PC", "url": "https://forum.luduvo.com/t/2277/2" }
+				{ "label": "Works on Linux with the same PC", "url": "https://forum.luduvo.com/t/2277/2" },
+				{ "label": "RX 6600 on build 45, now failing on D3D12", "url": "https://forum.luduvo.com/t/4011/1" }
 			],
 			"credits": [
 				{ "handle": "matt", "url": "https://forum.luduvo.com/t/3221/16", "for": "worked out that the AMD driver is what crashes" },

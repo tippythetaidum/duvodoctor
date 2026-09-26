@@ -12,5 +12,5 @@ export const load: PageLoad = ({ params }) => {
 	if (!sig) error(404, 'No such issue');
 	const causedBy = catalog.signatures.filter((s) => s.leads_to?.includes(sig.id));
 	const leadsTo = catalog.signatures.filter((s) => sig.leads_to?.includes(s.id));
-	return { sig, causedBy, leadsTo };
+	return { sig, causedBy, leadsTo, build: catalog.build };
 };

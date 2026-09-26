@@ -30,7 +30,7 @@
 <h1>Known issues</h1>
 <p class="lede">
 	Every known reason Luduvo won't start, join or stay open, built from forum reports and staff replies. Last checked
-	{formatDate(catalog.updated)}, against build 44.
+	{formatDate(catalog.updated)}, against build {catalog.build}.
 </p>
 <p>
 	Anything marked <span class="unconfirmed">unconfirmed</span> came from a player and nobody has confirmed it yet. The Doctor

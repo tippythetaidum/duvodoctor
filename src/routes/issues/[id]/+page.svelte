@@ -82,7 +82,7 @@
 		{:else if sig.status.state === 'workaround'}
 			There's a workaround, listed above.
 		{:else if sig.status.state === 'open'}
-			Still open as of build 44.
+			Still open as of build {data.build}.
 		{:else}
 			No staff word on this one yet.
 		{/if}

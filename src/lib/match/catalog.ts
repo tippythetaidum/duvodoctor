@@ -87,6 +87,7 @@ export interface Signature {
 export interface Catalog {
 	version: number;
 	updated: string;
+	build: number;
 	signatures: Signature[];
 }
 

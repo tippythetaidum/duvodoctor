@@ -12,6 +12,14 @@
 					]
 				},
 				{
+					"text": "Build 45 starts Windows PCs on D3D12 without trying Vulkan first. On 26 Sep, D3D12 was failing at startup on NVIDIA, AMD and Intel cards alike.",
+					"sources": [
+						{ "label": "GTX 1650 on build 45", "url": "https://forum.luduvo.com/t/3990/1" },
+						{ "label": "RX 6600 on build 45", "url": "https://forum.luduvo.com/t/4011/1" },
+						{ "label": "Intel UHD on build 45", "url": "https://forum.luduvo.com/t/4007/1" }
+					]
+				},
+				{
 					"text": "Macs need Metal 3. The popup lists Vulkan 1.3, Metal 3 and D3D12 as the options.",
 					"sources": [{ "label": "The popup", "url": "https://forum.luduvo.com/t/2215/1" }]
 				},

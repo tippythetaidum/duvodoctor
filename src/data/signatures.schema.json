@@ -2,11 +2,12 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "Duvo Doctor signature catalog",
 	"type": "object",
-	"required": ["version", "updated", "signatures"],
+	"required": ["version", "updated", "build", "signatures"],
 	"additionalProperties": false,
 	"properties": {
 		"version": { "type": "integer", "minimum": 1 },
 		"updated": { "$ref": "#/$defs/date" },
+		"build": { "type": "integer", "minimum": 1 },
 		"signatures": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/signature" } }
 	},
 	"$defs": {
