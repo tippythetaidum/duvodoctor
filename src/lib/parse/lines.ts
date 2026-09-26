@@ -9,7 +9,7 @@ const EMBEDDED = /(?<=\S) ?(?=\d{4}-\d{2}-\d{2} - \d{2}:\d{2}:\d{2}\.\d{3} \[(?:
 
 export function splitLines(text: string): LogLine[] {
 	const out: LogLine[] = [];
-	const rawLines = text.split(/\r\n|\r|\n/);
+	const rawLines = text.split(/\r*\n|\r/);
 	if (rawLines.length && rawLines[rawLines.length - 1] === '') rawLines.pop();
 	let n = 0;
 	for (const raw of rawLines) {

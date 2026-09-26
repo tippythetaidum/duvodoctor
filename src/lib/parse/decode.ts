@@ -64,15 +64,22 @@ export function decodeBytes(input: Uint8Array, size = input.length): Decoded {
 		return { text: '', encoding, binary: true, truncated, size };
 	}
 
-	let text = new TextDecoder(encoding, { fatal: false }).decode(bytes);
 	if (encoding === 'utf-8') {
-		let bad = 0;
-		for (let i = 0; i < text.length; i++) if (text.charCodeAt(i) === 0xfffd) bad++;
-		if (bad > 0 && bad / Math.max(text.length, 1) > 0.02) {
-			text = new TextDecoder('windows-1252').decode(bytes);
-			encoding = 'windows-1252';
+		// a cap can split a multi-byte character, so leave the last few bytes out of the strict check
+		const checked = truncated ? bytes.subarray(0, Math.max(0, bytes.length - 4)) : bytes;
+		try {
+			new TextDecoder('utf-8', { fatal: true }).decode(checked);
+		} catch {
+			return {
+				text: new TextDecoder('windows-1252').decode(bytes),
+				encoding: 'windows-1252',
+				binary: false,
+				truncated,
+				size
+			};
 		}
 	}
+	const text = new TextDecoder(encoding, { fatal: false }).decode(bytes);
 	return { text, encoding, binary: false, truncated, size };
 }
 
