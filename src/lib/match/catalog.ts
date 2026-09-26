@@ -88,6 +88,7 @@ export interface Catalog {
 	version: number;
 	updated: string;
 	build: number;
+	notice?: { date: string; text: string; link?: Link };
 	signatures: Signature[];
 }
 

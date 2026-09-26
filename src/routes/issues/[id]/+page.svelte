@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BLAME, OS_LABEL, SEVERITY, VENDOR_LABEL, formatDate, forumHandle } from '$lib/labels';
+	import { BLAME, OS_LABEL, SEVERITY, VENDOR_LABEL, formatDate, sourceSite } from '$lib/labels';
 	import Stamp from '$lib/components/Stamp.svelte';
 	import type { MatchRule, Pattern } from '$lib/match/catalog';
 
@@ -21,6 +21,9 @@
 			.replace(/\\d\+/g, 'N')
 			.replace(/\\S\+/g, '…');
 	const looksFor = $derived(patterns(sig.match).map(readable));
+	const anyUnconfirmed = $derived(
+		!!(sig.unconfirmed || sig.cause?.unconfirmed || note?.unconfirmed || sig.steps.some((s) => s.unconfirmed))
+	);
 </script>
 
 <svelte:head>
@@ -119,7 +122,7 @@
 
 	<h2>Sources</h2>
 	<ul>
-		{#each sig.sources as s}<li><a href={s.url}>{s.label}</a> <span class="ref">{forumHandle(s.url)}</span></li>{/each}
+		{#each sig.sources as s}<li><a href={s.url}>{s.label}</a> <span class="ref">{sourceSite(s.url)}</span></li>{/each}
 	</ul>
 
 	{#if sig.credits.length}
@@ -129,6 +132,11 @@
 		</ul>
 	{/if}
 
+	{#if anyUnconfirmed}
+		<p class="checked">
+			<span class="unconfirmed">unconfirmed</span> means a player suggested it and nobody has confirmed it works yet.
+		</p>
+	{/if}
 	<p class="checked">Last checked {formatDate(sig.last_checked)}.</p>
 </article>
 

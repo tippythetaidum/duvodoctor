@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Diagnosis, Evidence } from '$lib/match/engine';
-	import { BLAME, formatDate, forumHandle } from '$lib/labels';
+	import { BLAME, formatDate, sourceSite } from '$lib/labels';
 	import Stamp from './Stamp.svelte';
 	import Self from './DiagnosisCard.svelte';
 
@@ -29,7 +29,7 @@
 	<div class="top">
 		<div class="meta">
 			<span class="badge {blameTone}">{BLAME[sig.blame]}</span>
-			<span class="confidence">{d.confidence === 'exact' ? 'Exact match' : 'Partial match'}</span>
+			<span class="confidence">{d.confidence === 'exact' ? 'Definite match' : 'Possible match'}</span>
 			{#if sig.unconfirmed}<span class="unconfirmed">unconfirmed</span>{/if}
 		</div>
 		<Stamp {sig} />
@@ -41,14 +41,6 @@
 		<p class="hint">{d.hint}</p>
 	{:else if d.confidence === 'exact' && d.evidence.length}
 		<p class="why muted">Your log has the lines that define this issue.</p>
-	{/if}
-
-	{#if sig.cause}
-		<p class="cause">
-			<span class="label">Why</span>
-			{sig.cause.text}
-			{#if sig.cause.unconfirmed}<span class="unconfirmed">unconfirmed</span>{/if}
-		</p>
 	{/if}
 
 	<section aria-label="What to do now">
@@ -78,6 +70,16 @@
 		</section>
 	{/if}
 
+	{#if sig.cause}
+		<details class="cause">
+			<summary>Why this happens</summary>
+			<p>
+				{sig.cause.text}
+				{#if sig.cause.unconfirmed}<span class="unconfirmed">unconfirmed</span>{/if}
+			</p>
+		</details>
+	{/if}
+
 	{#if note}
 		<blockquote class="staff">
 			<p>“{note.quote}”</p>
@@ -102,7 +104,7 @@
 			<summary>Sources and credits</summary>
 			<ul class="sources">
 				{#each sig.sources as s}
-					<li><a href={s.url}>{s.label}</a> <span class="ref">{forumHandle(s.url)}</span></li>
+					<li><a href={s.url}>{s.label}</a> <span class="ref">{sourceSite(s.url)}</span></li>
 				{/each}
 			</ul>
 			{#if sig.credits.length}
@@ -167,8 +169,8 @@
 		border-radius: var(--radius-sm);
 		padding: 0.5rem 0.75rem;
 	}
-	.cause .label {
-		margin-right: 0.35rem;
+	.cause p {
+		margin: 0.2rem 0 0.4rem;
 	}
 	.steps,
 	.dont {

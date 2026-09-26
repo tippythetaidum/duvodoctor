@@ -6,7 +6,13 @@
 	let { setup }: { setup: SetupSummary } = $props();
 
 	const backend = $derived(
-		setup.backend === 'd3d12' ? 'D3D12' : setup.backend === 'vulkan' ? 'Vulkan' : setup.backend === 'metal' ? 'Metal' : null
+		setup.backend === 'd3d12'
+			? 'D3D12 (DirectX 12)'
+			: setup.backend === 'vulkan'
+				? 'Vulkan'
+				: setup.backend === 'metal'
+					? 'Metal'
+					: null
 	);
 	const settingsShown = $derived(
 		setup.settings
@@ -21,7 +27,7 @@
 	<div class="card-head">
 		<div>
 			<h2 id="setup-heading">Your setup</h2>
-			<p class="card-sub">Read from your logs. Nothing here was sent anywhere.</p>
+			<p class="card-sub">Read from your logs. Nothing here was sent anywhere. Handy if staff ask for your specs.</p>
 		</div>
 	</div>
 	<dl>
@@ -40,21 +46,21 @@
 			</dd>
 		</div>
 		<div>
-			<dt>Graphics API</dt>
+			<dt>Graphics mode</dt>
 			<dd>
 				{backend ?? 'Not in the logs'}
 				{#each setup.fallback as f}<span class="aside">{f}</span>{/each}
 			</dd>
 		</div>
 		<div>
-			<dt>Graphics</dt>
+			<dt>Graphics card</dt>
 			<dd>
 				{#if setup.adapters.length}
 					<ul class="adapters">
 						{#each setup.adapters as a}
 							<li class:picked={a === setup.selected} class:skipped={a.skipped}>
 								<span class="name">{a.name}</span>
-								{#if a === setup.selected}<span class="badge green">selected</span>{/if}
+								{#if a === setup.selected}<span class="badge green">in use</span>{/if}
 								<span class="aside">
 									{a.api === 'd3d12' ? 'D3D12' : 'Vulkan'}{a.index !== null ? ` adapter ${a.index}` : ''}{a.vendorId
 										? `, ${VENDOR_NAMES[a.vendor]} ${a.vendorId}:${a.deviceId}`
@@ -91,12 +97,12 @@
 			</div>
 		{/if}
 		<div>
-			<dt>Joined a server</dt>
+			<dt>Got into a game</dt>
 			<dd>{setup.connected ? 'Yes' : 'No'}</dd>
 		</div>
 		<div>
-			<dt>Ended cleanly</dt>
-			<dd>{setup.cleanQuit ? 'Yes, the log ends with Quit.' : 'No'}</dd>
+			<dt>Closed normally</dt>
+			<dd>{setup.cleanQuit ? 'Yes, the log ends with Quit.' : 'No, the log stops early'}</dd>
 		</div>
 		{#if settingsShown.length}
 			<div>
@@ -108,7 +114,7 @@
 		{/if}
 		{#if setup.failCount !== null}
 			<div>
-				<dt>Launcher fail count</dt>
+				<dt>Failed launches</dt>
 				<dd>{setup.failCount}</dd>
 			</div>
 		{/if}

@@ -8,6 +8,24 @@
 		"version": { "type": "integer", "minimum": 1 },
 		"updated": { "$ref": "#/$defs/date" },
 		"build": { "type": "integer", "minimum": 1 },
+		"notice": {
+			"type": "object",
+			"required": ["date", "text"],
+			"additionalProperties": false,
+			"properties": {
+				"date": { "$ref": "#/$defs/date" },
+				"text": { "$ref": "#/$defs/text" },
+				"link": {
+					"type": "object",
+					"required": ["label", "url"],
+					"additionalProperties": false,
+					"properties": {
+						"label": { "$ref": "#/$defs/text" },
+						"url": { "type": "string", "pattern": "^(https://|/)" }
+					}
+				}
+			}
+		},
 		"signatures": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/signature" } }
 	},
 	"$defs": {

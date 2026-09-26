@@ -13,6 +13,8 @@
 	import ReportBuilder from '$lib/components/ReportBuilder.svelte';
 	import SymptomPicker from '$lib/components/SymptomPicker.svelte';
 	import Mascot from '$lib/components/Mascot.svelte';
+	import Notice from '$lib/components/Notice.svelte';
+	import CopyButton from '$lib/components/CopyButton.svelte';
 
 	const catalog = catalogJson as unknown as Catalog;
 	const MAX_ITEMS = 12;
@@ -108,6 +110,17 @@
 		return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 	}
 
+	const anyUnconfirmed = $derived(
+		!!done &&
+			done.result.flat.some(
+				(d) =>
+					d.sig.unconfirmed ||
+					d.sig.cause?.unconfirmed ||
+					d.sig.status.staff_note?.unconfirmed ||
+					d.sig.steps.some((s) => s.unconfirmed)
+			)
+	);
+
 	const verdictText = $derived.by(() => {
 		if (!done) return null;
 		const n = done.result.flat.length;
@@ -136,14 +149,23 @@
 	/>
 </svelte:head>
 
+<Notice />
+
 <section class="intake" aria-labelledby="intake-heading">
 	<div class="intro">
-		<h1 id="intake-heading">Luduvo won't start? Drop your client.log here.</h1>
+		<h1 id="intake-heading">Luduvo won't start? Drop your log file here.</h1>
 		<p class="lede">
-			It never leaves your browser. You'll find out whether it's a Luduvo bug or something on your PC, and what to do
-			about it.
+			The file is called client.log, and it never leaves your browser. You'll find out whether it's a Luduvo bug or
+			something on your PC, and what to do about it.
 		</p>
-		<p class="find">Not sure where it is? <a href="/logs">Here's where your logs live</a>.</p>
+		<div class="find">
+			<p><strong>Where is it?</strong> On Windows, press <kbd>Win</kbd> + <kbd>R</kbd>, paste this and press Enter:</p>
+			<div class="path">
+				<code>%LocalAppData%\Luduvo\</code>
+				<CopyButton text={'%LocalAppData%\\Luduvo\\'} />
+			</div>
+			<p class="find-more"><a href="/logs">Help finding it, and Linux or Mac</a></p>
+		</div>
 	</div>
 
 	<div
@@ -164,8 +186,9 @@
 		</svg>
 		<p id="drop-label" class="drop-title">Drop log files here</p>
 		<p class="drop-sub">
-			client.log, crash.log, launcher.log, app.log, studio.log, state.json or Settings.cfg. Several at once is best.
+			<strong>client.log</strong> matters most. Add <strong>crash.log</strong> from the same folder if the game closed on you.
 		</p>
+		<p class="drop-also">It also reads launcher.log, app.log, studio.log, state.json and Settings.cfg.</p>
 		<input
 			bind:this={fileInput}
 			id="file-input"
@@ -183,8 +206,8 @@
 		<button type="button" class="button" onclick={() => fileInput?.click()}>Choose files</button>
 
 		<details class="paste">
-			<summary>Or paste the text instead</summary>
-			<label for="paste-box" class="visually-hidden">Paste log text</label>
+			<summary>Paste the text instead</summary>
+			<label for="paste-box" class="paste-label">Open client.log in Notepad, copy everything, and paste it here.</label>
 			<textarea
 				id="paste-box"
 				bind:value={pasteText}
@@ -192,12 +215,12 @@
 				spellcheck="false"
 				placeholder="Paste client.log, crash.log or terminal output here"
 			></textarea>
-			<button type="button" class="button quiet" onclick={addPaste} disabled={!pasteText.trim()}>Read pasted text</button>
+			<button type="button" class="button quiet" onclick={addPaste} disabled={!pasteText.trim()}>Check this text</button>
 		</details>
 	</div>
 	<p class="privacy">
 		Nothing is uploaded. This page isn't allowed to make network requests at all, and your browser enforces that.
-		<a href="/about#privacy">How that works</a>.
+		<a href="/about#privacy">How you can check</a>.
 	</p>
 </section>
 
@@ -275,6 +298,11 @@
 			{#each done.result.diagnoses as d (d.sig.id)}
 				<DiagnosisCard {d} build={done.analysis.setup.build} {selected} onshow={show} />
 			{/each}
+			{#if anyUnconfirmed}
+				<p class="legend">
+					<span class="unconfirmed">unconfirmed</span> means a player suggested it and nobody has confirmed it works yet.
+				</p>
+			{/if}
 		</div>
 		{#if done.result.verdict !== 'empty'}
 			<aside class="side-col">
@@ -301,7 +329,7 @@
 		<div class="card-body how-body">
 			<Mascot size={92} />
 			<ol class="how">
-				<li><strong>Find client.log.</strong> On Windows, press <kbd>Win</kbd> + <kbd>R</kbd> and paste <code>%LocalAppData%\Luduvo\</code>.</li>
+				<li><strong>Find client.log</strong> in the folder above. It's rewritten every time Luduvo starts, so grab it straight after the game fails.</li>
 				<li><strong>Drop it in the box above</strong>, with crash.log if the game closed on you.</li>
 				<li><strong>Read what's wrong</strong>, what to do, and what not to bother with.</li>
 			</ol>
@@ -333,7 +361,29 @@
 		color: var(--muted-fg);
 	}
 	.find {
-		font-weight: 600;
+		padding: 0.8rem 1rem 0.2rem;
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--card);
+	}
+	.find p {
+		margin-bottom: 0.6rem;
+	}
+	.find .path {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem 0.8rem;
+		margin-bottom: 0.6rem;
+	}
+	.find .path code {
+		font-size: 1rem;
+		padding: 0.3rem 0.55rem;
+		background: var(--bg);
+		border: 1px solid var(--border-strong);
+	}
+	.find-more {
+		font-size: 0.92rem;
 	}
 	.drop {
 		padding: 1.4rem 1.4rem 1.2rem;
@@ -354,20 +404,47 @@
 		margin: 0 0 0.2rem;
 	}
 	.drop-sub {
-		font-size: 0.9rem;
+		margin-bottom: 0.3rem;
+	}
+	.drop-also {
+		font-size: 0.88rem;
 		color: var(--muted-fg);
 	}
 	.paste {
 		margin-top: 1rem;
 		border-top: 1px solid var(--border);
-		padding-top: 0.5rem;
+		padding-top: 0.8rem;
 	}
 	.paste summary {
-		cursor: pointer;
-		min-height: 40px;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
+		gap: 0.45em;
+		min-height: 44px;
+		padding: 0.4em 1.1em;
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius-sm);
+		background: var(--muted);
 		font-weight: 600;
+		cursor: pointer;
+		list-style: none;
+	}
+	.paste summary::-webkit-details-marker {
+		display: none;
+	}
+	.paste summary::before {
+		content: '+';
+		font-weight: 700;
+	}
+	.paste[open] summary::before {
+		content: '−';
+	}
+	.paste summary:hover {
+		background: var(--hover);
+	}
+	.paste-label {
+		display: block;
+		margin-top: 0.8rem;
+		font-size: 0.92rem;
 	}
 	.paste textarea {
 		width: 100%;
@@ -493,6 +570,13 @@
 	.next {
 		padding: 0.9rem 1.15rem 0.4rem;
 		margin-bottom: 1rem;
+	}
+	.legend {
+		font-size: 0.9rem;
+		color: var(--muted-fg);
+	}
+	.legend .unconfirmed {
+		margin-left: 0;
 	}
 	.next h3 {
 		font-size: 1rem;

@@ -2,6 +2,7 @@
 	import '$lib/styles/global.css';
 	import { page } from '$app/state';
 	import catalog from '$data/signatures.json';
+	import luduvo from '$data/luduvo.json';
 	import { formatDate } from '$lib/labels';
 
 	let { children } = $props();
@@ -11,9 +12,9 @@
 		{
 			label: 'Help',
 			items: [
-				{ href: '/issues', label: 'Known issues' },
 				{ href: '/logs', label: 'Find your logs' },
-				{ href: '/requirements', label: 'Requirements' }
+				{ href: '/issues', label: 'Known issues' },
+				{ href: '/requirements', label: 'What your PC needs' }
 			]
 		},
 		{ label: 'Site', items: [{ href: '/about', label: 'About' }] }
@@ -64,8 +65,11 @@
 			{/each}
 		</nav>
 		<a class="version card" href="/about#changelog">
-			<span class="version-top"><strong>Checked {formatDate(catalog.updated)}</strong></span>
-			<span class="version-note">{catalog.signatures.filter((s) => s.blame !== 'noise').length} known issues, checked against build {catalog.build}</span>
+			<span class="version-top"><strong>Latest Luduvo build: {luduvo.latest_build}</strong></span>
+			<span class="version-note" class:behind={luduvo.latest_build > catalog.build}>
+				{catalog.signatures.filter((s) => s.blame !== 'noise').length} known issues, checked against build {catalog.build}
+				on {formatDate(catalog.updated)}
+			</span>
 			<span class="version-link">View changelog →</span>
 		</a>
 	</header>
@@ -238,6 +242,9 @@
 		}
 		.version-note {
 			color: var(--muted-fg);
+		}
+		.version-note.behind {
+			color: var(--warning-fg);
 		}
 		.version-link {
 			font-weight: 600;

@@ -3,6 +3,7 @@
 	import type { Catalog, Signature } from '$lib/match/catalog';
 	import { BLAME, OS_LABEL, SEVERITY, VENDOR_LABEL, formatDate } from '$lib/labels';
 	import Stamp from '$lib/components/Stamp.svelte';
+	import Notice from '$lib/components/Notice.svelte';
 
 	const catalog = catalogJson as unknown as Catalog;
 	const issues = catalog.signatures.filter((s) => s.blame !== 'noise');
@@ -27,14 +28,16 @@
 	<meta name="description" content="Every known reason Luduvo won't start or join, who it affects, whether there's a fix, and what staff last said." />
 </svelte:head>
 
+<Notice />
+
 <h1>Known issues</h1>
 <p class="lede">
 	Every known reason Luduvo won't start, join or stay open, built from forum reports and staff replies. Last checked
 	{formatDate(catalog.updated)}, against build {catalog.build}.
 </p>
 <p>
-	Anything marked <span class="unconfirmed">unconfirmed</span> came from a player and nobody has confirmed it yet. The Doctor
-	uses exactly this list.
+	Anything marked <span class="unconfirmed">unconfirmed</span> came from a player and nobody has confirmed it works yet.
+	The log checker on the <a href="/">home page</a> uses exactly this list.
 </p>
 
 <form class="filters sheet" aria-label="Filter issues" onsubmit={(e) => e.preventDefault()}>
@@ -60,8 +63,8 @@
 		<span>Status</span>
 		<select bind:value={status}>
 			<option value="any">Any</option>
-			<option value="open">Open</option>
-			<option value="workaround">Workaround</option>
+			<option value="open">Not fixed yet</option>
+			<option value="workaround">Has a workaround</option>
 			<option value="fixed">Fixed</option>
 			<option value="unknown">No word yet</option>
 		</select>
@@ -82,9 +85,9 @@
 					<h3><a href="/issues/{s.id}">{s.title}</a></h3>
 					<p class="said">“{s.summary}”</p>
 					<dl>
-						<dt>Who</dt>
+						<dt>Who gets it</dt>
 						<dd>{s.who}</dd>
-						<dt>Try</dt>
+						<dt>What to try</dt>
 						<dd>
 							{s.steps[0].text}
 							{#if s.steps[0].unconfirmed}<span class="unconfirmed">unconfirmed</span>{/if}
@@ -110,7 +113,7 @@
 {/each}
 
 <section class="group" aria-labelledby="noise">
-	<h2 id="noise">Harmless lines the Doctor folds away</h2>
+	<h2 id="noise">Harmless lines the log checker hides</h2>
 	<ul class="plain">
 		{#each noise as s}
 			<li><a href="/issues/{s.id}">{s.title}</a>: {s.headline}</li>
@@ -173,8 +176,8 @@
 		gap: 0.5rem;
 	}
 	.blame {
-		font-family: var(--mono);
-		font-size: 0.78rem;
+		font-size: 0.85rem;
+		font-weight: 600;
 		color: var(--muted-fg);
 	}
 	h3 {
@@ -186,22 +189,17 @@
 		color: var(--muted-fg);
 	}
 	dl {
-		display: grid;
-		grid-template-columns: 3.4rem 1fr;
-		gap: 0.3rem 0.6rem;
 		margin: 0 0 0.6rem;
 		font-size: 0.95rem;
 	}
 	dt {
-		font-family: var(--mono);
-		font-size: 0.74rem;
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
+		font-size: 0.8rem;
+		font-weight: 600;
 		color: var(--muted-fg);
-		padding-top: 0.2rem;
+		padding-top: 0.4rem;
 	}
 	dd {
-		margin: 0;
+		margin: 0.05rem 0 0;
 	}
 	.foot {
 		margin-top: auto;

@@ -50,7 +50,7 @@ test('works with the keyboard alone', async ({ page }) => {
 	await expect(page.getByRole('link', { name: 'Skip to content' })).toBeFocused();
 	await page.keyboard.press('Enter');
 
-	const paste = page.getByText('Or paste the text instead');
+	const paste = page.getByText('Paste the text instead');
 	for (let i = 0; i < 20 && !(await paste.evaluate((el) => el === document.activeElement)); i++) {
 		await page.keyboard.press('Tab');
 	}
@@ -66,7 +66,7 @@ test('works with the keyboard alone', async ({ page }) => {
 		].join('\n')
 	);
 	await page.keyboard.press('Tab');
-	await expect(page.getByRole('button', { name: 'Read pasted text' })).toBeFocused();
+	await expect(page.getByRole('button', { name: 'Check this text' })).toBeFocused();
 	await page.keyboard.press('Enter');
 	await page.locator('#verdict').waitFor();
 

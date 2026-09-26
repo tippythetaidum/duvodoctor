@@ -1,6 +1,6 @@
 <script lang="ts">
 	import locations from '$data/locations.json';
-	import { formatDate, forumHandle } from '$lib/labels';
+	import { formatDate } from '$lib/labels';
 	import CopyButton from '$lib/components/CopyButton.svelte';
 </script>
 
@@ -19,7 +19,7 @@
 	{#each locations.facts as f}
 		<li>
 			{f.text}
-			{#each f.sources as s}<a class="src" href={s.url}>{forumHandle(s.url)}</a>{/each}
+			{#each f.sources as s, i}<a class="src" href={s.url}>{f.sources.length > 1 ? `source ${i + 1}` : 'source'}</a>{/each}
 		</li>
 	{/each}
 </ul>
@@ -71,8 +71,7 @@
 		margin-bottom: 0.4rem;
 	}
 	.src {
-		font-family: var(--mono);
-		font-size: 0.78rem;
+		font-size: 0.85rem;
 		margin-left: 0.4rem;
 	}
 	.platform {

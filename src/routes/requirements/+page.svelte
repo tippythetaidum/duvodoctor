@@ -15,6 +15,14 @@
 	error messages and staff replies. Every line links to where it came from.
 </p>
 
+<section class="sheet short" aria-labelledby="req-short">
+	<h2 id="req-short">In short</h2>
+	<ul>
+		{#each req.summary as line}<li>{line}</li>{/each}
+	</ul>
+	<p><a href="/issues">See the known issues</a> if your PC should work but the game won't start.</p>
+</section>
+
 {#each req.groups as g}
 	<section class="sheet group" aria-labelledby="req-{g.title}">
 		<h2 id="req-{g.title}">{g.title}</h2>
@@ -32,14 +40,14 @@
 	</section>
 {/each}
 
-<section class="sheet group" aria-labelledby="req-features">
-	<h2 id="req-features">Vulkan features the engine asks for</h2>
+<details class="sheet group features-box">
+	<summary><h2 id="req-features">Vulkan features the engine asks for</h2><span class="muted">For the technically minded</span></summary>
 	<p>On top of Vulkan 1.3 itself. If your driver lacks any of these, Luduvo skips that graphics card.</p>
 	<ul class="features">
 		{#each req.vulkan_features.features as f}<li><code>{f}</code></li>{/each}
 	</ul>
 	<p class="sources">Source: <a href={req.vulkan_features.source.url}>{req.vulkan_features.source.label}</a></p>
-</section>
+</details>
 
 <p class="checked">Last checked {formatDate(req.last_checked)}, against build {catalog.build}.</p>
 
@@ -75,5 +83,34 @@
 	.checked {
 		margin-top: 1.5rem;
 		font-size: 0.9rem;
+	}
+	.short {
+		padding: 1rem 1.3rem 0.4rem;
+		margin-top: 1.2rem;
+		max-width: 52rem;
+		border-left: 4px solid var(--primary);
+	}
+	.short li {
+		font-size: 1.05rem;
+	}
+	.features-box {
+		padding-bottom: 1rem;
+	}
+	.features-box summary {
+		cursor: pointer;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.2rem 0.8rem;
+	}
+	.features-box summary h2 {
+		display: inline;
+		margin: 0;
+	}
+	.features-box summary .muted {
+		font-size: 0.9rem;
+	}
+	.features-box[open] summary {
+		margin-bottom: 0.8rem;
 	}
 </style>

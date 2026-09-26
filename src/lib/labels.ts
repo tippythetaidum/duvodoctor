@@ -53,9 +53,9 @@ export const FORUM_CATEGORY = {
 
 export function stampText(sig: Signature): string {
 	const s = sig.status;
-	if (s.state === 'fixed') return s.fixed_in ? `Fixed in ${s.fixed_in}` : 'Fixed';
-	if (s.state === 'workaround') return 'Workaround';
-	if (s.state === 'open') return 'Open';
+	if (s.state === 'fixed') return s.fixed_in ? `Fixed in build ${s.fixed_in}` : 'Fixed';
+	if (s.state === 'workaround') return 'Has a workaround';
+	if (s.state === 'open') return 'Not fixed yet';
 	return 'No word yet';
 }
 
@@ -65,8 +65,7 @@ export function formatDate(iso: string): string {
 	return `${d} ${months[m - 1]} ${y}`;
 }
 
-export function forumHandle(url: string): string {
-	const m = /forum\.luduvo\.com\/t\/(\d+)(?:\/(\d+))?/.exec(url);
-	if (m) return m[2] ? `${m[1]}#${m[2]}` : m[1];
+export function sourceSite(url: string): string {
+	if (/forum\.luduvo\.com\/t\//.test(url)) return 'forum';
 	return new URL(url).hostname.replace(/^www\./, '');
 }
