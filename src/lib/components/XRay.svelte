@@ -261,7 +261,7 @@
 		min-height: 38px;
 		padding: 0.2rem 0.75rem;
 		border: 1px solid var(--border);
-		border-radius: 999px;
+		border-radius: var(--radius-sm);
 		background: var(--muted);
 		color: var(--fg);
 		cursor: pointer;

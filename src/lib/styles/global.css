@@ -18,26 +18,25 @@
 	--primary: #d20a2e;
 	--primary-hover: #e52c3e;
 	--primary-fg: #ffffff;
-	--green: #34c759;
 
-	--danger-fg: #f87171;
-	--danger-bg: rgb(239 68 68 / 0.14);
-	--warning-fg: #fbbf24;
-	--warning-bg: rgb(245 158 11 / 0.14);
-	--success-fg: #34d399;
-	--success-bg: rgb(16 185 129 / 0.14);
-	--info-fg: #60a5fa;
-	--info-bg: rgb(59 130 246 / 0.14);
-	--mark-bg: rgb(250 204 21 / 0.2);
-	--mark-line: #facc15;
+	--danger-fg: #ff7b86;
+	--danger-bg: rgb(210 10 46 / 0.18);
+	--warning-fg: #f0b45b;
+	--warning-bg: rgb(240 180 91 / 0.14);
+	--success-fg: #6ccf9c;
+	--success-bg: rgb(108 207 156 / 0.13);
+	--info-fg: #8fb4ff;
+	--info-bg: rgb(143 180 255 / 0.13);
+	--mark-bg: rgb(255 224 102 / 0.2);
+	--mark-line: #ffe066;
 	--link: #7cb4ff;
 
 	--font: 'Titillium Web', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
 		sans-serif;
 	--mono: ui-monospace, SFMono-Regular, 'Cascadia Mono', Menlo, Monaco, Consolas, monospace;
 
-	--radius: 0.625rem;
-	--radius-sm: 0.4rem;
+	--radius: 0.375rem;
+	--radius-sm: 0.25rem;
 	--measure: 68ch;
 	--sidebar: 15rem;
 }
@@ -45,28 +44,28 @@
 @media (prefers-color-scheme: light) {
 	:root {
 		color-scheme: light;
-		--bg: #f4f4f5;
-		--fg: #09090b;
+		--bg: #f3f2ef;
+		--fg: #121212;
 		--card: #ffffff;
-		--raised: #fafafa;
-		--muted: #e4e4e7;
-		--hover: #ececee;
-		--muted-fg: #62626a;
+		--raised: #faf9f7;
+		--muted: #e7e5e0;
+		--hover: #eeece8;
+		--muted-fg: #5c5a55;
 		--border: #00000017;
 		--border-strong: #00000029;
 		--input: #ffffff;
 		--primary-hover: #b90018;
-		--danger-fg: #b91c1c;
-		--danger-bg: rgb(239 68 68 / 0.1);
-		--warning-fg: #92400e;
-		--warning-bg: rgb(245 158 11 / 0.14);
-		--success-fg: #047857;
-		--success-bg: rgb(16 185 129 / 0.12);
-		--info-fg: #1d4ed8;
-		--info-bg: rgb(59 130 246 / 0.1);
-		--mark-bg: #fef08a;
-		--mark-line: #ca8a04;
-		--link: #1d4ed8;
+		--danger-fg: #b0102c;
+		--danger-bg: rgb(210 10 46 / 0.09);
+		--warning-fg: #7f4a00;
+		--warning-bg: rgb(240 160 40 / 0.16);
+		--success-fg: #226947;
+		--success-bg: rgb(47 125 91 / 0.12);
+		--info-fg: #1f4fae;
+		--info-bg: rgb(31 79 174 / 0.09);
+		--mark-bg: #ffec99;
+		--mark-line: #b38600;
+		--link: #1f4fae;
 	}
 }
 
@@ -237,51 +236,52 @@ select {
 .badge {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.3em;
-	font-size: 0.78rem;
-	font-weight: 600;
+	font-size: 0.72rem;
+	font-weight: 700;
 	line-height: 1;
-	padding: 0.35em 0.6em;
-	border-radius: 999px;
-	background: var(--muted);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	padding: 0.35em 0.5em 0.3em;
+	border-radius: 3px;
+	border: 1px solid var(--border-strong);
+	background: transparent;
 	color: var(--fg);
-	border: 1px solid var(--border);
 	white-space: nowrap;
 }
 
 .badge.red {
-	background: var(--danger-bg);
 	color: var(--danger-fg);
-	border-color: transparent;
+	background: var(--danger-bg);
+	border-color: currentColor;
 }
 .badge.green {
-	background: var(--success-bg);
 	color: var(--success-fg);
-	border-color: transparent;
+	background: var(--success-bg);
+	border-color: currentColor;
 }
 .badge.amber {
-	background: var(--warning-bg);
 	color: var(--warning-fg);
-	border-color: transparent;
+	background: var(--warning-bg);
+	border-color: currentColor;
 }
 .badge.blue {
-	background: var(--info-bg);
 	color: var(--info-fg);
-	border-color: transparent;
+	background: var(--info-bg);
+	border-color: currentColor;
 }
 
 .unconfirmed {
 	display: inline-flex;
 	align-items: center;
 	font-size: 0.72rem;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1;
 	letter-spacing: 0.02em;
-	padding: 0.3em 0.5em;
+	padding: 0.25em 0.45em;
 	margin-left: 0.35em;
-	border-radius: 999px;
+	border-radius: 3px;
+	border: 1px dashed currentColor;
 	color: var(--warning-fg);
-	background: var(--warning-bg);
 	vertical-align: 0.1em;
 	white-space: nowrap;
 }

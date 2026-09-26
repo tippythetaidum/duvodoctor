@@ -488,8 +488,8 @@
 		gap: 0.1rem 0.5rem;
 		background: var(--card);
 		border: 1px solid var(--border);
-		border-radius: 999px;
-		padding: 0.15rem 0.2rem 0.15rem 0.85rem;
+		border-radius: var(--radius-sm);
+		padding: 0.15rem 0.2rem 0.15rem 0.75rem;
 	}
 	.chip-name {
 		font-family: var(--mono);
@@ -507,7 +507,7 @@
 		min-width: 36px;
 		min-height: 36px;
 		border: 0;
-		border-radius: 999px;
+		border-radius: var(--radius-sm);
 		background: none;
 		font-size: 1.25rem;
 		cursor: pointer;

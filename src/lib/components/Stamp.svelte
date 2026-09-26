@@ -14,13 +14,4 @@
 	);
 </script>
 
-<span class="badge {tone}"><span class="dot" aria-hidden="true"></span>{stampText(sig)}</span>
-
-<style>
-	.dot {
-		width: 0.45em;
-		height: 0.45em;
-		border-radius: 50%;
-		background: currentColor;
-	}
-</style>
+<span class="badge {tone}">{stampText(sig)}</span>

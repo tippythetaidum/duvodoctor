@@ -64,7 +64,7 @@
 				</ul>
 			{/each}
 		</nav>
-		<a class="version card" href="/about#changelog">
+		<a class="version" href="/about#changelog">
 			<span class="version-top"><strong>Latest Luduvo build: {luduvo.latest_build}</strong></span>
 			<span class="version-note" class:behind={luduvo.latest_build > catalog.build}>
 				{catalog.signatures.filter((s) => s.blame !== 'noise').length} known issues, checked against build {catalog.build}
@@ -231,14 +231,14 @@
 			flex-direction: column;
 			gap: 0.15rem;
 			margin-top: auto;
-			padding: 0.7rem 0.8rem;
-			background: var(--muted);
+			padding: 0.8rem 0.7rem 0.2rem;
+			border-top: 1px solid var(--border);
 			text-decoration: none;
 			color: var(--fg);
 			font-size: 0.82rem;
 		}
-		.version:hover {
-			background: var(--hover);
+		.version:hover .version-link {
+			text-decoration: underline;
 		}
 		.version-note {
 			color: var(--muted-fg);

@@ -28,7 +28,7 @@
 <article class="card slip" class:child={depth > 0} class:selected={selected === sig.id} aria-labelledby="dx-{sig.id}">
 	<div class="top">
 		<div class="meta">
-			<span class="badge {blameTone}">{BLAME[sig.blame]}</span>
+			<span class="blame {blameTone}">{BLAME[sig.blame]}</span>
 			<span class="confidence">{d.confidence === 'exact' ? 'Definite match' : 'Possible match'}</span>
 			{#if sig.unconfirmed}<span class="unconfirmed">unconfirmed</span>{/if}
 		</div>
@@ -148,6 +148,19 @@
 		flex-wrap: wrap;
 		gap: 0.4rem 0.6rem;
 		align-items: center;
+	}
+	.blame {
+		font-size: 0.88rem;
+		font-weight: 700;
+	}
+	.blame.red {
+		color: var(--danger-fg);
+	}
+	.blame.amber {
+		color: var(--warning-fg);
+	}
+	.blame.blue {
+		color: var(--info-fg);
 	}
 	.confidence {
 		font-size: 0.85rem;
