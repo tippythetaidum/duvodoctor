@@ -12,7 +12,7 @@
 			"id": "d3d12-cluster-pso-fail",
 			"ref": "S1",
 			"title": "Game won't start: D3D12 graphics error",
-			"headline": "Luduvo's D3D12 graphics code breaks before the game opens. This is a known Luduvo bug, not your PC.",
+			"headline": "Luduvo fails while setting up its graphics, before the game even opens. This is a known Luduvo bug, not your PC.",
 			"summary": "A popup says Luduvo failed to launch and to check client.log. Studio says the Client did not start.",
 			"who": "Anyone whose game ends up on D3D12. Build 45 starts Windows PCs on D3D12, and on 26 Sep players posted this failure from a GTX 1050, a GTX 1650, an RX 6600, a Ryzen laptop and an Intel UHD laptop. On build 44 it was mostly Intel UHD and HD laptops, plus a GTX 1650 and an RX 9060 XT.",
 			"blame": "luduvo",
