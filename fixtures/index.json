@@ -52,9 +52,13 @@
 		{ "dir": "forum/2649-1", "expect": ["d3d12-cluster-pso-fail"], "source": "https://forum.luduvo.com/t/2649/1" },
 		{ "dir": "forum/1645-15", "expect": [], "verdict": "healthy", "source": "https://forum.luduvo.com/t/1645/15" },
 		{ "dir": "forum/2160-1", "expect": ["non-ascii-username-launcher"], "source": "https://forum.luduvo.com/t/2160/1" },
+		{ "dir": "forum/3990-1", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/3990/1" },
+		{ "dir": "forum/3990-5", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/3990/5" },
+		{ "dir": "forum/4011-1", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/4011/1" },
+		{ "dir": "forum/4007-1", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/4007/1" },
+		{ "dir": "forum/3549-6", "expect": ["d3d12-cluster-pso-fail", "d3d12-without-vulkan-attempt"], "source": "https://forum.luduvo.com/t/3549/6" },
 
 		{ "dir": "synthetic/xss", "expect": [], "verdict": "unknown", "source": "Hand-written: HTML and script in log text must stay inert" },
-		{ "dir": "synthetic/vulkan-dll-popup", "expect": ["vulkan-dll-missing"], "source": "Popup text from https://forum.luduvo.com/t/1365/1" },
-		{ "dir": "synthetic/empty", "expect": [], "verdict": "empty", "source": "Hand-written: an empty client.log" }
+		{ "dir": "synthetic/vulkan-dll-popup", "expect": ["vulkan-dll-missing"], "source": "Popup text from https://forum.luduvo.com/t/1365/1" },		{ "dir": "synthetic/empty", "expect": [], "verdict": "empty", "source": "Hand-written: an empty client.log" }
 	]
 }

@@ -1,0 +1,49 @@
+2026-09-26 - 10:23:42.070 [INFO] content store: version 8 is ready, current names it
+2026-09-26 - 10:23:42.099 [INFO] client content: version 8 from C:\Users\<user>\AppData\Roaming\Luduvo\Client\content
+2026-09-26 - 10:23:42.125 [INFO] Window created. 1 pixel density, 1.25 display scale
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] backend init begin; debug_layer=false
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] Win32 HWND acquired: 0x1f072c
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] debug layer disabled
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] creating DXGI factory debug=false
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] DXGI factory created
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] variable refresh tearing support=true
+2026-09-26 - 10:23:42.125 [INFO] [d3d12] adapter 0: 'AMD Radeon(TM) Graphics' (Hardware, vendor=0x1002 device=0x164c, 495 MB)
+2026-09-26 - 10:23:42.179 [INFO] [d3d12] adapter 'AMD Radeon(TM) Graphics' created probe device for feature checks
+2026-09-26 - 10:23:42.179 [INFO] [d3d12] adapter 1: 'Microsoft Basic Render Driver' (Software, vendor=0x1414 device=0x008c, 0 MB)
+2026-09-26 - 10:23:42.179 [INFO] [d3d12] adapter 'Microsoft Basic Render Driver' skipped: software adapter
+2026-09-26 - 10:23:42.179 [INFO] [d3d12] selected adapter: 'AMD Radeon(TM) Graphics' (vendor=0x1002 device=0x164c, 495 MB)
+2026-09-26 - 10:23:42.179 [INFO] [d3d12] resourceBindingTier=3 meshShaderTier=0 samplerFeedbackTier=0
+2026-09-26 - 10:23:42.188 [INFO] [d3d12] command queue created: graphics type=0 flags=0x0
+2026-09-26 - 10:23:42.190 [INFO] [d3d12] command queue created: compute type=2 flags=0x0
+2026-09-26 - 10:23:42.190 [INFO] [d3d12] command queue created: copy type=3 flags=0x0
+2026-09-26 - 10:23:42.190 [INFO] [d3d12] caps sampler_anisotropy=true max_anisotropy=16
+2026-09-26 - 10:23:42.190 [INFO] [d3d12] context created
+2026-09-26 - 10:23:42.190 [INFO] [d3d12] creating NVRHI device: rtv_heap=1024 dsv_heap=1024 srv_heap=32768 sampler_heap=16
+2026-09-26 - 10:23:42.195 [INFO] [d3d12] NVRHI device created
+2026-09-26 - 10:23:42.195 [INFO] Renderer: NVRHI validation layer disabled
+2026-09-26 - 10:23:42.195 [INFO] [d3d12] backend create_swapchain requested: 1920x1001, vsync=true
+2026-09-26 - 10:23:42.195 [INFO] [d3d12] creating swapchain: 1920x1001, buffers=3, format=28, flags=0x800, vsync=true
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] IDXGISwapChain1 created
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] DXGI window association set: no_alt_enter=true
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] IDXGISwapChain3 acquired
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swap image 0 wrapped: resource=0x24e0c5fd0d0 format=19 size=1920x1001
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swap image 1 wrapped: resource=0x24e0c5fe6e0 format=19 size=1920x1001
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swap image 2 wrapped: resource=0x24e0c5ffcf0 format=19 size=1920x1001
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swap image wrappers created: count=3
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] frame event queries created: count=3
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swapchain present mode: vsync
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] swapchain created: current_backbuffer=0
+2026-09-26 - 10:23:42.208 [INFO] [d3d12] backend swapchain ready: 1920x1001, images=3
+2026-09-26 - 10:23:42.220 [INFO] Renderer: max_textures=1024 (GPU reports 0)
+2026-09-26 - 10:23:42.222 [INFO] Renderer up: 1920x1001, 3 swap images
+2026-09-26 - 10:23:42.319 [ERROR] [nvrhi] Failed to create a compute pipeline state object
+2026-09-26 - 10:23:42.322 [ERROR] ClusteredForward: failed to create build-grid pipeline
+2026-09-26 - 10:23:42.325 [ERROR] WorldRenderer: clustered forward init failed
+2026-09-26 - 10:23:42.333 [ERROR] SceneRenderer: gfx_wr_init failed
+2026-09-26 - 10:23:42.336 [ERROR] ClientApp::Init failed
+2026-09-26 - 10:23:50.229 [INFO] [d3d12] backend destroy_swapchain images=3
+2026-09-26 - 10:23:50.229 [INFO] [d3d12] swapchain destroy_inner begin: keep_handle=false images=3 events=3
+2026-09-26 - 10:23:50.240 [INFO] [d3d12] swapchain destroy_inner complete
+2026-09-26 - 10:23:50.240 [INFO] [d3d12] backend shutdown
+2026-09-26 - 10:23:50.240 [INFO] [d3d12] context destroy begin
+2026-09-26 - 10:23:50.295 [INFO] [d3d12] context destroyed
