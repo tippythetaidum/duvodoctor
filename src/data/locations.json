@@ -1,0 +1,125 @@
+{
+	"last_checked": "2026-09-26",
+	"platforms": [
+		{
+			"id": "windows",
+			"name": "Windows",
+			"confirmed": true,
+			"places": [
+				{
+					"what": "Your logs: client.log, crash.log, launcher.log, app.log, studio.log and state.json",
+					"path": "%LocalAppData%\\Luduvo\\",
+					"how": "Press Win + R, paste the path, press Enter.",
+					"sources": [
+						{ "label": "matt's debug guide", "url": "https://forum.luduvo.com/t/3852/1" },
+						{ "label": "File list", "url": "https://forum.luduvo.com/t/2030/10" }
+					]
+				},
+				{
+					"what": "Older zip installs from launch week and the alpha",
+					"path": "Next to the extracted Luduvo folder, for example Downloads\\windows-x86_64\\Luduvo\\",
+					"how": "Open the folder you unzipped Luduvo into.",
+					"sources": [{ "label": "Nikhil on zip installs", "url": "https://forum.luduvo.com/t/2424/2" }]
+				},
+				{
+					"what": "Your graphics settings: Settings.cfg",
+					"path": "%APPDATA%\\Luduvo\\Client\\Settings.cfg",
+					"how": "Press Win + R, paste the path, press Enter. It opens in Notepad.",
+					"sources": [{ "label": "Where Settings.cfg lives", "url": "https://forum.luduvo.com/t/1989/11" }]
+				},
+				{
+					"what": "Can't find the install? Use the Start menu",
+					"path": null,
+					"how": "Press the Windows key, type Luduvo, right-click the first result and pick Open file location. If that opens a shortcut, right-click it and pick Open file location again.",
+					"sources": [{ "label": "matt's tip", "url": "https://forum.luduvo.com/t/3221/9" }]
+				}
+			]
+		},
+		{
+			"id": "linux",
+			"name": "Linux",
+			"confirmed": false,
+			"places": [
+				{
+					"what": "The easiest way: run Luduvo from a terminal and copy what it prints",
+					"path": "luduvo --singleplayer",
+					"how": "Open a terminal, run the command, and when it fails, copy everything it printed. You can paste it straight into the Doctor.",
+					"sources": [{ "label": "Terminal output from a Fedora player", "url": "https://forum.luduvo.com/t/2638/1" }]
+				},
+				{
+					"what": "Downloaded content",
+					"path": "~/.local/share/Luduvo/Client/content",
+					"how": "Confirmed by several logs.",
+					"sources": [
+						{ "label": "Linux log showing the path", "url": "https://forum.luduvo.com/t/2487/1" },
+						{ "label": "Another", "url": "https://forum.luduvo.com/t/3043/1" }
+					]
+				},
+				{
+					"what": "Log files, probably somewhere under here",
+					"path": "~/.local/share/Luduvo/",
+					"how": "Nobody has confirmed where Linux writes client.log, and some players say it doesn't write one at all.",
+					"unconfirmed": true,
+					"sources": [
+						{ "label": "Can't find it on Linux", "url": "https://forum.luduvo.com/t/2456/7" },
+						{ "label": "No new logs on Linux", "url": "https://forum.luduvo.com/t/1749/1" }
+					]
+				}
+			]
+		},
+		{
+			"id": "macos",
+			"name": "macOS",
+			"confirmed": false,
+			"places": [
+				{
+					"what": "The game and Studio programs",
+					"path": "<your download>/Luduvo/bundle/usr/bin/",
+					"how": "LuduvoGame and LuduvoEditor live here. Running them from Terminal shows their output.",
+					"sources": [
+						{ "label": "Mac error with the path", "url": "https://forum.luduvo.com/t/2360/1" },
+						{ "label": "tunics on the Mac bundle", "url": "https://forum.luduvo.com/t/2530/3" }
+					]
+				},
+				{
+					"what": "Downloaded content, maybe",
+					"path": "~/Library/Application Support/Luduvo/Client/content",
+					"how": "One error message showed /Library/Application Support/Luduvo. It may really be in your home folder's Library.",
+					"unconfirmed": true,
+					"sources": [{ "label": "The error message", "url": "https://forum.luduvo.com/t/2360/1" }]
+				},
+				{
+					"what": "Log files",
+					"path": null,
+					"how": "One Mac player could only find studio.log. crash.log was only announced for Windows.",
+					"unconfirmed": true,
+					"sources": [
+						{ "label": "Only studio.log found", "url": "https://forum.luduvo.com/t/3362/4" },
+						{ "label": "crash.log is Windows only", "url": "https://forum.luduvo.com/t/2589/1" }
+					]
+				}
+			]
+		}
+	],
+	"facts": [
+		{
+			"text": "client.log is replaced every time Luduvo starts. Grab it straight after the game fails, before you try again.",
+			"sources": [{ "label": "Overwritten each launch", "url": "https://forum.luduvo.com/t/2616/24" }]
+		},
+		{
+			"text": "crash.log only arrived in build 44, on Windows. It's often empty, which just means nothing crashed that time.",
+			"sources": [
+				{ "label": "Build 44 release notes", "url": "https://forum.luduvo.com/t/2589/1" },
+				{ "label": "An empty crash.log", "url": "https://forum.luduvo.com/t/2649/1" }
+			]
+		},
+		{
+			"text": "For client problems, client.log and crash.log matter most. For Studio problems, studio.log and crash.log.",
+			"sources": [{ "label": "matt on which files matter", "url": "https://forum.luduvo.com/t/3221/9" }]
+		},
+		{
+			"text": "Deleting client.log is harmless. Luduvo writes a new one next time.",
+			"sources": [{ "label": "Deleting it is fine", "url": "https://forum.luduvo.com/t/2616/27" }]
+		}
+	]
+}
