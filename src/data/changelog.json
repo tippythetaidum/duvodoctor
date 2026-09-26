@@ -1,6 +1,16 @@
 [
 	{
 		"date": "2026-09-26",
+		"title": "Plainer words",
+		"notes": [
+			"I went through every page as if I'd never heard of Vulkan. There are fewer tech words, the log folder is on the front page with a copy button, and the paste box looks like something you can press.",
+			"Statuses now say \"Not fixed yet\" and \"Has a workaround\" instead of Open and Workaround.",
+			"What your PC needs starts with a short version. The Vulkan feature list is tucked away for the technically minded.",
+			"The sidebar shows the newest Luduvo build, and the site says so if a build comes out before I've checked the known issues against it."
+		]
+	},
+	{
+		"date": "2026-09-26",
 		"title": "Build 45",
 		"notes": [
 			"Build 45 came out today with no release notes. It starts Windows PCs on D3D12 without trying Vulkan, and the D3D12 startup failure is now hitting NVIDIA, AMD and Intel cards. I've added the five build 45 logs players posted today and updated that issue.",
