@@ -26,10 +26,16 @@ function fromDecoded(name: string, d: Decoded): ParsedFile {
 		const named = kindFromName(name);
 		return { ...base, empty: true, kind: named ?? 'unknown', kindFrom: named ? 'name' : 'content' };
 	}
-	const lines = splitLines(d.text);
+	const { lines, capped } = splitLines(d.text);
 	const named = kindFromName(name);
 	const kind = named ?? kindFromContent(d.text, lines);
-	const file: ParsedFile = { ...base, lines, kind, kindFrom: named ? 'name' : 'content' };
+	const file: ParsedFile = {
+		...base,
+		truncated: base.truncated || capped,
+		lines,
+		kind,
+		kindFrom: named ? 'name' : 'content'
+	};
 	file.crashes = parseCrashes(lines);
 	if (kind === 'settings') file.settings = parseSettings(lines);
 	if (kind === 'state') file.state = parseState(d.text);
