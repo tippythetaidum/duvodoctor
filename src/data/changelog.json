@@ -1,6 +1,16 @@
 [
 	{
 		"date": "2026-09-26",
+		"title": "Build 45",
+		"notes": [
+			"Build 45 came out today with no release notes. It starts Windows PCs on D3D12 without trying Vulkan, and the D3D12 startup failure is now hitting NVIDIA, AMD and Intel cards. I've added the five build 45 logs players posted today and updated that issue.",
+			"Build 45 changed the first line of client.log, so the Doctor was losing the build number. It reads both layouts now.",
+			"New issue: publishing from Studio fails with \"scene check failed\" since the update.",
+			"Every status is now checked against build 45."
+		]
+	},
+	{
+		"date": "2026-09-26",
 		"title": "First version",
 		"notes": [
 			"Reads client.log, crash.log, launcher.log, app.log, studio.log, state.json and Settings.cfg in your browser.",
