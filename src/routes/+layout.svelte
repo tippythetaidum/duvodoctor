@@ -25,6 +25,12 @@
 	const latest = changelog[0];
 </script>
 
+<svelte:head>
+	{#if page.status === 200 && page.url.pathname !== '/404'}
+		<link rel="canonical" href="https://duvodoctor.com{page.url.pathname}" />
+	{/if}
+</svelte:head>
+
 <a class="skip-link" href="#main">Skip to content</a>
 
 <div class="shell">
