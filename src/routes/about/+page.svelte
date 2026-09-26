@@ -3,7 +3,6 @@
 	import changelog from '$data/changelog.json';
 	import type { Catalog, Credit } from '$lib/match/catalog';
 	import { formatDate } from '$lib/labels';
-	import Mascot from '$lib/components/Mascot.svelte';
 
 	const catalog = catalogJson as unknown as Catalog;
 	const community = new Map<string, Credit[]>();
@@ -58,8 +57,8 @@
 			It has nothing to do with trading or the Luduvo API. It doesn't log in, doesn't talk to Luduvo's servers, and doesn't
 			know who you are.
 		</p>
-		<p class="sign">Tippy</p>
-		<div class="mascot"><Mascot size={96} /></div>
+		<p class="sign">-Tippy</p>
+		<img class="avatar" src="/tippy.png" width="96" height="96" alt="Tippy, drawn with round glasses and an ice cream cone" />
 	</section>
 
 	<section aria-labelledby="privacy" id="privacy-section">
@@ -151,10 +150,13 @@
 		font-size: 1.4rem;
 		margin-bottom: 0;
 	}
-	.mascot {
+	.avatar {
 		position: absolute;
 		right: 1.2rem;
-		bottom: 0.8rem;
+		bottom: 1rem;
+		border-radius: 50%;
+		border: 2px solid var(--border-strong);
+		background: #ffffff;
 	}
 	section + section {
 		margin-top: 2rem;
@@ -172,8 +174,9 @@
 		font-size: 1.05rem;
 	}
 	@media (max-width: 640px) {
-		.mascot {
+		.avatar {
 			position: static;
+			display: block;
 			margin-top: 0.5rem;
 		}
 	}

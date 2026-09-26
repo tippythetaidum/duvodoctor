@@ -9,7 +9,7 @@ for (const path of pages) {
 		await expect(page.locator('footer.site-foot')).toContainText(
 			'Unofficial fan tool. Not affiliated with or endorsed by Luduvo Corporation.'
 		);
-		expect(await page.locator('img, picture, image').count()).toBe(0);
+		expect(await page.locator('img:not([src="/tippy.png"]), picture, image').count()).toBe(0);
 		const external = await page.evaluate(() =>
 			performance
 				.getEntriesByType('resource')
