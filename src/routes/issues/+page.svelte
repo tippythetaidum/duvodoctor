@@ -19,6 +19,10 @@
 		(status === 'any' || s.status.state === status);
 
 	const shown = $derived(issues.filter(matches));
+	const whoShort = (s: Signature) => {
+		const where = s.platforms.includes('all') ? 'Any system' : s.platforms.map((p) => OS_LABEL[p]).join(', ');
+		return s.vendors ? `${where} with ${s.vendors.map((v) => VENDOR_LABEL[v]).join(' or ')} graphics` : where;
+	};
 	const order = ['blocks-launch', 'blocks-join', 'crash-in-game', 'studio', 'info'] as const;
 	const grouped = $derived(order.map((sev) => ({ sev, list: shown.filter((s) => s.severity === sev) })).filter((g) => g.list.length));
 </script>
@@ -86,7 +90,7 @@
 					<p class="said">“{s.summary}”</p>
 					<dl>
 						<dt>Who gets it</dt>
-						<dd>{s.who}</dd>
+						<dd>{whoShort(s)}</dd>
 						<dt>What to try</dt>
 						<dd>
 							{s.steps[0].text}
@@ -101,8 +105,7 @@
 						{/if}
 					</dl>
 					<p class="foot">
-						{s.platforms.map((p) => OS_LABEL[p]).join(', ')}{s.vendors ? `, ${s.vendors.map((v) => VENDOR_LABEL[v]).join(', ')}` : ''}.
-						Last checked {formatDate(s.last_checked)}.
+						<a href="/issues/{s.id}">Full details</a> · Last checked {formatDate(s.last_checked)}.
 					</p>
 				</li>
 			{/each}
