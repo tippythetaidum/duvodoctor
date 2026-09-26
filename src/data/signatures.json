@@ -80,7 +80,7 @@
 			"headline": "Your game went straight to D3D12 without trying Vulkan first. On build 45 every Windows log posted so far does this.",
 			"summary": "The log shows D3D12 starting up with no Vulkan lines before it.",
 			"who": "Every build 45 log posted on 26 Sep, on NVIDIA, AMD and Intel. Before that, an AMD RX 9060 XT on builds 41 and 44.",
-			"blame": "setup",
+			"blame": "luduvo",
 			"severity": "info",
 			"platforms": ["windows"],
 			"unconfirmed": true,
