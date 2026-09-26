@@ -1,6 +1,12 @@
 <script lang="ts">
 	let { mood = 'calm', size = 140 }: { mood?: 'calm' | 'pleased' | 'puzzled'; size?: number } =
 		$props();
+
+	const ink = '#121212';
+	const skin = '#d9d9d9';
+	const coat = '#f6f6f4';
+	const scrubs = '#d20a2e';
+	const armTurn = $derived(mood === 'pleased' ? 190 : mood === 'puzzled' ? 152 : 0);
 </script>
 
 <svg
@@ -10,65 +16,65 @@
 	viewBox="0 0 160 200"
 	role="img"
 	aria-label={mood === 'pleased'
-		? 'A blocky doctor giving a thumbs up'
+		? 'A blocky doctor with one arm raised'
 		: mood === 'puzzled'
 			? 'A blocky doctor scratching their head'
 			: 'A blocky doctor holding a clipboard'}
 >
-	<!-- legs and body -->
-	<rect x="56" y="150" width="20" height="40" rx="3" fill="#39465f" stroke="#1d2a44" stroke-width="3" />
-	<rect x="84" y="150" width="20" height="40" rx="3" fill="#39465f" stroke="#1d2a44" stroke-width="3" />
-	<rect x="44" y="92" width="72" height="64" rx="5" fill="#fffdf7" stroke="#1d2a44" stroke-width="3" />
-	<path d="M80 92v64" stroke="#d9d3c3" stroke-width="2" />
-	<rect x="90" y="104" width="14" height="10" rx="1.5" fill="none" stroke="#1d2a44" stroke-width="2" />
-	<!-- stethoscope -->
-	<path
-		d="M64 92c0 22 8 30 16 30s16-8 16-30"
-		fill="none"
-		stroke="#1d2a44"
-		stroke-width="3"
-		stroke-linecap="round"
-	/>
-	<circle cx="80" cy="128" r="5" fill="#c8372d" stroke="#1d2a44" stroke-width="2.5" />
-	<!-- arms -->
-	{#if mood === 'pleased'}
-		<rect x="116" y="70" width="18" height="42" rx="4" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" />
-		<rect x="118" y="58" width="9" height="16" rx="3" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" />
-	{:else if mood === 'puzzled'}
-		<rect x="116" y="44" width="18" height="52" rx="4" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" transform="rotate(-18 125 70)" />
-	{:else}
-		<rect x="116" y="96" width="18" height="46" rx="4" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" />
-	{/if}
-	<rect x="26" y="96" width="18" height="46" rx="4" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" />
-	<!-- clipboard -->
-	<g transform="rotate(-8 30 130)">
-		<rect x="8" y="112" width="34" height="44" rx="3" fill="#c9a46a" stroke="#1d2a44" stroke-width="3" />
-		<rect x="13" y="118" width="24" height="33" fill="#fffdf7" />
-		<rect x="18" y="108" width="14" height="7" rx="2" fill="#1d2a44" />
-		<path d="M17 126h16M17 133h12M17 140h14" stroke="#1d2a44" stroke-width="2" stroke-linecap="round" />
+	<g stroke={ink} stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+		<rect x="48" y="134" width="32" height="62" rx="4" fill={scrubs} />
+		<rect x="80" y="134" width="32" height="62" rx="4" fill={scrubs} />
+
+		<g transform="rotate({armTurn} 128 68)">
+			<rect x="112" y="64" width="32" height="64" rx="4" fill={coat} stroke="none" />
+			<rect x="112" y="115" width="32" height="13" rx="3" fill={skin} stroke="none" />
+			<path d="M112 115h32" fill="none" />
+			<rect x="112" y="64" width="32" height="64" rx="4" fill="none" />
+		</g>
+
+		<rect x="16" y="64" width="32" height="64" rx="4" fill={coat} stroke="none" />
+		<rect x="16" y="115" width="32" height="13" rx="3" fill={skin} stroke="none" />
+		<path d="M16 115h32" fill="none" />
+		<rect x="16" y="64" width="32" height="64" rx="4" fill="none" />
+
+		<rect x="48" y="64" width="64" height="80" rx="5" fill={coat} />
+		<path d="M70 64l10 20 10-20z" fill={scrubs} />
+		<path d="M80 84v60" fill="none" stroke-width="2" />
+		<rect x="92" y="94" width="13" height="10" rx="1.5" fill="none" stroke-width="2" />
+		<path d="M96 89v7" fill="none" stroke="#1f4fae" stroke-width="3" />
+		<path d="M67 66c0 18 6 25 13 25s13-7 13-25" fill="none" stroke-width="3" />
+		<circle cx="80" cy="95" r="5" fill="#c9d0d8" />
+
+		<g transform="rotate(-8 18 120)">
+			<rect x="2" y="100" width="30" height="40" rx="3" fill="#b98b52" />
+			<rect x="6" y="106" width="22" height="30" fill="#ffffff" stroke="none" />
+			<rect x="11" y="96" width="12" height="7" rx="2" fill={ink} />
+			<path d="M10 114h14M10 120h10M10 126h12" fill="none" stroke-width="1.8" />
+		</g>
+
+		<rect x="58" y="26" width="44" height="40" rx="10" fill={skin} stroke="none" />
+		<path d="M58 36h44" fill="none" stroke={scrubs} stroke-width="4" stroke-linecap="butt" />
+		<rect x="58" y="26" width="44" height="40" rx="10" fill="none" />
+		<circle cx="80" cy="34" r="9" fill="#d7dde4" />
+		<circle cx="80" cy="34" r="3" fill={ink} stroke="none" />
 	</g>
-	<!-- head -->
-	<rect x="46" y="24" width="68" height="64" rx="8" fill="#e9b98e" stroke="#1d2a44" stroke-width="3" />
-	<!-- head mirror band and mirror -->
-	<path d="M46 40h68" stroke="#1d2a44" stroke-width="5" />
-	<circle cx="80" cy="36" r="11" fill="#dfe6ee" stroke="#1d2a44" stroke-width="3" />
-	<circle cx="80" cy="36" r="3" fill="#1d2a44" />
-	<!-- face -->
-	{#if mood === 'puzzled'}
-		<rect x="62" y="56" width="8" height="8" rx="1.5" fill="#1d2a44" />
-		<rect x="90" y="54" width="8" height="10" rx="1.5" fill="#1d2a44" />
-		<path d="M68 76c6-3 16-3 24 1" fill="none" stroke="#1d2a44" stroke-width="3" stroke-linecap="round" />
-	{:else}
-		<rect x="62" y="54" width="8" height="10" rx="1.5" fill="#1d2a44" />
-		<rect x="90" y="54" width="8" height="10" rx="1.5" fill="#1d2a44" />
-		<path
-			d={mood === 'pleased' ? 'M66 72c6 8 22 8 28 0' : 'M68 74c6 4 18 4 24 0'}
-			fill="none"
-			stroke="#1d2a44"
-			stroke-width="3"
-			stroke-linecap="round"
-		/>
-	{/if}
+
+	<g fill={ink} stroke={ink} stroke-width="2.6" stroke-linecap="round">
+		{#if mood === 'puzzled'}
+			<ellipse cx="72" cy="50" rx="2.6" ry="3.6" stroke="none" />
+			<ellipse cx="88" cy="49" rx="2.6" ry="3.8" stroke="none" />
+			<path d="M84 43l8-2.5" fill="none" />
+			<path d="M73 59q3.5-2.5 7 0t7 0" fill="none" />
+		{:else if mood === 'pleased'}
+			<ellipse cx="72" cy="49" rx="2.6" ry="3.8" stroke="none" />
+			<ellipse cx="88" cy="49" rx="2.6" ry="3.8" stroke="none" />
+			<path d="M71 55.5q9 10 18 0z" stroke-linejoin="round" />
+		{:else}
+			<ellipse cx="72" cy="49" rx="2.6" ry="3.8" stroke="none" />
+			<ellipse cx="88" cy="49" rx="2.6" ry="3.8" stroke="none" />
+			<path d="M73 57.5q7 4.5 14 0" fill="none" />
+		{/if}
+	</g>
 </svg>
 
 <style>

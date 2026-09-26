@@ -36,18 +36,15 @@
 	<header class="sidebar">
 		<div class="brand-row">
 			<a class="brand" href="/">
-				<svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
-					<rect x="5" y="4" width="22" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="2.5" />
-					<rect x="11" y="1.5" width="10" height="6" rx="2" fill="currentColor" />
-					<path d="M10 14h12M10 19h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
-					<path
-						d="M17.5 24.5l2.5 2.5 5-6"
-						fill="none"
-						stroke="#d20a2e"
-						stroke-width="2.6"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					/>
+				<svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+					<rect x="4" y="6" width="24" height="23" rx="6" fill="#d9d9d9" />
+					<path d="M4 12h24" stroke="#d20a2e" stroke-width="2.6" />
+					<rect x="4" y="6" width="24" height="23" rx="6" fill="none" stroke="#121212" stroke-width="1.8" />
+					<circle cx="16" cy="11" r="4.6" fill="#d7dde4" stroke="#121212" stroke-width="1.6" />
+					<circle cx="16" cy="11" r="1.4" fill="#121212" />
+					<ellipse cx="11.8" cy="19" rx="1.4" ry="2" fill="#121212" />
+					<ellipse cx="20.2" cy="19" rx="1.4" ry="2" fill="#121212" />
+					<path d="M12 23.3q4 2.8 8 0" fill="none" stroke="#121212" stroke-width="1.7" stroke-linecap="round" />
 				</svg>
 				<span>Duvo Doctor</span>
 			</a>
