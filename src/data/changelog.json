@@ -1,5 +1,13 @@
 [
 	{
+		"date": "2026-09-27",
+		"title": "Feedback from the forum",
+		"notes": [
+			"matt pointed out that asking people to press Win + R and paste something looks exactly like a common scam to Chrome and Edge. The site now uses the Start menu instead, and the copy buttons on folder paths are gone. Thanks matt.",
+			"Jediweirdo says Luduvo is on build 47 now, and players say the build 45 startup failure is fixed. The top issue now says to update first. I haven't checked the rest against 47 yet."
+		]
+	},
+	{
 		"date": "2026-09-26",
 		"title": "New look",
 		"notes": [
