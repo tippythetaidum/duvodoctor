@@ -1,10 +1,10 @@
 {
 	"version": 1,
-	"updated": "2026-09-26",
+	"updated": "2026-09-27",
 	"build": 45,
 	"notice": {
-		"date": "2026-09-26",
-		"text": "Build 45 is out. On a lot of Windows PCs it closes straight away with a popup telling you to check client.log. That's a Luduvo bug, not your PC, and there's nothing to fix on your end yet.",
+		"date": "2026-09-27",
+		"text": "Luduvo is on build 47 now. Players say the startup failure from build 45 is fixed, so close Luduvo and open it again to update before anything else. I haven't checked every known issue against 47 yet.",
 		"link": { "label": "What's known so far", "url": "/issues/d3d12-cluster-pso-fail" }
 	},
 	"signatures": [
@@ -36,8 +36,12 @@
 				"Studio says the Client did not start"
 			],
 			"steps": [
-				{ "text": "There's nothing you can fix on your end yet. Reinstalling drivers or Luduvo won't change this one." },
-				{ "text": "Build 45 didn't fix this. Update Luduvo when the next build comes out, then try again." },
+				{
+					"text": "Update Luduvo first: close it completely and open it again so the launcher can update. Players on the forum say it started working again on the builds after 45.",
+					"unconfirmed": true,
+					"link": { "label": "Starte2 saying it's fixed", "url": "https://forum.luduvo.com/t/4007/2" }
+				},
+				{ "text": "If it still fails after updating, there's nothing you can fix on your end. Reinstalling drivers or Luduvo won't change this one." },
 				{
 					"text": "Follow the main thread for news.",
 					"link": { "label": "I cant play luduvo because of this bug", "url": "https://forum.luduvo.com/t/2616" }
@@ -55,11 +59,14 @@
 					"handle": "Isaac",
 					"date": "2026-09-24",
 					"url": "https://forum.luduvo.com/t/3549/4",
-					"context": "Build 45 came out on 26 Sep, and logs posted that day still show this failure. Staff haven't posted about it on the forum since."
+					"context": "Build 45 came out on 26 Sep, and logs posted that day still show this failure. Players say later builds fixed it, but staff haven't posted about it on the forum."
 				}
 			},
 			"sources": [
 				{ "label": "The popup players see", "url": "https://forum.luduvo.com/t/2616/43" },
+				{ "label": "A player saying it works again", "url": "https://forum.luduvo.com/t/2616/194" },
+				{ "label": "Starte2 saying it's fixed", "url": "https://forum.luduvo.com/t/4007/2" },
+				{ "label": "Jediweirdo on build 47", "url": "https://forum.luduvo.com/t/4137/2" },
 				{ "label": "GTX 1650 log, build 45", "url": "https://forum.luduvo.com/t/3990/1" },
 				{ "label": "GTX 1050 log, build 45", "url": "https://forum.luduvo.com/t/3990/5" },
 				{ "label": "AMD RX 6600 log, build 45", "url": "https://forum.luduvo.com/t/4011/1" },
@@ -74,9 +81,10 @@
 			],
 			"credits": [
 				{ "handle": "matt", "url": "https://forum.luduvo.com/t/2241/6", "for": "traced the failure to a D3D12 shader" },
-				{ "handle": "Jediweirdo", "url": "https://forum.luduvo.com/t/2649/1", "for": "the clearest build 44 report" }
+				{ "handle": "Jediweirdo", "url": "https://forum.luduvo.com/t/2649/1", "for": "the clearest build 44 report" },
+				{ "handle": "Starte2", "url": "https://forum.luduvo.com/t/4007/2", "for": "reported that later builds fixed it" }
 			],
-			"last_checked": "2026-09-26"
+			"last_checked": "2026-09-27"
 		},
 		{
 			"id": "d3d12-without-vulkan-attempt",

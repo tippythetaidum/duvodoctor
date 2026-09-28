@@ -3,7 +3,7 @@
 	"summary": [
 		"You need a Windows PC, a Linux PC or an Apple Silicon Mac, with a graphics card from roughly the last ten years and an up-to-date graphics driver.",
 		"Very old graphics cards and some Intel laptop chips from 2016 to 2020 aren't supported yet.",
-		"On build 45, lots of Windows PCs that do meet this still can't start the game. That's a Luduvo bug, not your PC."
+		"Build 45 couldn't start on a lot of Windows PCs that do meet this. That was a Luduvo bug, and players say later builds fixed it."
 	],
 	"groups": [
 		{
