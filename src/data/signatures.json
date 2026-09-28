@@ -1,9 +1,9 @@
 {
 	"version": 1,
-	"updated": "2026-09-27",
+	"updated": "2026-09-28",
 	"build": 45,
 	"notice": {
-		"date": "2026-09-27",
+		"date": "2026-09-28",
 		"text": "Luduvo is on build 47 now. Players say the startup failure from build 45 is fixed, so close Luduvo and open it again to update before anything else. I haven't checked every known issue against 47 yet.",
 		"link": { "label": "What's known so far", "url": "/issues/d3d12-cluster-pso-fail" }
 	},
@@ -84,7 +84,7 @@
 				{ "handle": "Jediweirdo", "url": "https://forum.luduvo.com/t/2649/1", "for": "the clearest build 44 report" },
 				{ "handle": "Starte2", "url": "https://forum.luduvo.com/t/4007/2", "for": "reported that later builds fixed it" }
 			],
-			"last_checked": "2026-09-27"
+			"last_checked": "2026-09-28"
 		},
 		{
 			"id": "d3d12-without-vulkan-attempt",
