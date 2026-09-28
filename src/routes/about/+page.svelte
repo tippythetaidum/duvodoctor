@@ -16,6 +16,7 @@
 	const extra: Credit[] = [
 		{ handle: 'matt', url: 'https://forum.luduvo.com/t/3852/1', for: 'the Windows debug guide' },
 		{ handle: 'matt', url: 'https://forum.luduvo.com/t/2616/154', for: 'showing the IP: line is Luduvo\u2019s server' },
+		{ handle: 'matt', url: 'https://forum.luduvo.com/t/4137/3', for: 'warning that Win + R instructions look like a scam to browsers' },
 		{ handle: 'Jediweirdo', url: 'https://forum.luduvo.com/t/2649/1', for: 'the bug report layout the report builder uses' }
 	];
 	for (const c of extra) {

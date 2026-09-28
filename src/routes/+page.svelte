@@ -14,7 +14,6 @@
 	import SymptomPicker from '$lib/components/SymptomPicker.svelte';
 	import Mascot from '$lib/components/Mascot.svelte';
 	import Notice from '$lib/components/Notice.svelte';
-	import CopyButton from '$lib/components/CopyButton.svelte';
 
 	const catalog = catalogJson as unknown as Catalog;
 	const MAX_ITEMS = 12;
@@ -164,14 +163,14 @@
 			something on your PC, and what to do about it.
 		</p>
 		<div class="find">
-			<p><strong>Where is it?</strong> On Windows, press <kbd>Win</kbd> + <kbd>R</kbd>, paste this and press Enter:</p>
-			<div class="path">
-				<code>%LocalAppData%\Luduvo\</code>
-				<CopyButton text={'%LocalAppData%\\Luduvo\\'} />
-			</div>
+			<p>
+				<strong>Where is it?</strong> Open the Start menu, type <strong>Luduvo</strong>, right-click it and choose
+				<strong>Open file location</strong>. If that opens a folder of shortcuts, right-click the Luduvo shortcut and choose
+				<strong>Open file location</strong> again. client.log is in the folder that opens.
+			</p>
 			<p class="find-more">
 				It's rewritten every time Luduvo starts, so grab it straight after the game fails.
-				<a href="/logs">Help finding it, and Linux or Mac</a>
+				<a href="/logs">Other ways to find it, and Linux or Mac</a>
 			</p>
 		</div>
 	</div>
@@ -358,19 +357,6 @@
 	}
 	.find p {
 		margin-bottom: 0.6rem;
-	}
-	.find .path {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.5rem 0.8rem;
-		margin-bottom: 0.6rem;
-	}
-	.find .path code {
-		font-size: 1rem;
-		padding: 0.3rem 0.55rem;
-		background: var(--bg);
-		border: 1px solid var(--border-strong);
 	}
 	.find-more {
 		font-size: 0.92rem;

@@ -102,7 +102,7 @@
 				}
 			},
 			"steps": [
-				{ "text": "Press Win + R, paste %APPDATA%\\Luduvo\\Client and press Enter. Copy Settings.cfg somewhere safe first." },
+				{ "text": "Open File Explorer, click the address bar at the top, type %APPDATA%\\Luduvo\\Client and press Enter. Copy Settings.cfg somewhere safe first." },
 				{ "text": "Open Settings.cfg in Notepad and find the graphics_api line." },
 				{
 					"text": "If it says D3D12 and your graphics card supports Vulkan 1.3, you could change it to Vulkan and save. Nobody on the forum has confirmed this fixes the client yet.",
@@ -705,7 +705,7 @@
 			},
 			"steps": [
 				{ "text": "Close Luduvo completely." },
-				{ "text": "Press Win + R, paste %APPDATA%\\Luduvo and press Enter." },
+				{ "text": "Open File Explorer, click the address bar at the top, type %APPDATA%\\Luduvo and press Enter." },
 				{ "text": "Copy Client\\Settings.cfg somewhere safe if you want to keep your settings." },
 				{ "text": "Delete the Luduvo folder you just opened, then start Luduvo. It downloads fresh content." }
 			],
@@ -750,7 +750,7 @@
 			},
 			"steps": [
 				{ "text": "Update Luduvo. This was a launch-day bug and hasn't turned up in build 44 logs." },
-				{ "text": "If it still happens, close Luduvo, press Win + R, paste %APPDATA%\\Luduvo\\Client and delete the content folder. Luduvo downloads it again next time." }
+				{ "text": "If it still happens, close Luduvo, open File Explorer, type %APPDATA%\\Luduvo\\Client into the address bar and delete the content folder. Luduvo downloads it again next time." }
 			],
 			"dont": ["Copying shader files from someone else's PC."],
 			"status": {

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import locations from '$data/locations.json';
 	import { formatDate } from '$lib/labels';
-	import CopyButton from '$lib/components/CopyButton.svelte';
 </script>
 
 <svelte:head>
@@ -40,7 +39,6 @@
 					{#if place.path}
 						<div class="path">
 							<code>{place.path}</code>
-							<CopyButton text={place.path} />
 						</div>
 					{/if}
 					<p>{place.how}</p>
