@@ -4,6 +4,18 @@
 	"source": "https://forum.luduvo.com/t/4137/2",
 	"release_notes": [
 		{
+			"build": 46,
+			"title": "Luduvo 46 DirectX 11 and startup fixes",
+			"url": "https://forum.luduvo.com/t/4502",
+			"date": "2026-10-02"
+		},
+		{
+			"build": 45,
+			"title": "Luduvo 45 Sky, widgets, API additions",
+			"url": "https://forum.luduvo.com/t/4486",
+			"date": "2026-10-02"
+		},
+		{
 			"build": 44,
 			"title": "Luduvo 44 In-game console",
 			"url": "https://forum.luduvo.com/t/2589",
@@ -19,18 +31,6 @@
 			"build": 42,
 			"title": "Luduvo 42 Fast loading",
 			"url": "https://forum.luduvo.com/t/2560",
-			"date": "2026-09-15"
-		},
-		{
-			"build": 41,
-			"title": "Luduvo 41 Asset picker",
-			"url": "https://forum.luduvo.com/t/2559",
-			"date": "2026-09-15"
-		},
-		{
-			"build": 40,
-			"title": "Luduvo 40 Decals",
-			"url": "https://forum.luduvo.com/t/2558",
 			"date": "2026-09-15"
 		}
 	]
