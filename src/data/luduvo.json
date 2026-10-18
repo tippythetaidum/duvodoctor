@@ -1,37 +1,37 @@
 {
-	"latest_build": 47,
-	"seen": "2026-09-27",
-	"source": "https://forum.luduvo.com/t/4137/2",
+	"latest_build": 50,
+	"seen": "2026-10-17",
+	"source": "https://forum.luduvo.com/t/5224",
 	"release_notes": [
+		{
+			"build": 50,
+			"title": "Luduvo 50 Chat bubbles, teams, SurfaceGui",
+			"url": "https://forum.luduvo.com/t/5224",
+			"date": "2026-10-17"
+		},
+		{
+			"build": 49,
+			"title": "Luduvo 49 Server crash and autosave hotfix",
+			"url": "https://forum.luduvo.com/t/5210",
+			"date": "2026-10-17"
+		},
+		{
+			"build": 48,
+			"title": "Luduvo 48 Multiplayer and playtest fixes",
+			"url": "https://forum.luduvo.com/t/5209",
+			"date": "2026-10-17"
+		},
+		{
+			"build": 47,
+			"title": "Luduvo 47 Hover fix",
+			"url": "https://forum.luduvo.com/t/5189",
+			"date": "2026-10-17"
+		},
 		{
 			"build": 46,
 			"title": "Luduvo 46 DirectX 11 and startup fixes",
 			"url": "https://forum.luduvo.com/t/4502",
 			"date": "2026-10-02"
-		},
-		{
-			"build": 45,
-			"title": "Luduvo 45 Sky, widgets, API additions",
-			"url": "https://forum.luduvo.com/t/4486",
-			"date": "2026-10-02"
-		},
-		{
-			"build": 44,
-			"title": "Luduvo 44 In-game console",
-			"url": "https://forum.luduvo.com/t/2589",
-			"date": "2026-09-15"
-		},
-		{
-			"build": 43,
-			"title": "Luduvo 43 Metal shaders",
-			"url": "https://forum.luduvo.com/t/2561",
-			"date": "2026-09-15"
-		},
-		{
-			"build": 42,
-			"title": "Luduvo 42 Fast loading",
-			"url": "https://forum.luduvo.com/t/2560",
-			"date": "2026-09-15"
 		}
 	]
 }
