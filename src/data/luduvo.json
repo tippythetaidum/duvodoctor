@@ -1,8 +1,26 @@
 {
-	"latest_build": 52,
-	"seen": "2026-11-05",
-	"source": "https://forum.luduvo.com/t/5842",
+	"latest_build": 55,
+	"seen": "2026-11-24",
+	"source": "https://forum.luduvo.com/t/6648",
 	"release_notes": [
+		{
+			"build": 55,
+			"title": "Luduvo 55 Changelog",
+			"url": "https://forum.luduvo.com/t/6648",
+			"date": "2026-11-24"
+		},
+		{
+			"build": 54,
+			"title": "Luduvo 54 Changelog",
+			"url": "https://forum.luduvo.com/t/6634",
+			"date": "2026-11-24"
+		},
+		{
+			"build": 53,
+			"title": "Luduvo 53 Changelog",
+			"url": "https://forum.luduvo.com/t/6633",
+			"date": "2026-11-24"
+		},
 		{
 			"build": 52,
 			"title": "Luduvo 52 Update",
@@ -13,24 +31,6 @@
 			"build": 50,
 			"title": "Luduvo 50 Chat bubbles, teams, SurfaceGui",
 			"url": "https://forum.luduvo.com/t/5224",
-			"date": "2026-10-17"
-		},
-		{
-			"build": 49,
-			"title": "Luduvo 49 Server crash and autosave hotfix",
-			"url": "https://forum.luduvo.com/t/5210",
-			"date": "2026-10-17"
-		},
-		{
-			"build": 48,
-			"title": "Luduvo 48 Multiplayer and playtest fixes",
-			"url": "https://forum.luduvo.com/t/5209",
-			"date": "2026-10-17"
-		},
-		{
-			"build": 47,
-			"title": "Luduvo 47 Hover fix",
-			"url": "https://forum.luduvo.com/t/5189",
 			"date": "2026-10-17"
 		}
 	]
